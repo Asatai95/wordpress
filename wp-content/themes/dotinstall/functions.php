@@ -32,4 +32,18 @@ function twpp_enqueue_scripts() {
 
   add_action( 'wp_enqueue_scripts', 'twpp_enqueue_scripts' );
 
+function if_pc($atts, $content = null ) {
+  $content = do_shortcode( $content);
+    if(!wp_is_mobile()) {
+      return $content;
+    }
+  }
+  add_shortcode('pc', 'if_pc');
+  function if_sp($atts, $content = null ) {
+    $content = do_shortcode( $content);
+    if(wp_is_mobile()) {
+        return $content;
+    }
+  }
+  add_shortcode('sp', 'if_sp');
 ?>

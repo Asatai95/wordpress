@@ -2,15 +2,17 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
         <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 	      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <link rel="stylesheet" media="screen and (max-width: 481px)" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
-        <link rel="stylesheet" media="screen and (min-width: 480px)" href="<?php echo get_template_directory_uri(); ?>/style_sp.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (min-width: 897px)" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="<?php echo get_template_directory_uri(); ?>/style_tb.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?php echo get_template_directory_uri(); ?>/style_sp.css" type="text/css" />
     </head>
     <body>
       <aside class="sidevar">
         <nav class="navbar navbar-dark bg-white">
-          <a href="#" class="navbar-brand"><img class="awamori-logo" src="/wp-content/uploads/2019/10/header_logo.png" alt=""></a>
+          <a href="<?php echo home_url() ?>" class="navbar-brand"><img class="awamori-logo" src="/wp-content/uploads/2019/10/header_logo.png" alt=""></a>
           <button class="navbar-toggler" type="button"
             data-toggle="collapse"
             data-target="#navmenu1"
@@ -23,7 +25,11 @@
           </button>
         </nav>
       </aside>
+      <?php if ( wp_is_mobile() ) : ?>
+      <div class="nav_header_menu sp" id="navmenu1">
+      <?php else : ?>
       <div class="nav_header_menu" id="navmenu1">
+      <?php endif ; ?>
         <div class="navbar-nav">
           <div class="about_nav">
             <span>ABOUT</span>

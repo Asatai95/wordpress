@@ -7,7 +7,7 @@
           <img src="/wp-content/uploads/2019/10/footer_icon.png" alt="">
         </div>
         <div class="copy">
-          <a href="#">
+          <a href="<?php echo home_url() ?>">
             <img src="/wp-content/uploads/2019/10/footer_logo.png" alt="">
           </a>
           <img src="/wp-content/uploads/2019/10/copyright.png" alt="">

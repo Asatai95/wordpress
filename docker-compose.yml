@@ -33,6 +33,8 @@ services:
        WORDPRESS_DB_NAME: wordpress
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
+     expose:
+       - "8080"
      links:
        - mysql
      depends_on:

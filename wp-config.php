@@ -45,13 +45,13 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'heroku_fff778b8fc92284');
+define('DB_NAME', 'heroku_1bff9e81ade02e9');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'b348b721f1773e');
+define('DB_USER', 'bdbacc7113cae6');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'b74d2085');
+define('DB_PASSWORD', '6311e600');
 
 /** MySQL のホスト名 */
 define('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net');

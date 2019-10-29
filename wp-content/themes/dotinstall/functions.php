@@ -15,7 +15,7 @@ register_sidebar(
  add_theme_support('post-thumbnails');
 
 function delete_domain_from_attachment_url( $url ) {
-    if ( preg_match( '/^https?:\/\/[^\/\s]+(.*)$/', $url, $match ) ) {
+    if ( preg_match( '/^http(s)?:\/\/[^\/\s]+(.*)$/', $url, $match ) ) {
         $url = $match[2];
     }
     return $url;

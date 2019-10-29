@@ -48,7 +48,7 @@
 define('DB_NAME', 'heroku_fff778b8fc92284');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'b348b721f1773e:b74d2085');
+define('DB_USER', 'b348b721f1773e');
 
 /** MySQL データベースのパスワード */
 define('DB_PASSWORD', 'b74d2085');

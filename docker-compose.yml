@@ -1,0 +1,44 @@
+version: '2'
+
+
+services:
+   mysql:
+     image: mysql:5.7
+     container_name: wordpress_test_db
+     restart: always
+     ports:
+       - 3306:3306
+     tty: true
+     environment:
+       MYSQL_ROOT_PASSWORD: wordpress
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+       TZ: 'Asia/Tokyo'
+     networks:
+       - app-net
+
+   wordpress:
+     build: ~/Desktop/test_wordpress
+     image: wordpress:latest
+     container_name: wordpress_test_app
+     volumes:
+       - ~/Desktop/test_wordpress:/var/www/html
+     ports:
+       - "8000:80"
+     tty: true
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: wordpress_test_db:3306
+       WORDPRESS_DB_NAME: wordpress
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+     links:
+       - mysql
+     depends_on:
+       - mysql
+     networks:
+       - app-net
+networks:
+    app-net:
+      driver: bridge

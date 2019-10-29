@@ -9,7 +9,7 @@
 
         <link rel="stylesheet" media="screen and (min-width: 897px)" href="https://wordpressradiotest.herokuapp.com/wp-content/themes/dotinstall/style.css" type="text/css" />
         <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="https://wordpressradiotest.herokuapp.com/wp-content/themes/dotinstall/style_tb.css" type="text/css" />
-        <link rel="stylesheet" media="screen and (max-width: 480px)" href="https://wordpressradiotest.herokuapp.com/wp-content/themes/dotinstall/style.css" type="text/css" />
+        <link rel="stylesheet" media="screen and (max-width: 480px)" href="http://wordpressradiotest.herokuapp.com/wp-content/themes/dotinstall/style_sp.css" type="text/css" />
     </head>
     <body>
       <aside class="sidevar">

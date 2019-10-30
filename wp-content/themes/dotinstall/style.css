@@ -1,5 +1,5 @@
 .awamori-logo{
-    height: 100px;
+    height: 80px;
 
 }
 
@@ -642,6 +642,10 @@ figure iframe {
 
 .contact_form_box.tb {
     display: none;
+    text-align: center;
+}
+
+.contact_form_box {
     text-align: center;
 }
 

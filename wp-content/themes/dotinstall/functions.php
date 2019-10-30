@@ -1,5 +1,27 @@
 <?php
 
+// logを確認するため用のコード
+// if(!function_exists('_log')){
+
+//   function _log($message) {
+//     if (WP_DEBUG === true) {
+
+//       if (is_array($message) || is_object($message)) {
+
+//         error_log(print_r($message, true));
+
+//       } else {
+
+//         error_log($message);
+
+//       }
+
+//     }
+
+//   }
+// }
+
+
 add_theme_support('menus');
 
 register_sidebar(
@@ -14,14 +36,14 @@ register_sidebar(
  show_admin_bar( false );
  add_theme_support('post-thumbnails');
 
-function delete_domain_from_attachment_url( $url ) {
-    if ( preg_match( '/^http(s)?:\/\/[^\/\s]+(.*)$/', $url, $match ) ) {
-        $url = $match[2];
-    }
-    return $url;
-}
+// function delete_domain_from_attachment_url( $url ) {
+//     if ( preg_match( '/^http(s)?:\/\/[^\/\s]+(.*)$/', $url, $match ) ) {
+//         $url = $match[2];
+//     }
+//     return $url;
+// }
 
-add_filter( 'wp_get_attachment_url', 'delete_domain_from_attachment_url' );
+// add_filter( 'wp_get_attachment_url', 'delete_domain_from_attachment_url' );
 
 function twpp_enqueue_scripts() {
     wp_enqueue_script(
@@ -48,33 +70,32 @@ function if_pc($atts, $content = null ) {
   add_shortcode('sp', 'if_sp');
 
   function cldnry_wp_generate_attachment_metadata($metadata, $postid){
-    $imgPath = get_attached_file( $postid );
+      $imgPath = get_attached_file( $postid );
+      //ファイル形式のチェック
+      $info = pathinfo($imgPath);
+      $public_id = $info["filename"];
+      $mime_types = array("png"=>"image/png", "jpg"=>"image/jpeg", "pdf"=>"application/pdf", "gif"=>"image/gif", "bmp"=>"image/bmp");
+      $extension = $info["extension"];
 
-    //ファイル形式のチェック
-    $info = pathinfo($imgPath);
-    $public_id = $info["filename"];
-    $mime_types = array("png"=>"image/png", "jpg"=>"image/jpeg", "pdf"=>"application/pdf", "gif"=>"image/gif", "bmp"=>"image/bmp");
-    $extension = $info["extension"];
-    $type = @$mime_types[$extension];
-    //画像以外はcloudinaryにアップしない
-    if($type === null){
-        $stderr = fopen( 'php://stderr', 'w' );
-        fwrite( $stderr, 'アップロードされたファイルが画像ではありません。file-type:'.$extension );
-        return $metadata;
-    }
+      $type = @$mime_types[$extension];
+      //画像以外はcloudinaryにアップしない
+      if($type === null){
+          $stderr = fopen( 'php://stderr', 'w' );
+          fwrite( $stderr, 'アップロードされたファイルが画像ではありません。file-type:'.$extension );
+          return $metadata;
+      }
 
-    //Cloudinaryへアップ
-    $cl_upload = new CloudinaryUploader();
-    $uploaded = $cl_upload->upload($imgPath, array(
-    ));
-    $public_id = $uploaded['public_id'];
+      //Cloudinaryへアップ
+      // $cl_upload = new CloudinaryUploader();
+      $cl_upload = \Cloudinary\Uploader::upload($imgPath);
+      $public_id = $cl_upload['public_id'];
 
-    //DBへ保存
-    update_attached_file($postid, $uploaded['secure_url']);
-    $metadata['cloudinary'] = true; //cloudinaryからアップしたことを記録
+      //DBへ保存
+      update_attached_file($postid, $cl_upload['secure_url']);
+      $metadata['cloudinary'] = true; //cloudinaryからアップしたことを記録
 
-    return $metadata;
-}
-add_filter( "wp_generate_attachment_metadata" , "cldnry_wp_generate_attachment_metadata",10 );
+      return $metadata;
+  }
+  add_filter( "wp_generate_attachment_metadata" , "cldnry_wp_generate_attachment_metadata", 10, 2 );
 
 ?>

@@ -14,6 +14,21 @@ $(function(){
         });
     });
 
+    $(".navigation.single div a").each(function(){
+        $(this).on("mouseover mouseout", function(e){
+            if (e.type == "mouseover") {
+                $(this).css("background-color", "rgb(255,255,255)");
+                $(this).css("border", "3px solid rgb(81, 165, 255)");
+                $(this).css("color", "rgb(81, 165, 255)");
+            }
+            if (e.type == "mouseout") {
+                $(this).css("background-color", "rgb(81, 165, 255)");
+                $(this).css("border", "none");
+                $(this).css("color", "#fff");
+            }
+        });
+    });
+
     var w = $(window).width();
     if (w <= 500) {
         $('.device').each(function(){

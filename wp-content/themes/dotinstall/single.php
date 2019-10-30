@@ -17,9 +17,7 @@
                     <h2 class="single_title"><?php the_title(); ?></h2>
                     <div class="post-header single">
                         <div class="single-image"><?php the_post_thumbnail(array(0, 0)); ?></div>
-                        <div class="post-meta">
-                            <?php echo get_the_date(); ?> 【<?php the_category(', '); ?>】
-                        </div>
+
                     </div>
                     <div class="post-content">
                         <?php the_content(); ?>

@@ -681,3 +681,94 @@ figure iframe {
     margin: 30px auto;
     padding: 0;
 }
+
+
+.container.single #posts_page {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.single_title.page ,
+.user_info h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.single_title.page .post-content.contents {
+    margin: 60px auto;
+    margin-top: 0;
+}
+
+.post-content.contents {
+    float: none;
+    margin: 60px auto;
+    margin-top: 0;
+}
+
+.post-content.contents p {
+    font-size: 17px;
+}
+
+.box_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box_info .profile {
+    width: 30%;
+    text-align: center;
+}
+
+.box_info .profile img {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 100px;
+}
+
+.box_info .profile div span {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.box_info .profile div p {
+    padding-top: 5px;
+}
+
+.box_info .profile div .something {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.box_info .profile div .something span.something_title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.box_info .profile div .something span.item {
+    font-size: 15px!important;
+    font-weight: 500!important;
+}
+
+.box_info .profile div .sns_account {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box_info .profile div .sns_account a {
+    color: #333;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.box_info .profile div .sns_account a:hover {
+    opacity: .7;
+}

@@ -249,6 +249,10 @@ aside{
     flex-wrap: wrap;
 }
 
+.container.single #posts {
+    float: none;
+}
+
 .container.main #posts {
     width: 100%;
     display: flex;
@@ -368,6 +372,13 @@ aside{
     margin-bottom: 15px;
 }
 
+.navigation.single {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 80px auto;
+}
+
 .navigation.container.footer_nav {
     width: 70%;
     margin-bottom: 80px;
@@ -400,6 +411,17 @@ aside{
         margin: auto 20px;
     }
 
+    .navigation.single .prev,
+    .navigation.single .next {
+        width: 120px;
+        height: 60px;
+        border: none;
+        border-radius: 30px;
+        float: none;
+        text-align: center;
+        margin: auto 20px;
+    }
+
     .navigation.container.footer_nav .prev a,
     .navigation.container.footer_nav .next a {
         color: #fff;
@@ -412,6 +434,22 @@ aside{
         justify-content: center;
         border-radius: 30px;
         background-color: rgb(81, 165, 255);
+        box-shadow: 0 2px 10px 2px rgb(26, 13, 171, 0.25);
+    }
+
+    .navigation.single .prev a,
+    .navigation.single .next a {
+        background-color: rgb(81, 165, 255);
+        border: none;
+        color: rgb(255, 255, 255);
+        font-size: 17px;
+        font-weight: 800;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
         box-shadow: 0 2px 10px 2px rgb(26, 13, 171, 0.25);
     }
 
@@ -582,4 +620,12 @@ li{
 
 .device div {
     display: none;
+}
+
+figure {
+    text-align: center;
+}
+
+figure iframe {
+    border: none;
 }

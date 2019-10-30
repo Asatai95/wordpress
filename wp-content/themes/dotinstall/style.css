@@ -242,6 +242,10 @@ aside{
 
 /* posts */
 
+.post-meta {
+    display: none;
+}
+
 #posts {
     float: left;
     width:100%;

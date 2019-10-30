@@ -6,7 +6,6 @@
         <link rel="shortcut icon" href="/wp-content/uploads/2019/10/logo_part_5.png">
         <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 	      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
         <link rel="stylesheet" media="screen and (min-width: 897px)" href="https://wordpressradiotest.herokuapp.com/wp-content/themes/dotinstall/style.css" type="text/css">
         <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="https://wordpressradiotest.herokuapp.com/wp-content/themes/dotinstall/style_tb.css" type="text/css">
         <link rel="stylesheet" media="screen and (max-width: 480px)" href="https://wordpressradiotest.herokuapp.com/wp-content/themes/dotinstall/style_sp.css" type="text/css">

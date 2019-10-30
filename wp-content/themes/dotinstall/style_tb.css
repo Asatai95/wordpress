@@ -365,7 +365,7 @@ aside{
 }
 
 .single-post{
-    width:70%;
+    width:95%;
     margin:auto;
 }
 
@@ -646,4 +646,42 @@ figure {
 
 figure iframe {
     border: none;
+}
+
+/* シングルページ、snsボタン類管理ボックス */
+
+.contact_form_box.tb {
+    display: none;
+    text-align: center;
+}
+
+.main_information {
+    margin: 30px auto;
+    height: 1100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main_information h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.main_information p {
+    font-size: 15px;
+}
+
+.main_information .share_box {
+    width : 100%;
+}
+
+.google_form .contact_form_box {
+    margin: auto;
+    text-align: center;
+}
+
+.main_information .google_form iframe {
+    margin: auto;
 }

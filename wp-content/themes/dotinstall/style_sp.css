@@ -639,3 +639,28 @@ figure {
 figure iframe {
     border: none;
 }
+
+/* シングルページ、snsボタン類管理ボックス */
+
+.contact_form_box.tb {
+    display: none;
+    text-align: center;
+}
+
+.main_information {
+    margin: 30px auto;
+    height: 1150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main_information h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.main_information p {
+    font-size: 15px;
+}

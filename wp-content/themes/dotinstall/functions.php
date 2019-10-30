@@ -47,34 +47,34 @@ function if_pc($atts, $content = null ) {
   }
   add_shortcode('sp', 'if_sp');
 
-  function cldnry_wp_generate_attachment_metadata($metadata, $postid){
-    $imgPath = get_attached_file( $postid );
+//   function cldnry_wp_generate_attachment_metadata($metadata, $postid){
+//     $imgPath = get_attached_file( $postid );
 
-    //ファイル形式のチェック
-    $info = pathinfo($imgPath);
-    $public_id = $info["filename"];
-    $mime_types = array("png"=>"image/png", "jpg"=>"image/jpeg", "pdf"=>"application/pdf", "gif"=>"image/gif", "bmp"=>"image/bmp");
-    $extension = $info["extension"];
-    $type = @$mime_types[$extension];
-    //画像以外はcloudinaryにアップしない
-    if($type === null){
-        $stderr = fopen( 'php://stderr', 'w' );
-        fwrite( $stderr, 'アップロードされたファイルが画像ではありません。file-type:'.$extension );
-        return $metadata;
-    }
+//     //ファイル形式のチェック
+//     $info = pathinfo($imgPath);
+//     $public_id = $info["filename"];
+//     $mime_types = array("png"=>"image/png", "jpg"=>"image/jpeg", "pdf"=>"application/pdf", "gif"=>"image/gif", "bmp"=>"image/bmp");
+//     $extension = $info["extension"];
+//     $type = @$mime_types[$extension];
+//     //画像以外はcloudinaryにアップしない
+//     if($type === null){
+//         $stderr = fopen( 'php://stderr', 'w' );
+//         fwrite( $stderr, 'アップロードされたファイルが画像ではありません。file-type:'.$extension );
+//         return $metadata;
+//     }
 
-    //Cloudinaryへアップ
-    $cl_upload = new CloudinaryUploader();
-    $uploaded = $cl_upload->upload($imgPath, array(
-    ));
-    $public_id = $uploaded['public_id'];
+//     //Cloudinaryへアップ
+//     $cl_upload = new CloudinaryUploader();
+//     $uploaded = $cl_upload->upload($imgPath, array(
+//     ));
+//     $public_id = $uploaded['public_id'];
 
-    //DBへ保存
-    update_attached_file($postid, $uploaded['secure_url']);
-    $metadata['cloudinary'] = true; //cloudinaryからアップしたことを記録
+//     //DBへ保存
+//     update_attached_file($postid, $uploaded['secure_url']);
+//     $metadata['cloudinary'] = true; //cloudinaryからアップしたことを記録
 
-    return $metadata;
-}
-add_filter( "wp_generate_attachment_metadata" , "cldnry_wp_generate_attachment_metadata",10 ,2 );
+//     return $metadata;
+// }
+// add_filter( "wp_generate_attachment_metadata" , "cldnry_wp_generate_attachment_metadata",10 ,2 );
 
 ?>

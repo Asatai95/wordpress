@@ -359,6 +359,10 @@ aside{
     font-weight: 800;
 }
 
+.single_title.page {
+    width: 100%;
+}
+
 .single-post{
     width:70%;
     margin:auto;

@@ -6,14 +6,11 @@
         <link rel="shortcut icon" href="https://res.cloudinary.com/huu97stsb/image/upload/v1572486177/logo_part_5.png">
         <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <link rel="stylesheet" media="screen and (min-width: 897px)" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css">
-        <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="<?php echo get_template_directory_uri(); ?>/style_tb.css" type="text/css">
-        <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?php echo get_template_directory_uri(); ?>/style_sp.css" type="text/css">
 
-        <!-- <link rel="stylesheet" media="screen and (min-width: 897px)" href="https://pockeawa.herokuapp.com/wp-content/themes/dotinstall/style.css" type="text/css">
+        <link rel="stylesheet" media="screen and (min-width: 897px)" href="https://pockeawa.herokuapp.com/wp-content/themes/dotinstall/style.css" type="text/css">
         <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="https://pockeawa.herokuapp.com/wp-content/themes/dotinstall/style_tb.css" type="text/css">
         <link rel="stylesheet" media="screen and (max-width: 480px)" href="https://pockeawa.herokuapp.com/wp-content/themes/dotinstall/style_sp.css" type="text/css">
- -->
+
     </head>
     <body>
       <aside class="sidevar">

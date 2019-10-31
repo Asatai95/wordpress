@@ -28,11 +28,11 @@
                                     <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572508059/idyejb7wupwlfnnwi0l9.jpg" alt="">
                                     <div>
                                         <span>Kou</span>
-                                        <p>Apprentice Frontend Engineer / Podcaster / Blogger / Freelance</p>
+                                        <p>Apprentice Frontend Engineer / Podcaster / Blogger / Freelancer</p>
                                         <div class="something">
                                             <div class="something">
                                                 <p>
-                                                    沖縄生まれ沖縄育ちのフロントエンジニアです。アメリカと日本のハーフ、現在は大学４年次です。愛知に出稼ぎに行ったり、オーストラリアに一年滞在したり、たまにラジオでペチャクチャしております。ラジオでは主に沖縄のグルメや海外生活のことを仲間と共有していきますので興味があればぜひ気軽にコメントよろしくお願いします！
+                                                    沖縄生まれ沖縄育ちのフロントエンジニアです。アメリカと日本のハーフ、現在は大学４年次です。愛知に出稼ぎに行ったり、オーストラリアに一年滞在したり、たまにラジオでペチャクチャしております。ラジオでは主に沖縄のグルメや海外生活のことを仲間と共有していきますので興味があれば、ぜひ気軽にコメントよろしくお願いします！
                                                 </p>
                                             </div>
                                             <div class="sns_account">
@@ -55,7 +55,7 @@
                                     <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572453887/profile.png" alt="">
                                     <div>
                                         <span>Asuka</span>
-                                        <p>Travel Concierge / Podcaster / Blogger / Freelance</p>
+                                        <p>Travel Concierge / Podcaster / Blogger / Freelancer</p>
                                         <div class="something">
                                             <div class="something">
                                                 <p>
@@ -82,14 +82,11 @@
                                     <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572451661/si65kyly64ite4j6y0bj.jpg" alt="">
                                     <div>
                                         <span>Asatai</span>
-                                        <p>Application Engineer / Podcaster / Freelance</p>
+                                        <p>Application Engineer / Podcaster / Freelancer</p>
                                         <div class="something">
                                             <div class="something">
                                                 <p>
-                                                    はいさーい、あさたいです！
-                                                    人生を自由に放浪している、旅するエンジニアです。
-                                                    このラジオを通して、視聴者の皆さんと一緒にコミュニケーションできたら嬉しいです！
-                                                    一緒にゆんたくしよう！
+                                                    はいさーい、あさたいです！人生を自由に放浪している、旅するエンジニアです。このラジオを通して、視聴者の皆さんと一緒にコミュニケーションできたら嬉しいです！ゆたしく！
                                                 </p>
                                             </div>
                                             <div class="sns_account">

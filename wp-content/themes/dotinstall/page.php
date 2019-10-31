@@ -25,26 +25,26 @@
                             <h2>パーソナリティ紹介</h2>
                             <div class="box_info">
                                 <div class="profile">
-                                    <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572453887/profile.png" alt="">
+                                    <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572508059/idyejb7wupwlfnnwi0l9.jpg" alt="">
                                     <div>
                                         <span>Kou</span>
-                                        <p>Apprentice Frontend Engineer / Podcaster / Blogger</p>
+                                        <p>Apprentice Frontend Engineer / Podcaster / Blogger / Freelance</p>
                                         <div class="something">
                                             <div class="something">
-                                                <span class="something_title">なんでもいい</span>
-                                                <span class="item">何か</span>
-                                                <span class="item">何か</span>
+                                                <p>
+                                                    沖縄生まれ沖縄育ちのフロントエンジニアです。アメリカと日本のハーフ、現在は大学４年次です。愛知に出稼ぎに行ったり、オーストラリアに一年滞在したり、たまにラジオでペチャクチャしております。ラジオでは主に沖縄のグルメや海外生活のことを仲間と共有していきますので興味があればぜひ気軽にコメントよろしくお願いします！
+                                                </p>
                                             </div>
                                             <div class="sns_account">
-                                                <a href="#">
+                                                <a href="https://twitter.com/AwamoriKou">
                                                     Titter
                                                 </a>
                                                 /
-                                                <a href="#">
+                                                <a href="https://www.instagram.com/@koutamakin">
                                                     Instagram
                                                 </a>
                                                 /
-                                                <a href="#">
+                                                <a href="https://www.facebook.com/profile.php?id=100007218916422">
                                                     Facebook
                                                 </a>
                                             </div>
@@ -55,23 +55,23 @@
                                     <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572453887/profile.png" alt="">
                                     <div>
                                         <span>Asuka</span>
-                                        <p>tourism coordinator / Podcaster / Blogger</p>
+                                        <p>Travel Concierge / Podcaster / Blogger / Freelance</p>
                                         <div class="something">
                                             <div class="something">
-                                                <span class="something_title">なんでもいい</span>
-                                                <span class="item">何か</span>
-                                                <span class="item">何か</span>
+                                                <p>
+                                                    県産品娘、あーすーです！トラベルコンシェルジュとして、主に地元沖縄の案内やオススメを紹介しています！沖縄で開催されるイベントに参加したりしてるので、その事についてもお話していきます！よろしくお願いしまーす！
+                                                </p>
                                             </div>
                                             <div class="sns_account">
-                                                <a href="#">
+                                                <a href="https://twitter.com/a_su_awamori">
                                                     Titter
                                                 </a>
                                                 /
-                                                <a href="#">
+                                                <a href="https://www.instagram.com/asukamiyazato">
                                                     Instagram
                                                 </a>
                                                 /
-                                                <a href="#">
+                                                <a href="https://www.facebook.com/asukamiyazato">
                                                     Facebook
                                                 </a>
                                             </div>
@@ -82,23 +82,26 @@
                                     <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572451661/si65kyly64ite4j6y0bj.jpg" alt="">
                                     <div>
                                         <span>Asatai</span>
-                                        <p>Apprentice Engineer / Podcaster</p>
+                                        <p>Application Engineer / Podcaster / Freelance</p>
                                         <div class="something">
                                             <div class="something">
-                                                <span class="something_title">なんでもいい</span>
-                                                <span class="item">何か</span>
-                                                <span class="item">何か</span>
+                                                <p>
+                                                    はいさーい、あさたいです！
+                                                    人生を自由に放浪している、旅するエンジニアです。
+                                                    このラジオを通して、視聴者の皆さんと一緒にコミュニケーションできたら嬉しいです！
+                                                    一緒にゆんたくしよう！
+                                                </p>
                                             </div>
                                             <div class="sns_account">
-                                                <a href="#">
+                                                <a href="https://twitter.com/asatai_awamori">
                                                     Titter
                                                 </a>
                                                 /
-                                                <a href="#">
+                                                <a href="https://www.instagram.com/asatai_awamori">
                                                     Instagram
                                                 </a>
                                                 /
-                                                <a href="#">
+                                                <a href="https://www.facebook.com/asatai.oki">
                                                     Facebook
                                                 </a>
                                             </div>

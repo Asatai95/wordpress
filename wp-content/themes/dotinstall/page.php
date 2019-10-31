@@ -181,7 +181,12 @@
                 <div><ul>
                 <li>サポーター募集中！</li>
                 <li>サポーター募集中！</li>
-                <li class="support_form_link"><a href="#"><img src="/wp-content/uploads/2019/10/preparation.png" alt=""></a></li>
+                <li class="support_form_link">
+                    応援していただける方は
+                    <a href="https://polca.jp/users/pockeawa">
+                        こちらへ！
+                    </a>
+                </li>
                 </ul></div>
             </div>
         </div>

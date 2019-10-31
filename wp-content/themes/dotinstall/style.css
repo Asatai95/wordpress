@@ -353,6 +353,8 @@ aside{
 
 
 .single_title{
+    width: 80%;
+    margin: auto;
     font-size: 28px;
 }
 

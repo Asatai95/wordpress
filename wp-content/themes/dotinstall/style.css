@@ -690,6 +690,10 @@ figure iframe {
     margin-bottom: 80px;
 }
 
+#posts_page .single-post {
+    width: 80%;
+}
+
 .single_title.page ,
 .user_info h2 {
     font-size: 25px;

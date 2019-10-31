@@ -35,6 +35,8 @@ $(function(){
             $(this).find(".sp").show();
             $(this).find(".tb").hide();
             $(".contact_form_box.tb").hide();
+            $(".user_info .box_info").css('flex-direction', "column");
+            $(".user_info .box_info .profile").removeClass("tb");
         });
     } else if (w <= 770) {
         $('.device').each(function(){
@@ -43,6 +45,8 @@ $(function(){
             $(this).find(".tb").hide();
             $(".contact_form_box.sp").hide();
             $(".contact_form_box.tb").show();
+            $(".user_info .box_info").css('flex-direction', "column");
+            $(".user_info .box_info .profile").addClass("tb");
         });
     } else if (w <= 900 && w >= 770) {
         $('.device').each(function(){
@@ -50,6 +54,8 @@ $(function(){
             $(this).find(".tb").show();
             $(".contact_form_box.sp").hide();
             $(".contact_form_box.tb").show();
+            $(".user_info .box_info").css('flex-direction', "initial");
+            $(".user_info .box_info .profile").removeClass("tb");
         });
     } else if (w <= 1024 && w >= 1000) {
         $(".nav_header_menu").removeClass("sp");

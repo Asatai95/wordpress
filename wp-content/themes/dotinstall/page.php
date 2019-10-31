@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="profile">
-                                    <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572453887/profile.png" alt="">
+                                    <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572510717/hbb4mv5qure5acixcdpy.jpg" alt="">
                                     <div>
                                         <span>Asuka</span>
                                         <p>Travel Concierge / Podcaster / Blogger / Freelancer</p>

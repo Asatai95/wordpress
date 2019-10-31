@@ -37,7 +37,7 @@
                                             </div>
                                             <div class="sns_account">
                                                 <a href="https://twitter.com/AwamoriKou">
-                                                    Titter
+                                                    Twitter
                                                 </a>
                                                 /
                                                 <a href="https://www.instagram.com/@koutamakin">
@@ -64,7 +64,7 @@
                                             </div>
                                             <div class="sns_account">
                                                 <a href="https://twitter.com/a_su_awamori">
-                                                    Titter
+                                                    Twitter
                                                 </a>
                                                 /
                                                 <a href="https://www.instagram.com/asukamiyazato">
@@ -91,7 +91,7 @@
                                             </div>
                                             <div class="sns_account">
                                                 <a href="https://twitter.com/asatai_awamori">
-                                                    Titter
+                                                    Twitter
                                                 </a>
                                                 /
                                                 <a href="https://www.instagram.com/asatai_awamori">

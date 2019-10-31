@@ -776,3 +776,21 @@ figure iframe {
 .box_info .profile div .sns_account a:hover {
     opacity: .7;
 }
+
+.support_form_link a button {
+    width: 200px;
+    height: 60px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.support_form_link {
+    display: flex;
+    align-items: flex-start;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 10px auto;
+}

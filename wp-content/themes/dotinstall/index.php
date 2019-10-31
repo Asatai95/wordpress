@@ -76,7 +76,7 @@
 	    	<div><ul>
 		    <li>サポーター募集中！</li>
 		    <li>サポーター募集中！</li>
-		    <li class="support_form_link"><a href="#"><img src="/wp-content/uploads/2019/10/preparation.png" alt=""></a></li>
+		    <li class="support_form_link"><a href="#"><img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572486177/logo_part_5.png" alt=""></a></li>
 	        </ul></div>
 	    </div>
 	</div>

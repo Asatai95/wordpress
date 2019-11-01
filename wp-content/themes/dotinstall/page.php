@@ -148,11 +148,6 @@
                 </div>
             </div>
 
-            <div class="navigation single">
-                <div class="prev"><?php previous_post_link('%link', '&lt; PREVIOUS'); ?></div>
-                <div class="next"><?php next_post_link('%link', 'NEXT &gt;'); ?></div>
-            </div>
-
         </div><!-- /main -->
         <div class="tips">
             <div class="sns_box">

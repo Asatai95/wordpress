@@ -19,7 +19,7 @@
                         <div class="single-image"><?php the_post_thumbnail(array(0, 0)); ?></div>
 
                     </div>
-                    <div class="post-content">
+                    <div class="post-content single_main">
                         <?php the_content(); ?>
                     </div>
                 </div><!-- /post -->
@@ -41,7 +41,7 @@
                 <div class="share_box">
                     <h2>Share</h2>
                     <p>僕らのラジオをシェア、いいね！してもらえるとうれしいです！</p>
-                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&width=161&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId=2165553107045876" width="161" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&width=161&layout=button_count&action=like&size=large&show_faces=true&share=true&height=46&appId=2165553107045876" width="200" height="60" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                 </div>
                 <div class = "google_form">
                     <h2>Contact</h2>

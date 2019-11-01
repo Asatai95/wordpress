@@ -318,6 +318,10 @@ aside{
                 width:100%;
             }
 
+            .post-content.single_main ul {
+                padding: 0;
+            }
+
             .container.main .post-content {
                 width:70%;
                 float: none;

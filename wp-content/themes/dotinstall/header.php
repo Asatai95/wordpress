@@ -13,14 +13,15 @@
         <link rel="stylesheet" media="screen and (max-width: 480px)" href="https://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/style_sp.css" type="text/css">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151377550-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151346364-1"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'UA-151377550-1');
+          gtag('config', 'UA-151346364-1');
         </script>
+
 
     </head>
     <body>

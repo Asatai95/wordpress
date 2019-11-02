@@ -120,5 +120,5 @@ if ( !defined('ABSPATH') )
 require_once(ABSPATH . 'wp-settings.php');
 
 // define( "RELOCATE", true );
-// define('WP_HOME','https://pockeawa.herokuapp.com/');
-// define('WP_SITEURL','https://pockeawa.herokuapp.com/');
+// define('WP_HOME','http://awamori-in-the-pocket.herokuapp.com');
+// define('WP_SITEURL','http://awamori-in-the-pocket.herokuapp.com');

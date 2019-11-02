@@ -370,6 +370,10 @@ aside{
     margin:auto;
 }
 
+.post-content.single_main ul {
+    padding: 0;
+}
+
 .single-image{
     padding: 0px;
     margin: 31px 0px;

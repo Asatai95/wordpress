@@ -123,7 +123,7 @@
                 ?>
 
             </div><!-- /posts -->
-            <div class="main_information">
+            <div class="main_information page">
                 <div class="share_box">
                     <h2>Share</h2>
                     <p>僕らのラジオをシェア、いいね！してもらえるとうれしいです！</p>

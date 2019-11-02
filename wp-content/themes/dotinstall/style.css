@@ -844,3 +844,8 @@ figure iframe {
 .navbar-brand img:hover {
     transform: scale(1.1);
 }
+
+.main_information.page .share_box,
+.main_information.page .google_form {
+    width: 80%;
+}

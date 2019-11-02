@@ -25,7 +25,7 @@
                             <h2>パーソナリティ紹介</h2>
                             <div class="box_info">
                                 <div class="profile">
-                                    <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572508059/idyejb7wupwlfnnwi0l9.jpg" alt="">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704897/sbyavoe1ulg7vbjbkvkr.jpg" alt="">
                                     <div>
                                         <span>Kou</span>
                                         <p>Apprentice Frontend Engineer / Podcaster / Blogger / Freelancer</p>
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="profile">
-                                    <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572510717/hbb4mv5qure5acixcdpy.jpg" alt="">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704906/iob6zfw5ipv0sffihf9s.jpg" alt="">
                                     <div>
                                         <span>Asuka</span>
                                         <p>Travel Concierge / Podcaster / Blogger / Freelancer</p>
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                                 <div class="profile">
-                                    <img src="https://res.cloudinary.com/huu97stsb/image/upload/v1572451661/si65kyly64ite4j6y0bj.jpg" alt="">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704968/acvgh4hcnmccxobtvrmt.jpg" alt="">
                                     <div>
                                         <span>Asatai</span>
                                         <p>Application Engineer / Podcaster / Freelancer</p>

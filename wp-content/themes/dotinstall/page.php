@@ -40,7 +40,7 @@
                                                     Twitter
                                                 </a>
                                                 /
-                                                <a href="https://www.instagram.com/@koutamakin">
+                                                <a href="https://www.instagram.com/koutamakin">
                                                     Instagram
                                                 </a>
                                                 /

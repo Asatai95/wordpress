@@ -119,6 +119,6 @@ if ( !defined('ABSPATH') )
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
 
-
+define( "RELOCATE", true );
 define('WP_HOME','https://pockeawa.herokuapp.com/');
 define('WP_SITEURL','https://pockeawa.herokuapp.com/');

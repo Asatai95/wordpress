@@ -803,3 +803,8 @@ figure iframe {
 .main_information.single .google_form {
     width : 95%;
 }
+
+.main_information.page .share_box,
+.main_information.page .google_form {
+    width: 80%;
+}

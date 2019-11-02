@@ -41,10 +41,13 @@
           </div>
           <div class="cast">
             <div>
-              <h3>聴けるプラットフォーム</h3>
+              <h3>PODCAST</h3>
             </div>
             <div>
               <ul>
+                <li>
+                  <span>聴けるプラットフォーム</span>
+                </li>
                 <li>
                   <a href="https://anchor.fm/pockeawa">
                     Anchor

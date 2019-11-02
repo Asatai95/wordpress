@@ -322,6 +322,10 @@ aside{
                 padding: 0;
             }
 
+            .post-content.single_main ul li {
+                font-size: 20px;
+            }
+
             .container.main .post-content {
                 width:70%;
                 float: none;

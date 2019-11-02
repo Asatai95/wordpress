@@ -374,6 +374,10 @@ aside{
     padding: 0;
 }
 
+.post-content.single_main ul li {
+    font-size: 18px;
+}
+
 .single-image{
     padding: 0px;
     margin: 31px 0px;

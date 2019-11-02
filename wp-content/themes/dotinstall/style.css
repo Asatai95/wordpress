@@ -834,3 +834,7 @@ figure iframe {
 .cast div ul li a:hover {
     color: rgba(0, 117, 255)!important;
 }
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}

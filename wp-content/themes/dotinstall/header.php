@@ -39,8 +39,36 @@
             <span>ABOUT</span>
             <a class="nav-item nav-link" href="https://pockeawa.herokuapp.com/about/">「ポケットに泡盛」について</a>
           </div>
-          <!-- <a class="nav-item nav-link" href="#"></a>
-          <a class="nav-item nav-link" href="#"></a> -->
+          <div class="cast">
+            <div>
+              <h3>聴けるプラットフォーム</h3>
+            </div>
+            <div>
+              <ul>
+                <li>
+                  <a href="https://anchor.fm/pockeawa">
+                    Anchor
+                  </a>
+                </li>
+                <li>
+                  <a href="https://podcasts.apple.com/us/podcast/awamori-in-the-pocket/id1485462376?uo=4">
+                    Apple Podcast
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy9mYTc2NmVjL3BvZGNhc3QvcnNz">
+                    Google Podcast
+                  </a>
+                </li>
+                <li>
+                  <a href="https://open.spotify.com/show/74ChfX0zYfFfJMcXzA01Yx">
+                    Spotify
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
         </div>
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

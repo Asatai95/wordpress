@@ -46,9 +46,6 @@
             <div>
               <ul>
                 <li>
-                  <span>聴けるプラットフォーム</span>
-                </li>
-                <li>
                   <a href="https://anchor.fm/pockeawa">
                     Anchor
                   </a>

@@ -810,3 +810,27 @@ figure iframe {
     font-size: 18px;
     margin: 10px auto;
 }
+
+.cast {
+    text-align: center;
+}
+
+.cast h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.cast div ul {
+    padding: 0;
+}
+
+.cast div ul li a {
+    color: rgba(0, 117, 255, 0.5)!important;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+}
+
+.cast div ul li a:hover {
+    transform: scale(1.1);
+}

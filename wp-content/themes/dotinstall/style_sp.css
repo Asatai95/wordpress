@@ -804,7 +804,11 @@ figure iframe {
     width : 95%;
 }
 
-.main_information.page .share_box,
-.main_information.page .google_form {
+.main_information.page .share_box {
     width: 80%;
+}
+
+.main_information.page {
+    margin: 30px auto;
+    margin-bottom: 35px;
 }

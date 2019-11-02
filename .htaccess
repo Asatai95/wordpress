@@ -1,4 +1,9 @@
 
 # BEGIN WordPress
 
+RewriteEngine On
+# Force HTTPS
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R,L]
+
 # END WordPress

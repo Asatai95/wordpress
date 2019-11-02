@@ -118,7 +118,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-// define( "RELOCATE", true );
-// define('WP_HOME','http://awamori-in-the-pocket.herokuapp.com');
-// define('WP_SITEURL','http://awamori-in-the-pocket.herokuapp.com');

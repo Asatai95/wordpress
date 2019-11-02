@@ -678,6 +678,12 @@ figure iframe {
     margin: auto;
 }
 
+.main_information.single .share_box,
+.main_information.single .google_form {
+    width: 70%;
+    margin: auto;
+}
+
 .share_box h2,
 .google_form h2 {
     font-size: 1.6rem;

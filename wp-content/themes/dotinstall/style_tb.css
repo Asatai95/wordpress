@@ -687,6 +687,11 @@ figure iframe {
     width : 100%;
 }
 
+.main_information.single .share_box,
+.main_information.single .google_form {
+    width : 95%;
+}
+
 .google_form .contact_form_box {
     margin: auto;
     text-align: center;

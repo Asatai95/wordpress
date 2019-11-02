@@ -832,5 +832,5 @@ figure iframe {
 }
 
 .cast div ul li a:hover {
-    transform: scale(1.1);
+    color: rgba(0, 117, 255)!important;
 }

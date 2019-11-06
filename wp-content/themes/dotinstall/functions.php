@@ -22,7 +22,6 @@ if(!function_exists('_log')){
 }
 
 
-
 function ajax_get_new_posts() {
   $mes = $_POST['mes'];
   $returnObj = array();

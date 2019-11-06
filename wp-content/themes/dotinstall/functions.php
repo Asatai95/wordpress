@@ -1,25 +1,72 @@
 <?php
 
 // logを確認するため用のコード
-// if(!function_exists('_log')){
+if(!function_exists('_log')){
 
-//   function _log($message) {
-//     if (WP_DEBUG === true) {
+  function _log($message) {
+    if (WP_DEBUG === true) {
 
-//       if (is_array($message) || is_object($message)) {
+      if (is_array($message) || is_object($message)) {
 
-//         error_log(print_r($message, true));
+        error_log(print_r($message, true));
 
-//       } else {
+      } else {
 
-//         error_log($message);
+        error_log($message);
 
-//       }
+      }
 
-//     }
+    }
 
-//   }
-// }
+  }
+}
+
+function add_my_ajaxurl() {
+  ?>
+      <script>
+          var ajaxurl = '<?php echo admin_url( 'admin-ajax.php'); ?>';
+      </script>
+  <?php
+}
+add_action( 'wp_footer', 'add_my_ajaxurl', 1 );
+
+function ajax_get_new_posts() {
+  $mes = $_POST['mes'];
+  $returnObj = array();
+
+  $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => 4,
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'post_status' => 'publish',
+      'category_name' => $mes,
+  );
+
+  $posts  = new WP_Query( $args );
+  if ($posts->have_posts()) {
+      while($posts->have_posts()) {
+          $posts->the_post();
+          $returnObj[] = array(
+              'post_title' => get_the_title(),
+              'permalink' => get_permalink(),
+              'thumbnail' => get_the_post_thumbnail_url(),
+              'excerpt' => get_the_excerpt(),
+          );
+      }
+  }
+  $cnt = count($returnObj);
+  if ($cnt > 4) {
+    $return = array_merge($returnObj,array('flag'=>'True'));
+  } else {
+    $return = array_merge($returnObj,array('flag'=>'False'));
+  }
+  wp_reset_postdata();
+
+  echo json_encode( $return );
+  die();
+}
+add_action( 'wp_ajax_ajax_get_new_posts', 'ajax_get_new_posts' );
 
 
 add_theme_support('menus');

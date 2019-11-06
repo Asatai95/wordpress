@@ -1,4 +1,247 @@
 $(function(){
+    $('#wave').wavify({
+        height: 20,
+        bones: 3,
+        amplitude: 40,
+        color: "#51a5ff",
+        speed: .25
+    });
+
+    $(".cancel .cancel_back").each(function(){
+        $(this).on("mouseover mouseout click", function(e){
+            if(e.type == "mouseover") {
+                $(this).find("span").css("transform", "rotate(45deg) scale(1.1)");
+                $(this).find("span:before").css("transform", "rotate(45deg) scale(1.1)");
+            }
+            if(e.type == "mouseout") {
+                $(this).find("span").css("transform", "rotate(45deg) scale(1.0)");
+                $(this).find("span:before").css("transform", "rotate(45deg) scale(1.0)");
+            }
+            if(e.type == "click") {
+                if ($(this).parents(".name_text.view").length){
+                    $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
+                }
+                if ($(".container.main .post .main_top_map .map_pin .pins .name_text.disactive").length){
+                    $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("disactive");
+                } else {
+                    $(".container.main .post .main_top_map .map_pin .pins .name_text").addClass("disactive");
+                }
+
+                $(this).parents(".name_text").removeClass("disactive");
+                if ($(".container.main .post .main_top_map.active").length){
+                    $(".container.main .post .main_top_map").addClass("map");
+                } else {
+                    $(".container.main .post .main_top_map").addClass("active");
+                    $(".container.main .post .main_top_map.active").css("transform", "scale(.5)");
+                }
+                if ($(".container.main .post .main_top_map.active.map").length){
+                    $(".radio_box").each(function(){
+                        $(this).css("transform", "scale(.5)");
+                        $(this).animate(
+                            {"right": -600}, 1000, function(){
+                                $(this).fadeOut(800, function(){
+
+                                    $(this).find(".contents").each(function(){
+                                        $(this).find("div").remove();
+                                    });
+                                    // $(".container.main .post .main_top_map.active.map").animate(
+                                    //     {}, 300);
+                                    // $(".container.main .post .main_top_map.active.map").animate(
+                                    //     {}, 800
+                                    // );
+                                    $(".container.main .post .main_top_map.active.map").animate(
+                                        {
+                                        "top": 0,
+                                        "right": 0,
+                                        "bottom": 0,
+                                        "left": 0}, 800 , function(){
+                                            $(".container.main .post .main_top_map").delay(1000).queue(function(){
+                                                $(this).css("transform", "scale(1.0)");
+                                            });
+                                        }
+                                    );
+                                    $(this).css("right", "0px");
+                                    if ($(".container.main .post .main_top_map.active").length){
+                                        $(".container.main .post .main_top_map").removeClass("map");
+                                        $(".container.main .post .main_top_map").removeClass("active");
+
+                                    } else {
+                                        $(".container.main .post .main_top_map").addClass("active");
+                                    }
+
+                                });
+                            }
+                        );
+                    });
+                } else {
+                    $(document).ready(function(){
+                        $(".container.main .post .main_top_map.active").stop().animate(
+                            {
+                                'top': '200px',
+                                'right': '700px',
+                                'left': '55px',
+                                'bottom': '0px'
+                            }, 800);
+                    });
+
+                }
+            }
+        });
+    });
+
+    $(".container.main .post .main_top_map .map_pin .pins a img").hide();
+
+    $(".pins.hae").each(function(){
+        var array = [];
+        $(this).find(".name_text span").each(function(index){
+            array.push(index);
+        });
+        if (array.length < 2) {
+            $(this).find(".name_text").addClass("active");
+        } else {
+            $(this).find(".name_text").removeClass("active");
+        }
+    });
+    $(".pins.nakagusuku").each(function(){
+        var array = [];
+        $(this).find(".name_text span").each(function(index){
+            array.push(index)
+        });
+        if (array.length == 1) {
+            $(this).find(".name_text").addClass("active");
+        } else if (array.length == 2) {
+            $(this).find(".name_text").removeClass("active");
+            $(this).find(".name_text").addClass("other_active");
+        } else if (array.length == 3) {
+            $(this).find(".name_text").removeClass("active");
+            $(this).find(".name_text").removeClass("other_active");
+        }
+    });
+
+    $(".map_pin .pins").each(function(){
+        $(this).find(".name_text span").on("mouseover mouseout click", function(e){
+            if(e.type == "mouseover") {
+                if ($(this).text() == "中城村") {
+                    $(this).parents(".map_pin").find(".nakagusuku a img").fadeIn(function(){
+                        $(this).parents(".map_pin").find(".nakagusuku a img").css("transform", "translate(-3px,-3px) scale(.98)");
+                    });
+                } else if ($(this).text() == "西原町") {
+                    $(this).parents(".map_pin").find(".nishihara a img").show();
+                    $(this).parents(".map_pin").find(".nishihara a img").fadeIn(function(){
+                        $(this).parents(".map_pin").find(".nishihara a img").css("transform", "translate(-3px,-3px) scale(.98)");
+                    });
+                } else if ($(this).text() == "与那原町") {
+                    $(this).parents(".map_pin").find(".yonabaru a img").show();
+                    $(this).parents(".map_pin").find(".yonabaru a img").fadeIn(function(){
+                        $(this).parents(".map_pin").find(".yonabaru a img").css("transform", "translate(-3px,-3px) scale(.98)");
+                    });
+                } else if ($(this).text() == "南風原町") {
+                    $(this).parents(".map_pin").find(".hae a img").show();
+                    $(this).parents(".map_pin").find(".hae a img").fadeIn(function(){
+                        $(this).parents(".map_pin").find(".hae a img").css("transform", "translate(-3px,-3px) scale(.98)");
+                    });
+                } else if ($(this).text() == "豊見城市") {
+                    $(this).parents(".map_pin").find(".tomishiro a img").show();
+                    $(this).parents(".map_pin").find(".tomishiro a img").fadeIn(function(){
+                        $(this).parents(".map_pin").find(".tomishiro a img").css("transform", "translate(-3px,-3px) scale(.98)");
+                    });
+                } else {
+                    $(this).parents(".pins").find("a img").show();
+                    $(this).parents(".pins").find("a img").fadeIn(function(){
+                        $(this).css("transform", "translate(-3px,-3px) scale(.98)");
+                    });
+                }
+
+                $(this).css("border-bottom", "3px solid #222");
+                $(this).parents(".name_text").find("img").hide();
+                if ($(this).parents(".main_top_map.active").length){} else{
+                    if ($(this).parents(".name_text.view").length){} else {
+                        $(".container.main .post .main_top_map .map_pin .pins .name_text").addClass("view");
+                    }
+                }
+            }
+            if(e.type == "mouseout") {
+                $(".map_pin .pins a img").hide();
+                $(".map_pin .pins a img").css("transform", "none");
+                $(this).css("border-bottom", "none");
+                $(this).parents(".name_text").find("img").show();
+            }
+
+            if(e.type == "click") {
+
+                if ($(this).parents(".name_text.view").length){
+                    $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
+                }
+                if ($(".container.main .post .main_top_map .map_pin .pins .name_text.disactive").length){
+                    $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("disactive");
+                } else {
+                    $(".container.main .post .main_top_map .map_pin .pins .name_text").addClass("disactive");
+                }
+
+                $(this).parents(".name_text").removeClass("disactive");
+                if ($(".container.main .post .main_top_map.active").length){
+                    $(".container.main .post .main_top_map").addClass("map");
+                } else {
+                    $(".container.main .post .main_top_map").addClass("active");
+                    $(".container.main .post .main_top_map.active").css("transform", "scale(.5)");
+
+                }
+
+                if ($(".container.main .post .main_top_map.active.map").length){
+                    $(".radio_box").each(function(){
+                        $(this).css("transform", "scale(.5)");
+                        $(this).animate(
+                            {"right": -600}, 1000, function(){
+                                $(this).fadeOut(800, function(){
+
+                                    $(this).find(".contents").each(function(){
+                                        $(this).find("div").remove();
+                                    });
+                                    // $(".container.main .post .main_top_map.active.map").animate(
+                                    //     {}, 300);
+                                    // $(".container.main .post .main_top_map.active.map").animate(
+                                    //     {}, 800
+                                    // );
+                                    $(".container.main .post .main_top_map.active.map").animate(
+                                        {
+                                        "top": 0,
+                                        "right": 0,
+                                        "bottom": 0,
+                                        "left": 0}, 800 , function(){
+                                            $(".container.main .post .main_top_map").delay(1000).queue(function(){
+                                                $(this).css("transform", "scale(1.0)");
+                                            });
+                                        }
+                                    );
+                                    $(this).css("right", "0px");
+                                    if ($(".container.main .post .main_top_map.active").length){
+                                        $(".container.main .post .main_top_map").removeClass("map");
+                                        $(".container.main .post .main_top_map").removeClass("active");
+
+                                    } else {
+                                        $(".container.main .post .main_top_map").addClass("active");
+                                    }
+
+                                });
+                            }
+                        );
+                    });
+                } else {
+                    $(document).ready(function(){
+                        $(".container.main .post .main_top_map.active").stop().animate(
+                            {
+                                'top': '200px',
+                                'right': '700px',
+                                'left': '55px',
+                                'bottom': '0px'
+                            }, 800);
+
+                    });
+                }
+            }
+        });
+    });
+
     $(".navigation.container.footer_nav div a").each(function(){
         $(this).on("mouseover mouseout", function(e){
             if (e.type == "mouseover") {
@@ -95,7 +338,7 @@ $(function(){
 
                         }
                     } else {
-                        if ($(".nav_header_menu").css("bottom") == "-120px"){
+                        if ($(".nav_header_menu").css("bottom") == "-107px"){
                             $(".nav_header_menu").fadeOut(400, function(){
                                 $("body").css("position", "relative");
                             }).animate({
@@ -108,7 +351,7 @@ $(function(){
                             $(".nav_header_menu").fadeIn(400, function(){
                                 $("body").css("position", "fixed");
                             }).animate({
-                                'bottom': '-120px',
+                                'bottom': '-107px',
                             },{
                                 duration: 500,
                                 queue: false
@@ -176,3 +419,5 @@ $(function(){
         }
     });
 });
+
+

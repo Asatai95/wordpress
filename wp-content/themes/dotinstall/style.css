@@ -349,9 +349,9 @@ aside{
         z-index:10;
     }
 
-    .container.main .post .main_top_map .map_pin .pins .name_text img {
+    /* .container.main .post .main_top_map .map_pin .pins .name_text img {
         z-index: -1;
-    }
+    } */
 
     /* .container.main .post .main_top_map .map_pin .pins a img {
         display: none;

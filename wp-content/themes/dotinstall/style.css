@@ -1642,6 +1642,7 @@ aside{
     height: 100%;
     display: none;
     background: rgb(255,255,255);
+    z-index: 50;
 }
 
 .nav_header_menu .navbar-nav {

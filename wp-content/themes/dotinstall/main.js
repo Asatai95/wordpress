@@ -338,7 +338,7 @@ $(function(){
 
                         }
                     } else {
-                        if ($(".nav_header_menu").css("bottom") == "-107px"){
+                        if ($(".nav_header_menu").css("bottom") == "-96px"){
                             $(".nav_header_menu").fadeOut(400, function(){
                                 $("body").css("position", "relative");
                             }).animate({
@@ -351,7 +351,7 @@ $(function(){
                             $(".nav_header_menu").fadeIn(400, function(){
                                 $("body").css("position", "fixed");
                             }).animate({
-                                'bottom': '-107px',
+                                'bottom': '-96px',
                             },{
                                 duration: 500,
                                 queue: false

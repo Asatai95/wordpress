@@ -44,13 +44,11 @@
                       success: function( response ){
                         var jsonData = JSON.parse( response );
                         console.log(jsonData)
-                        $.each(jsonData, function(i, value) {
-                          if (value == "True") {
-                            $(".more_link a").show();
-                          } else if (value == "False") {
-                            $(".more_link a").hide();
-                          }
-                        });
+                        if (jsonData[4] == "True") {
+                          $(".more_link a").show();
+                        } else if (jsonData[4] == "False") {
+                          $(".more_link a").hide();
+                        }
                         if (jsonData.length < 3) {
                           $.each(jsonData, function(i, value) {
                             if (value == "False"){} else {

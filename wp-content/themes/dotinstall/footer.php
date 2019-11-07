@@ -44,12 +44,12 @@
                       success: function( response ){
                         var jsonData = JSON.parse( response );
                         console.log(jsonData)
-                        console.log("jsonData[4]")
-                        console.log(jsonData[4])
+                        console.log("jsonData[flag]")
+                        console.log(jsonData["flag"])
                         if (jsonData.length > 3){
-                          if (jsonData[4] == "True") {
+                          if (jsonData["flag"] == "True") {
                             $(".more_link a").show();
-                          } else if (jsonData[4] == "False") {
+                          } else if (jsonData["flag"] == "False") {
                             $(".more_link a").hide();
                           }
                         }

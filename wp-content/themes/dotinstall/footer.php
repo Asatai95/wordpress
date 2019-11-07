@@ -44,10 +44,14 @@
                       success: function( response ){
                         var jsonData = JSON.parse( response );
                         console.log(jsonData)
-                        if (jsonData[4] == "True") {
-                          $(".more_link a").show();
-                        } else if (jsonData[4] == "False") {
-                          $(".more_link a").hide();
+                        console.log("jsonData[4]")
+                        console.log(jsonData[4])
+                        if (jsonData.length > 3){
+                          if (jsonData[4] == "True") {
+                            $(".more_link a").show();
+                          } else if (jsonData[4] == "False") {
+                            $(".more_link a").hide();
+                          }
                         }
                         if (jsonData.length < 3) {
                           $.each(jsonData, function(i, value) {

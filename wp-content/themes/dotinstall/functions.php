@@ -48,6 +48,8 @@ function ajax_get_new_posts() {
       }
   }
   $cnt = count($returnObj);
+  _log("cnt");
+  _log($cnt);
   if ($cnt > 4) {
     $return = array_merge($returnObj,array('flag'=>'True'));
   } else {

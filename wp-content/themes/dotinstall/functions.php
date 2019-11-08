@@ -57,14 +57,40 @@ function ajax_get_new_posts() {
           );
       }
   }
-  $cnt = count($returnObj);
+
+  $tmp_args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 5,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'post_status' => 'publish',
+    'category_name' => $mes,
+  );
+  $tmpreturnObj = array();
+  $tmpposts  = new WP_Query( $tmp_args );
+  if ($tmpposts->have_posts()) {
+      while($tmpposts->have_posts()) {
+          $tmpposts->the_post();
+          $tmpreturnObj[] = array(
+              'post_title' => get_the_title(),
+              'permalink' => get_permalink(),
+              'thumbnail' => get_the_post_thumbnail_url(),
+              'excerpt' => get_the_excerpt(),
+          );
+      }
+  }
+
+  _log("tmpreturnObj");
+  _log($tmpreturnObj);
+  $cnt = count($tmpreturnObj);
   _log("cnt");
   _log($cnt);
   if ($cnt > 4) {
-    $return = array_merge($returnObj,array('flag'=>'True'));
+    $return = array_merge($returnObj,array('flag'=>true));
   } else {
-    $return = array_merge($returnObj,array('flag'=>'False'));
+    $return = array_merge($returnObj,array('flag'=>false));
   }
+  _log($return);
   wp_reset_postdata();
 
   echo json_encode( $return );

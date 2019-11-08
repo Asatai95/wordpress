@@ -21,9 +21,9 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.1.0/jquery.sidebar.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
       <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
-      <script>
+      <!-- <script>
         var ajaxurl = 'https://awamori-in-the-pocket.herokuapp.com/wp-admin/admin-ajax.php';
-      </script>
+      </script> -->
       <script>
         $(function(){
 
@@ -43,19 +43,17 @@
                       },
                       success: function( response ){
                         var jsonData = JSON.parse( response );
-                        console.log(jsonData)
-                        console.log("jsonData[flag]")
-                        console.log(jsonData["flag"])
-                        if (jsonData.length > 3){
-                          if (jsonData["flag"] == "True") {
+                        var count = Object.keys(jsonData).length;
+                        if (count > 3){
+                          if (jsonData["flag"] == true) {
                             $(".more_link a").show();
-                          } else if (jsonData["flag"] == "False") {
+                          } else if (jsonData["flag"] == false) {
                             $(".more_link a").hide();
                           }
                         }
-                        if (jsonData.length < 3) {
+                        if (count < 3) {
                           $.each(jsonData, function(i, value) {
-                            if (value == "False"){} else {
+                            if (value == jsonData["flag"]){} else {
                               $(".radio_box .contents").each(function(){
                                 $(this).append(
                                   '<div class="contents_box">\
@@ -76,7 +74,7 @@
                           });
                         } else {
                           $.each(jsonData, function(i, value) {
-                            if (value == "False"){} else {
+                            if (value == jsonData["flag"]){} else {
                               if (i < 2) {
                                 $(".radio_box .contents").each(function(){
                                   $(this).prepend(

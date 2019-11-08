@@ -2052,6 +2052,7 @@ figure iframe {
 .radio_box .more_link div {
     width: 100%;
     height: 45px;
+    padding: 0 20px;
 }
 
 .radio_box .more_link a {

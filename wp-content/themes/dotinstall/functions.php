@@ -70,7 +70,8 @@ function ajax_get_new_posts() {
   echo json_encode( $return );
   die();
 }
-add_action( 'wp_ajax_ajax_get_new_posts', 'ajax_get_new_posts' );
+add_action( 'wp_ajax_ajax_get_new_posts', 'update_custom_field' );
+add_action('wp_ajax_nopriv_ajax_get_new_posts', 'update_custom_field' );
 
 
 add_theme_support('menus');

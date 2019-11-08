@@ -21,9 +21,10 @@ if(!function_exists('_log')){
   }
 }
 
-
 function ajax_get_new_posts() {
   $mes = $_POST['mes'];
+  _log("mes");
+  _log($mes);
   $returnObj = array();
 
   $args = array(

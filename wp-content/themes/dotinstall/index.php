@@ -41,6 +41,7 @@
                         <?php elseif ($value == "大宜味村"):?>
                             <div class="pins oogimi">
                                 <a href="#">
+
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836540/oogimi.png" alt="">
                                 </a>
                                 <div class="name_text view">

@@ -121,6 +121,7 @@ $(function(){
     $(".map_pin .pins").each(function(){
         $(this).find(".name_text span").on("mouseover mouseout click", function(e){
             if(e.type == "mouseover") {
+
                 if ($(this).text() == "中城村") {
                     $(this).parents(".map_pin").find(".nakagusuku a img").fadeIn(function(){
                         $(this).parents(".map_pin").find(".nakagusuku a img").css("transform", "translate(-3px,-3px) scale(.98)");
@@ -150,6 +151,9 @@ $(function(){
                     $(this).parents(".pins").find("a img").fadeIn(function(){
                         $(this).css("transform", "translate(-3px,-3px) scale(.98)");
                     });
+                    $(this).parents(".pins").find("a").prepend(
+                        '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573226334/pin_icon.png" alt="" class="pin_icon">'
+                    );
                 }
 
                 $(this).css("border-bottom", "3px solid #222");
@@ -165,6 +169,7 @@ $(function(){
                 $(".map_pin .pins a img").css("transform", "none");
                 $(this).css("border-bottom", "none");
                 $(this).parents(".name_text").find("img").show();
+                $(this).parents(".pins").find("a .pin_icon").remove();
             }
 
             if(e.type == "click") {

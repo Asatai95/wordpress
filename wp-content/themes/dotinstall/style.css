@@ -8,6 +8,7 @@ button:focus {
 }
 
 a {
+    position: relative;
     text-decoration: none!important;
 }
 
@@ -2158,3 +2159,15 @@ figure iframe {
     margin-top: -2px;
     background: #000;
   }
+
+  img.pin_icon {
+    width: 25px!important;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 25px;
+    margin: auto;
+    z-index: 30;
+}

@@ -20,15 +20,24 @@ $(function(){
             if(e.type == "click") {
                 if($(".container.main .post .main_top_map .map_pin.active").length){
                 } else {
-                    console.log("test");
                     $(".container.main .post .main_top_map .map_pin").addClass("active");
-
                 }
 
-                if ($(this).attr("class") == "text_color"){
-                    $(this).removeClass("text_color");
-                } else {
-                    $(this).addClass("text_color");
+                try {
+                    var list = $(this).attr("class").split(" ");
+                    console.log(list)
+                    if ($.inArray("text_color" ,list) > -1){
+                        $(this).removeClass("text_color");
+                    } else {
+                        $(this).addClass("text_color");
+                    }
+                } catch {
+                    var list = $(this).attr("class");
+                    if (list == "text_color"){
+                        $(this).removeClass("text_color");
+                    } else {
+                        $(this).addClass("text_color");
+                    }
                 }
 
                 if ($(this).parents(".name_text.view").length){
@@ -49,20 +58,37 @@ $(function(){
 
                 }
 
-                if ($(this).parents('.pins').find("a img.pin_icon_active").length){
-                    $(this).parents(".pins").find("a img.pin_icon_active").remove();
+                if ($(this).text() == "与那原町"){
+                    if ($(this).parents(".map_pin").find(".pins.yonabaru a img.pin_icon_active").length){
+                        $(this).parents(".map_pin").find(".pins.yonabaru a img.pin_icon_active").remove();
 
-                    $(this).parents(".pins").find("a img").each(function(){
-                        $(this).removeClass("active");
-                    });
+                        $(this).parents(".map_pin").find(".pins.yonabaru a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".map_pin").find(".pins.yonabaru a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+                        $(this).parents(".map_pin").find(".pins.yonabaru a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
                 } else {
-                    $(this).parents(".pins").find("a").prepend(
-                        '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
-                    );
+                    if ($(this).parents('.pins').find("a img.pin_icon_active").length){
+                        $(this).parents(".pins").find("a img.pin_icon_active").remove();
 
-                    $(this).parents(".pins").find("a img").each(function(){
-                        $(this).addClass("active");
-                    });
+                        $(this).parents(".pins").find("a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".pins").find("a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+
+                        $(this).parents(".pins").find("a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
                 }
 
                 if ($(".container.main .post .main_top_map.active.map").length){
@@ -111,11 +137,10 @@ $(function(){
                         );
                     });
                 } else {
-                    $(".container.main .post .main_top_map .map_pin").toggleClass("map_view");
-                    // setTimeout(function(){
-                    //     $(".container.main .post .main_top_map .map_pin").removeClass("map_view");
-                    // },2000);
 
+                    $(document).ready(function(){
+
+                        $(".container.main .post .main_top_map .map_pin.active").addClass("map_view");
                         $(".container.main .post .main_top_map.active").stop().animate(
                             {
                                 'top': '200px',
@@ -123,13 +148,18 @@ $(function(){
                                 'left': '55px',
                                 'bottom': '0px'
                             }, 800, function(){
-                                $(".container.main .post .main_top_map .map_pin").delay(1000).queue(function(){
 
+                                $(".container.main .post .main_top_map .map_pin").delay(1000).queue(function(){
                                     $(this).css("width","410px");
                                     $(this).css("height","562px");
                                 });
+                                setTimeout(function(){
+                                    $(".container.main .post .main_top_map .map_pin.active").removeClass("map_view");
+                                },1500);
+
                             });
 
+                    });
                 }
             }
         });

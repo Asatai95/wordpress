@@ -18,6 +18,19 @@ $(function(){
                 $(this).find("span:before").css("transform", "rotate(45deg) scale(1.0)");
             }
             if(e.type == "click") {
+                if($(".container.main .post .main_top_map .map_pin.active").length){
+                } else {
+                    console.log("test");
+                    $(".container.main .post .main_top_map .map_pin").addClass("active");
+
+                }
+
+                if ($(this).attr("class") == "text_color"){
+                    $(this).removeClass("text_color");
+                } else {
+                    $(this).addClass("text_color");
+                }
+
                 if ($(this).parents(".name_text.view").length){
                     $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
                 }
@@ -33,8 +46,29 @@ $(function(){
                 } else {
                     $(".container.main .post .main_top_map").addClass("active");
                     $(".container.main .post .main_top_map.active").css("transform", "scale(.5)");
+
                 }
+
+                if ($(this).parents('.pins').find("a img.pin_icon_active").length){
+                    $(this).parents(".pins").find("a img.pin_icon_active").remove();
+
+                    $(this).parents(".pins").find("a img").each(function(){
+                        $(this).removeClass("active");
+                    });
+                } else {
+                    $(this).parents(".pins").find("a").prepend(
+                        '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                    );
+
+                    $(this).parents(".pins").find("a img").each(function(){
+                        $(this).addClass("active");
+                    });
+                }
+
                 if ($(".container.main .post .main_top_map.active.map").length){
+                    $(".container.main .post .main_top_map .map_pin.active").removeClass("map_view");
+                    $(".container.main .post .main_top_map .map_pin").css("width", "auto");
+                    $(".container.main .post .main_top_map .map_pin").css("height", "auto");
                     $(".radio_box").each(function(){
                         $(this).css("transform", "scale(.5)");
                         $(this).animate(
@@ -49,6 +83,7 @@ $(function(){
                                     // $(".container.main .post .main_top_map.active.map").animate(
                                     //     {}, 800
                                     // );
+                                    $(".container.main .post .main_top_map .map_pin").css("padding-bottom", "0px");
                                     $(".container.main .post .main_top_map.active.map").animate(
                                         {
                                         "top": 0,
@@ -57,6 +92,8 @@ $(function(){
                                         "left": 0}, 800 , function(){
                                             $(".container.main .post .main_top_map").delay(1000).queue(function(){
                                                 $(this).css("transform", "scale(1.0)");
+                                                $(this).find(".map_pin").css("width", "410px");
+                                                $(this).find(".map_pin").css("height", "562px");
                                             });
                                         }
                                     );
@@ -74,15 +111,24 @@ $(function(){
                         );
                     });
                 } else {
-                    $(document).ready(function(){
+                    $(".container.main .post .main_top_map .map_pin").toggleClass("map_view");
+                    // setTimeout(function(){
+                    //     $(".container.main .post .main_top_map .map_pin").removeClass("map_view");
+                    // },2000);
+
                         $(".container.main .post .main_top_map.active").stop().animate(
                             {
                                 'top': '200px',
                                 'right': '700px',
                                 'left': '55px',
                                 'bottom': '0px'
-                            }, 800);
-                    });
+                            }, 800, function(){
+                                $(".container.main .post .main_top_map .map_pin").delay(1000).queue(function(){
+
+                                    $(this).css("width","410px");
+                                    $(this).css("height","562px");
+                                });
+                            });
 
                 }
             }
@@ -126,34 +172,342 @@ $(function(){
                     $(this).parents(".map_pin").find(".nakagusuku a img").fadeIn(function(){
                         $(this).parents(".map_pin").find(".nakagusuku a img").css("transform", "translate(-3px,-3px) scale(.98)");
                     });
+                    if ($(this).parents('.pins.nakagusuku').find("a img.pin_icon_active").length){
+                    } else {
+                        $(this).parents(".map_pin").find(".nakagusuku a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin_icon">'
+                        );
+                        $(this).parents(".map_pin").find(".nakagusuku a .pin_icon").animate(
+                            {"bottom": "45px"},
+                            {
+                                complete: function() {
+                                    $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                    $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                    setTimeout(function(){
+                                        $("img.pin_icon").addClass("after");
+                                    },2500);
+                                },
+                            }
+                        );
+                    }
                 } else if ($(this).text() == "西原町") {
                     $(this).parents(".map_pin").find(".nishihara a img").show();
                     $(this).parents(".map_pin").find(".nishihara a img").fadeIn(function(){
                         $(this).parents(".map_pin").find(".nishihara a img").css("transform", "translate(-3px,-3px) scale(.98)");
                     });
+                    if ($(this).parents('.pins.nishihara').find("a img.pin_icon_active").length){
+                    } else {
+                        $(this).parents(".map_pin").find(".nishihara a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin_icon">'
+                        );
+                        $(this).parents(".map_pin").find(".nishihara a .pin_icon").animate(
+                            {"bottom": "45px"},
+                            {
+                                complete: function() {
+                                    $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                    $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                    setTimeout(function(){
+                                        $("img.pin_icon").addClass("after");
+                                    },2500);
+                                },
+                            }
+                        );
+                    }
                 } else if ($(this).text() == "与那原町") {
                     $(this).parents(".map_pin").find(".yonabaru a img").show();
                     $(this).parents(".map_pin").find(".yonabaru a img").fadeIn(function(){
                         $(this).parents(".map_pin").find(".yonabaru a img").css("transform", "translate(-3px,-3px) scale(.98)");
                     });
+                    if ($(this).parents('.pins.yonabaru').find("a img.pin_icon_active").length){
+                    } else {
+                        $(this).parents(".map_pin").find(".yonabaru a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin_icon">'
+                        );
+                        $(this).parents(".map_pin").find(".yonabaru a .pin_icon").animate(
+                            {"bottom": "55px"},
+                            {
+                                complete: function() {
+                                    $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                    $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                    setTimeout(function(){
+                                        $("img.pin_icon").addClass("after");
+                                    },2500);
+                                },
+                            }
+                        );
+                    }
                 } else if ($(this).text() == "南風原町") {
                     $(this).parents(".map_pin").find(".hae a img").show();
                     $(this).parents(".map_pin").find(".hae a img").fadeIn(function(){
                         $(this).parents(".map_pin").find(".hae a img").css("transform", "translate(-3px,-3px) scale(.98)");
                     });
+                    if ($(this).parents('.pins.hae').find("a img.pin_icon_active").length){
+                    } else {
+                        $(this).parents(".map_pin").find(".hae a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin_icon">'
+                        );
+                        $(this).parents(".map_pin").find(".hae a .pin_icon").animate(
+                            {"bottom": "45px"},
+                            {
+                                complete: function() {
+                                    $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                    $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                    setTimeout(function(){
+                                        $("img.pin_icon").addClass("after");
+                                    },2500);
+                                },
+                            }
+                        );
+                    }
                 } else if ($(this).text() == "豊見城市") {
                     $(this).parents(".map_pin").find(".tomishiro a img").show();
                     $(this).parents(".map_pin").find(".tomishiro a img").fadeIn(function(){
                         $(this).parents(".map_pin").find(".tomishiro a img").css("transform", "translate(-3px,-3px) scale(.98)");
                     });
+
+                    if ($(this).parents('.pins.tomishiro').find("a img.pin_icon_active").length){
+                    } else {
+                        $(this).parents(".map_pin").find(".tomishiro a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin_icon">'
+                        );
+                        $(this).parents(".map_pin").find(".tomishiro a .pin_icon").animate(
+                            {"bottom": "45px"},
+                            {
+                                complete: function() {
+                                    $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                    $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                    setTimeout(function(){
+                                        $("img.pin_icon").addClass("after");
+                                    },2500);
+                                },
+                            }
+                        );
+                    }
+
                 } else {
-                    $(this).parents(".pins").find("a img").show();
-                    $(this).parents(".pins").find("a img").fadeIn(function(){
-                        $(this).css("transform", "translate(-3px,-3px) scale(.98)");
-                    });
-                    $(this).parents(".pins").find("a").prepend(
-                        '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573226334/pin_icon.png" alt="" class="pin_icon">'
-                    );
+                    if ($(this).parents('.pins').find("a img.pin_icon_active").length){}{
+                        if ($(this).parents('.pins').find("a img.pin_icon_active").length){
+
+                        } else {
+                            $(this).parents(".pins").find("a img").show();
+                            $(this).parents(".pins").find("a img").fadeIn(function(){
+                                $(this).css("transform", "translate(-3px,-3px) scale(.98)");
+                            });
+                            $(this).parents(".pins").find("a").prepend(
+                                '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin_icon">'
+                            );
+                            if($(this).parents(".pins.oogimi").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "60px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.higashi").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "50px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.nago").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "70px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.nakizin").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "60px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.motobu").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "45px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.ginoza").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "40px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.onna").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "35px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.yomitan").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "45px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.kadena").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "35px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.ginowan").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "45px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.urasoe").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "45px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.kitanaka").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "45px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.nanzyou").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "45px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.naha").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "40px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },3000);
+                                        },
+                                    }
+                                );
+                            } else if ($(this).parents(".pins.kin").length){
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "40px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            } else {
+
+                                $(this).parents(".pins").find("a .pin_icon").animate(
+                                    {"bottom": "25px"},
+                                    {
+                                        complete: function() {
+                                            $(this).parents(".pins").find("a img.pin_icon").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                                            $(this).parents(".pins").find("a img.pin_icon").addClass("action");
+                                            setTimeout(function(){
+                                                $("img.pin_icon").addClass("after");
+                                            },2500);
+                                        },
+                                    }
+                                );
+                            }
+                        }
+                    }
                 }
 
                 $(this).css("border-bottom", "3px solid #222");
@@ -166,13 +520,35 @@ $(function(){
             }
             if(e.type == "mouseout") {
                 $(".map_pin .pins a img").hide();
+                $("img.pin_icon").removeClass("after");
                 $(".map_pin .pins a img").css("transform", "none");
                 $(this).css("border-bottom", "none");
                 $(this).parents(".name_text").find("img").show();
-                $(this).parents(".pins").find("a .pin_icon").remove();
+                $(this).parents(".map_pin").find(".pins a .pin_icon").remove();
             }
 
             if(e.type == "click") {
+                if($(".container.main .post .main_top_map .map_pin.active").length){
+                } else {
+                    $(".container.main .post .main_top_map .map_pin").addClass("active");
+                }
+
+                try {
+                    var list = $(this).attr("class").split(" ");
+                    console.log(list)
+                    if ($.inArray("text_color" ,list) > -1){
+                        $(this).removeClass("text_color");
+                    } else {
+                        $(this).addClass("text_color");
+                    }
+                } catch {
+                    var list = $(this).attr("class");
+                    if (list == "text_color"){
+                        $(this).removeClass("text_color");
+                    } else {
+                        $(this).addClass("text_color");
+                    }
+                }
 
                 if ($(this).parents(".name_text.view").length){
                     $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
@@ -192,7 +568,43 @@ $(function(){
 
                 }
 
+                if ($(this).text() == "与那原町"){
+                    if ($(this).parents(".map_pin").find(".pins.yonabaru a img.pin_icon_active").length){
+                        $(this).parents(".map_pin").find(".pins.yonabaru a img.pin_icon_active").remove();
+
+                        $(this).parents(".map_pin").find(".pins.yonabaru a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".map_pin").find(".pins.yonabaru a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+                        $(this).parents(".map_pin").find(".pins.yonabaru a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
+                } else {
+                    if ($(this).parents('.pins').find("a img.pin_icon_active").length){
+                        $(this).parents(".pins").find("a img.pin_icon_active").remove();
+
+                        $(this).parents(".pins").find("a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".pins").find("a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+
+                        $(this).parents(".pins").find("a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
+                }
+
                 if ($(".container.main .post .main_top_map.active.map").length){
+                    $(".container.main .post .main_top_map .map_pin.active").removeClass("map_view");
+                    $(".container.main .post .main_top_map .map_pin").css("width", "auto");
+                    $(".container.main .post .main_top_map .map_pin").css("height", "auto");
                     $(".radio_box").each(function(){
                         $(this).css("transform", "scale(.5)");
                         $(this).animate(
@@ -207,6 +619,7 @@ $(function(){
                                     // $(".container.main .post .main_top_map.active.map").animate(
                                     //     {}, 800
                                     // );
+                                    $(".container.main .post .main_top_map .map_pin").css("padding-bottom", "0px");
                                     $(".container.main .post .main_top_map.active.map").animate(
                                         {
                                         "top": 0,
@@ -215,6 +628,8 @@ $(function(){
                                         "left": 0}, 800 , function(){
                                             $(".container.main .post .main_top_map").delay(1000).queue(function(){
                                                 $(this).css("transform", "scale(1.0)");
+                                                $(this).find(".map_pin").css("width", "410px");
+                                                $(this).find(".map_pin").css("height", "562px");
                                             });
                                         }
                                     );
@@ -232,14 +647,27 @@ $(function(){
                         );
                     });
                 } else {
+
                     $(document).ready(function(){
+
+                        $(".container.main .post .main_top_map .map_pin.active").addClass("map_view");
                         $(".container.main .post .main_top_map.active").stop().animate(
                             {
                                 'top': '200px',
                                 'right': '700px',
                                 'left': '55px',
                                 'bottom': '0px'
-                            }, 800);
+                            }, 800, function(){
+
+                                $(".container.main .post .main_top_map .map_pin").delay(1000).queue(function(){
+                                    $(this).css("width","410px");
+                                    $(this).css("height","562px");
+                                });
+                                setTimeout(function(){
+                                    $(".container.main .post .main_top_map .map_pin.active").removeClass("map_view");
+                                },1500);
+
+                            });
 
                     });
                 }

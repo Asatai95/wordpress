@@ -800,6 +800,18 @@ figure iframe {
     font-weight: 800;
 }
 
+.box_info .profile div .sns_account a.twitter {
+    color: #55acee;
+}
+
+.box_info .profile div .sns_account a.facebook {
+    color :#3B5998 ;
+}
+
+.box_info .profile div .sns_account a.instagram {
+    color: #3f729b;
+}
+
 .box_info .profile div .sns_account a:hover {
     opacity: .7;
 }

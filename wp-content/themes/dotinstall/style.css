@@ -302,8 +302,7 @@ aside{
         right: 0;
         left: 0;
         bottom :0;
-
-        /* display: none; */
+        display: block;
     }
 
     .container.main .post .main_top_map.active {
@@ -328,6 +327,17 @@ aside{
         /* display: none; */
     }
 
+    .container.main .post .main_top_map .map_pin.active {
+        width: auto;
+        height : auto;
+        padding-bottom: 560px;
+    }
+
+    .container.main .post .main_top_map .map_pin.active.map_view {
+        width: auto!important;
+        height: auto!important;
+    }
+
     .container.main .post .main_top_map .map_pin .pins {
         -webkit-animation-name: fadeIn;
         animation-name: fadeIn;
@@ -339,6 +349,15 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins img {
         transition: .6s;
+        z-index: 1;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins img.pin_icon {
+        z-index: 30;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins img.active {
+        display: block!important;
     }
 
     .container.main .post .main_top_map .map_pin .pins .name_text.disactive {
@@ -347,7 +366,11 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins .name_text span {
         transition: .6s;
-        z-index:10;
+        z-index:30;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins .name_text span.text_color {
+        color: #222!important;
     }
 
     /* .container.main .post .main_top_map .map_pin .pins .name_text img {
@@ -364,14 +387,14 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.kunigami {
         position: absolute;
-        right: 60px;
-        top: 13px;
+        right: 7px;
+        top: 14px;
         width: 101px;
         height: 138px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.kunigami img {
-        width: 101px;
+        width: 95px;
         height: 138px;
     }
 
@@ -406,14 +429,14 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.oogimi {
         position: absolute;
-        top: 119.5px;
-        right: 136px;
+        top: 120.5px;
+        right: 83px;
         width: 70px;
         height: 65.5px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.oogimi img {
-        width: 70px;
+        width: 68px;
         height: 65.5px;
     }
 
@@ -448,8 +471,8 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.higashi {
         position: absolute;
-        right: 95px;
-        top: 128px;
+        right: 46px;
+        top: 129px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.higashi .name_text {
@@ -482,20 +505,25 @@ aside{
     }
 
     .container.main .post .main_top_map .map_pin .pins.higashi img {
-        width: 105px;
-        height: 78px;
+        width: 101px;
+        height: 77px;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins.higashi img.pin_icon {
+        left :30px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nago {
-        top: 169px;
+        top: 170px;
         position: absolute;
-        right: 167px;
+        right: 111px;
         width: 146px;
         height: 89.45px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nago img {
-        width: 146px;
+        width: 143px;
+        height: 89px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nago .name_text {
@@ -513,7 +541,7 @@ aside{
     .container.main .post .main_top_map .map_pin .pins.nago .name_text span {
         font-size: 20px;
         font-weight: 800;
-        color: #fff;
+        color: #666666;
         margin: 0 30px;
         cursor: pointer;
     }
@@ -529,14 +557,14 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.nakizin {
         position: absolute;
-        left: 166px;
-        top: 125px;
+        left: 163px;
+        top: 128px;
         width: 55px;
         height: 48.97px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nakizin img {
-        width: 55px;
+        width: 50px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nakizin .name_text {
@@ -570,7 +598,7 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.nakizin_islands {
         position: absolute;
-        top: 134px;
+        top: 129px;
         left: 220px;
     }
 
@@ -580,8 +608,8 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.motobu {
         position: absolute;
-        top: 125px;
-        left: 142px;
+        top: 127px;
+        left: 138px;
         width: 50px;
         height: 68px;
     }
@@ -621,15 +649,15 @@ aside{
     }
 
     .container.main .post .main_top_map .map_pin .pins.ginoza {
-        top: 245px;
-        left: 174px;
+        top: 246px;
+        left: 169px;
         position: absolute;
         width: 45px;
         height: 44.38px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.ginoza img {
-        width: 45px;
+        width: 44px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.ginoza .name_text {
@@ -663,14 +691,14 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.onna {
         position: absolute;
-        top: 238px;
-        left: 53px;
+        top: 241px;
+        left: 54px;
         width: 126px;
         height: 83.66px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.onna img {
-        width: 126px;
+        width: 120px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.onna .name_text {
@@ -704,14 +732,18 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.kin {
         position: absolute;
-        top: 265px;
-        left: 117px;
+        top: 266px;
+        left: 116px;
         width: 67px;
         height: 43.63px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.kin img {
-        width: 67px;
+        width: 63px;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins.kin img.pin_icon {
+        left: 30px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.kin .name_text {
@@ -726,7 +758,7 @@ aside{
     .container.main .post .main_top_map .map_pin .pins.kin .name_text span {
         font-size: 20px;
         font-weight: 800;
-        color: #fff;
+        color: #666666;
         margin: 0 30px;
         cursor: pointer;
         position: absolute;
@@ -745,16 +777,16 @@ aside{
     }
 
     .container.main .post .main_top_map .map_pin .pins.uruma {
-        top: 299px;
+        top: 301px;
         position: absolute;
-        left: 90px;
+        left: 88px;
         width: 81px;
         height: 102px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.uruma img {
-        width: 81px;
-        height: 102px;
+        width: 78px;
+        height: 99px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.uruma .name_text {
@@ -789,7 +821,7 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.uruma_island {
         position: absolute;
-        top: 329px;
+        top: 327px;
         left: 160px;
     }
 
@@ -808,6 +840,10 @@ aside{
     .container.main .post .main_top_map .map_pin .pins.okinawa img {
         width: 53px;
         height: 78px;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins.okinawa img.pin_icon {
+        left: -15px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.okinawa .name_text {
@@ -884,14 +920,18 @@ aside{
     .container.main .post .main_top_map .map_pin .pins.kadena {
         position: absolute;
         top: 328px;
-        left: 60px;
+        left: 61px;
         width: 45px;
         height: 53px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.kadena img {
-        width: 45px;
+        width: 42px;
         height: 53px;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins.kadena img.pin_icon {
+        left: -15px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.kadena .name_text {
@@ -936,6 +976,10 @@ aside{
         width: 37px;
     }
 
+    .container.main .post .main_top_map .map_pin .pins.tyatan img.pin_icon {
+        left: -15px;
+    }
+
     .container.main .post .main_top_map .map_pin .pins.tyatan .name_text {
         position: absolute;
         top: -38px;
@@ -978,6 +1022,10 @@ aside{
         width: 52px;
     }
 
+    .container.main .post .main_top_map .map_pin .pins.kitanaka img.pin_icon {
+        left : -10px;
+    }
+
     .container.main .post .main_top_map .map_pin .pins.kitanaka .name_text {
         position: absolute;
         top: 35px;
@@ -1010,14 +1058,18 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.ginowan {
         position: absolute;
-        top: 384px;
-        left: 52px;
+        top: 385px;
+        left: 51px;
         width: 56px;
         height: 63.03px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.ginowan img {
-        width: 56px;
+        width: 54px;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins.ginowan img.pin_icon {
+        left: -25px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.ginowan .name_text {
@@ -1062,6 +1114,10 @@ aside{
         width: 37px;
     }
 
+    .container.main .post .main_top_map .map_pin .pins.nakagusuku img.pin_icon {
+        left: -5px;
+    }
+
     .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text {
         position: absolute;
         top: 42px;
@@ -1070,10 +1126,13 @@ aside{
         z-index: 10;
         width: 420px;
         height: 53px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text.active {
-        width: 200px;
+        width: 300px;
         right: auto;
     }
 
@@ -1081,20 +1140,16 @@ aside{
         font-size: 20px;
         font-weight: 800;
         color: #fff;
-        margin: 0 30px;
+        margin: 5px 15px;
         cursor: pointer;
-        position: absolute;
-        right: 10px;
-        bottom: 5px;
         z-index: 10;
-
     }
 
-    .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text span:nth-child(1)  {
+    /* .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text span:nth-child(1)  {
         right: 187px;
-    }
+    } */
 
-    .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text.active span:nth-child(1) {
+    /* .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text.active span:nth-child(1) {
         right: 10px;
     }
 
@@ -1104,23 +1159,24 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text span:nth-child(3) {
         right: 7px;
-    }
+    } */
 
     .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text span:hover {
         color: #222;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text img {
+        position: absolute;
         width: 420px;
         height: 53px;
     }
 
-    .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text.other_active img {
+    /* .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text.other_active img {
         width: 350px;
-    }
+    } */
 
     .container.main .post .main_top_map .map_pin .pins.nakagusuku .name_text.active img {
-        width: 200px;
+        width: 300px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.urasoe {
@@ -1174,6 +1230,10 @@ aside{
         width: 33px;
     }
 
+    .container.main .post .main_top_map .map_pin .pins.nishihara img.pin_icon {
+        left : -5px;
+    }
+
     .container.main .post .main_top_map .map_pin .pins.naha {
         position: absolute;
         top: 424px;
@@ -1220,14 +1280,19 @@ aside{
 
     .container.main .post .main_top_map .map_pin .pins.hae {
         position: absolute;
-        top: 449px;
-        left: 42.5px;
+        top: 450px;
+        left: 43px;
         width: 21.5px;
         height: 38.88px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.hae img {
-        width: 21.5px;
+        width: 20px;
+        height: 38px;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins.hae img.pin_icon {
+        left: -15px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.hae .name_text {
@@ -1286,7 +1351,11 @@ aside{
     }
 
     .container.main .post .main_top_map .map_pin .pins.yonabaru img {
-        width: 17px;
+        width: 16px;
+    }
+
+    .container.main .post .main_top_map .map_pin .pins.yonabaru img.pin_icon {
+        left: -12px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nanzyou {
@@ -1298,7 +1367,7 @@ aside{
     }
 
     .container.main .post .main_top_map .map_pin .pins.nanzyou img {
-        width: 58px;
+        width: 56px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.nanzyou .name_text {
@@ -1347,14 +1416,14 @@ aside{
     .container.main .post .main_top_map .map_pin .pins.yaese {
         position: absolute;
         top: 479px;
-        left: 35px;
+        left: 36px;
         width: 37px;
         height: 56px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.yaese img {
-        width: 37px;
-        height: 56px;
+        width: 34px;
+        height: 53px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.yaese .name_text {
@@ -1390,14 +1459,14 @@ aside{
     .container.main .post .main_top_map .map_pin .pins.itoman {
         position: absolute;
         top: 490px;
-        left: 8px;
+        left: 9px;
         width: 44px;
         height: 60px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.itoman img {
-        width: 44px;
-        height: 60px;
+        width: 42px;
+        height: 58px;
     }
 
     .container.main .post .main_top_map .map_pin .pins.itoman .name_text {
@@ -1952,9 +2021,21 @@ figure iframe {
 }
 
 .box_info .profile div .sns_account a {
-    color: #333;
+    color: #1a0dab;
     font-size: 15px;
     font-weight: 800;
+}
+
+.box_info .profile div .sns_account a.twitter {
+    color: #55acee;
+}
+
+.box_info .profile div .sns_account a.facebook {
+    color :#3B5998 ;
+}
+
+.box_info .profile div .sns_account a.instagram {
+    color: #3f729b;
 }
 
 .box_info .profile div .sns_account a:hover {
@@ -2149,25 +2230,183 @@ figure iframe {
 }
 
 .cancel span:before{
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -15px;
-    width: 35px;
-    height: 5px;
-    margin-top: -2px;
-    background: #000;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 35px;
+  height: 5px;
+  margin-top: -2px;
+  background: #000;
+}
+
+@keyframes korokoro {
+    0%   { transform: translate(0%, 0%); }
+    5%   { transform: translate(10%, 0%) rotate(10deg); }
+    25%  { transform: translate(20%, 0%) rotate(20deg); }
+    30%  { transform: translate(-10%, 0%) rotate(-10deg); }
+    35%  { transform: translate(-15%, 0%) rotate(-15deg); }
+    45%  { transform: translate(10%, 0%) rotate(10deg); }
+    50%  { transform: translate(15%, 0%) rotate(15deg); }
+    60%  { transform: translate(-5%, 0%) rotate(-5deg); }
+    65%  { transform: translate(-7%, 0%) rotate(-7deg); }
+    75%  { transform: translate(0%, 0%) rotate(0deg); }
+    100% { transform: translate(0%, 0%) rotate(0deg); }
   }
 
-  img.pin_icon {
-    width: 25px!important;
-    height: 25px;
+  @keyframes poyon {
+    0%   { transform: scale(0.8, 1.4) translate(0%, -100%); }
+    10%  { transform: scale(0.8, 1.4) translate(0%, -15%); }
+    20%  { transform: scale(1.4, 0.6) translate(0%, 30%); }
+    30%  { transform: scale(0.9, 1.1) translate(0%, -10%); }
+    40%  { transform: scale(0.95, 1.2) translate(0%, -30%); }
+    50%  { transform: scale(0.95, 1.2) translate(0%, -10%); }
+    60%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+    70%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  }
+
+img.pin_icon {
+  width: 40px!important;
+  height: 50px!important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 150px;
+  margin: auto;
+  z-index: 30;
+  transition: .2s;
+  display: block!important;
+  animation: korokoro .5s linear 0s 1;
+}
+
+img.pin_icon.action {
+    animation: poyon 2.5s linear 0s 1;
+}
+
+img.pin_icon.action.after {
+    animation: korokoro 2.5s linear 0s 100;
+}
+
+img.pin_icon_active {
+    width: 55px!important;
+    height: 75px!important;
     position: absolute;
     top: 0;
-    right: 0;
-    left: 0;
-    bottom: 25px;
+    right: 0px;
+    left: 10px;
+    bottom: 0px;
     margin: auto;
     z-index: 30;
+    transition: .2s;
+
+}
+
+.container.main .post .main_top_map .map_pin .pins img.active.pin_icon_active {
+    left: 40px;
+    bottom: -25px;
+    animation: korokoro 2.5s linear 0s 100;
+}
+
+.container.main .post .main_top_map .map_pin .pins.yonabaru img.active.pin_icon_active {
+    left: -20px;
+    bottom: 60px;
+    animation: korokoro 2.5s linear 0s 100;
+}
+
+.container.main .post .main_top_map .map_pin .pins.higashi img.active.pin_icon_active {
+    left: 30px;
+    bottom: 15px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.oogimi img.active.pin_icon_active {
+    left: 20px;
+    bottom: 30px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.nakizin img.active.pin_icon_active {
+    left: 15px;
+    bottom: 35px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.motobu img.active.pin_icon_active {
+    left: -10px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.ginoza img.active.pin_icon_active {
+    left: -10px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.kin img.active.pin_icon_active {
+    left: 15px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.uruma img.active.pin_icon_active {
+    left: 10px;
+    bottom: -45px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.okinawa img.active.pin_icon_active {
+    left: -5px;
+    bottom: -15px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.kitanaka img.active.pin_icon_active {
+    left: 0;
+    bottom: 0;
+}
+
+.container.main .post .main_top_map .map_pin .pins.nanzyou img.active.pin_icon_active {
+    left: 0;
+    bottom: 40px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.yaese img.active.pin_icon_active {
+    left: -8px;
+    bottom: 20px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.naha img.active.pin_icon_active {
+    left: 5px;
+    bottom: 20px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.urasoe img.active.pin_icon_active {
+    left: -3px;
+    bottom: 55px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.ginowan img.active.pin_icon_active {
+    left: -3px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.tyatan img.active.pin_icon_active {
+    left: -15px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.kadena img.active.pin_icon_active {
+    left: -8px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.nago img.active.pin_icon_active {
+    left: 50px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.onna img.active.pin_icon_active {
+    left: 80px;
+    bottom: 30px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.hae img.active.pin_icon_active {
+    left: -15px;
+    bottom: 30px;
 }

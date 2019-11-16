@@ -36,15 +36,15 @@
                                                 </p>
                                             </div>
                                             <div class="sns_account">
-                                                <a href="https://twitter.com/AwamoriKou">
+                                                <a href="https://twitter.com/AwamoriKou" class="twitter">
                                                     Twitter
                                                 </a>
                                                 /
-                                                <a href="https://www.instagram.com/koutamakin">
+                                                <a href="https://www.instagram.com/koutamakin" class="instagram">
                                                     Instagram
                                                 </a>
                                                 /
-                                                <a href="https://www.facebook.com/profile.php?id=100007218916422">
+                                                <a href="https://www.facebook.com/profile.php?id=100007218916422" class="facebook">
                                                     Facebook
                                                 </a>
                                             </div>
@@ -63,15 +63,15 @@
                                                 </p>
                                             </div>
                                             <div class="sns_account">
-                                                <a href="https://twitter.com/a_su_awamori">
+                                                <a href="https://twitter.com/a_su_awamori" class="twitter">
                                                     Twitter
                                                 </a>
                                                 /
-                                                <a href="https://www.instagram.com/asukamiyazato">
+                                                <a href="https://www.instagram.com/asukamiyazato" class="instagram">
                                                     Instagram
                                                 </a>
                                                 /
-                                                <a href="https://www.facebook.com/asukamiyazato">
+                                                <a href="https://www.facebook.com/asukamiyazato" class="facebook">
                                                     Facebook
                                                 </a>
                                             </div>
@@ -90,15 +90,15 @@
                                                 </p>
                                             </div>
                                             <div class="sns_account">
-                                                <a href="https://twitter.com/asatai_awamori">
+                                                <a href="https://twitter.com/asatai_awamori" class="twitter">
                                                     Twitter
                                                 </a>
                                                 /
-                                                <a href="https://www.instagram.com/asatai_awamori">
+                                                <a href="https://www.instagram.com/asatai_awamori" class="instagram">
                                                     Instagram
                                                 </a>
                                                 /
-                                                <a href="https://www.facebook.com/asatai.oki">
+                                                <a href="https://www.facebook.com/asatai.oki" class="facebook">
                                                     Facebook
                                                 </a>
                                             </div>

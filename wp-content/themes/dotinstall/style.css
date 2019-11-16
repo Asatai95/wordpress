@@ -2410,3 +2410,18 @@ img.pin_icon_active {
     left: -15px;
     bottom: 30px;
 }
+
+.container.main .post .main_top_map .map_pin .pins.nakagusuku img.active.pin_icon_active {
+    left: -10px;
+    bottom: 25px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.nishihara img.active.pin_icon_active {
+    left: -15px;
+    bottom: 40px;
+}
+
+.container.main .post .main_top_map .map_pin .pins.tomishiro img.active.pin_icon_active {
+    left: -5px;
+    bottom: 55px;
+}

@@ -23,22 +23,19 @@ $(function(){
                     $(".container.main .post .main_top_map .map_pin").addClass("active");
                 }
 
-                try {
-                    var list = $(this).attr("class").split(" ");
-                    console.log(list)
-                    if ($.inArray("text_color" ,list) > -1){
-                        $(this).removeClass("text_color");
-                    } else {
-                        $(this).addClass("text_color");
+                $(".pins .name_text span").each(function(){
+                    try {
+                        var list = $(this).attr("class").split(" ");
+                        if ($.inArray("text_color" ,list) > -1){
+                            $(this).removeClass("text_color");
+                        }
+                    } catch {
+                        var list = $(this).attr("class");
+                        if (list == "text_color"){
+                            $(this).removeClass("text_color");
+                        }
                     }
-                } catch {
-                    var list = $(this).attr("class");
-                    if (list == "text_color"){
-                        $(this).removeClass("text_color");
-                    } else {
-                        $(this).addClass("text_color");
-                    }
-                }
+                });
 
                 if ($(this).parents(".name_text.view").length){
                     $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
@@ -58,37 +55,20 @@ $(function(){
 
                 }
 
-                if ($(this).text() == "与那原町"){
-                    if ($(this).parents(".map_pin").find(".pins.yonabaru a img.pin_icon_active").length){
-                        $(this).parents(".map_pin").find(".pins.yonabaru a img.pin_icon_active").remove();
+                if ($(".pins a img.pin_icon_active").length){
+                    $(".pins a img.pin_icon_active").remove();
 
-                        $(this).parents(".map_pin").find(".pins.yonabaru a img").each(function(){
-                            $(this).removeClass("active");
-                        });
-                    } else {
-                        $(this).parents(".map_pin").find(".pins.yonabaru a").prepend(
-                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
-                        );
-                        $(this).parents(".map_pin").find(".pins.yonabaru a img").each(function(){
-                            $(this).addClass("active");
-                        });
-                    }
+                    $(".pins a img").each(function(){
+                        $(this).removeClass("active");
+                    });
                 } else {
-                    if ($(this).parents('.pins').find("a img.pin_icon_active").length){
-                        $(this).parents(".pins").find("a img.pin_icon_active").remove();
+                    $(".pins a").prepend(
+                        '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                    );
 
-                        $(this).parents(".pins").find("a img").each(function(){
-                            $(this).removeClass("active");
-                        });
-                    } else {
-                        $(this).parents(".pins").find("a").prepend(
-                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
-                        );
-
-                        $(this).parents(".pins").find("a img").each(function(){
-                            $(this).addClass("active");
-                        });
-                    }
+                    $(".pins a img").each(function(){
+                        $(this).addClass("active");
+                    });
                 }
 
                 if ($(".container.main .post .main_top_map.active.map").length){
@@ -610,6 +590,66 @@ $(function(){
                             '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
                         );
                         $(this).parents(".map_pin").find(".pins.yonabaru a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
+                } else if ($(this).text() == "中城村") {
+                    if ($(this).parents(".map_pin").find(".pins.nakagusuku a img.pin_icon_active").length){
+                        $(this).parents(".map_pin").find(".pins.nakagusuku a img.pin_icon_active").remove();
+
+                        $(this).parents(".map_pin").find(".pins.nakagusuku a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".map_pin").find(".pins.nakagusuku a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+                        $(this).parents(".map_pin").find(".pins.nakagusuku a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
+                } else if ($(this).text() == "西原町") {
+                    if ($(this).parents(".map_pin").find(".pins.nishihara a img.pin_icon_active").length){
+                        $(this).parents(".map_pin").find(".pins.nishihara a img.pin_icon_active").remove();
+
+                        $(this).parents(".map_pin").find(".pins.nishihara a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".map_pin").find(".pins.nishihara a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+                        $(this).parents(".map_pin").find(".pins.nishihara a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
+                } else if ($(this).text() == "豊見城市") {
+                    if ($(this).parents(".map_pin").find(".pins.tomishiro a img.pin_icon_active").length){
+                        $(this).parents(".map_pin").find(".pins.tomishiro a img.pin_icon_active").remove();
+
+                        $(this).parents(".map_pin").find(".pins.tomishiro a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".map_pin").find(".pins.tomishiro a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+                        $(this).parents(".map_pin").find(".pins.tomishiro a img").each(function(){
+                            $(this).addClass("active");
+                        });
+                    }
+                } else if ($(this).text() == "南風原町") {
+                    if ($(this).parents(".map_pin").find(".pins.hae a img.pin_icon_active").length){
+                        $(this).parents(".map_pin").find(".pins.hae a img.pin_icon_active").remove();
+
+                        $(this).parents(".map_pin").find(".pins.hae a img").each(function(){
+                            $(this).removeClass("active");
+                        });
+                    } else {
+                        $(this).parents(".map_pin").find(".pins.hae a").prepend(
+                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
+                        );
+                        $(this).parents(".map_pin").find(".pins.hae a img").each(function(){
                             $(this).addClass("active");
                         });
                     }

@@ -14,7 +14,7 @@ $(function(){
             } else {
                 $("#instagram_field").css("margin-top", "250px");
             }
-            if (scroll > 2190){
+            if (scroll > 2100){
                 $(".travel_info_block").css("margin-top", "0");
             } else {
                 $(".travel_info_block").css("margin-top", "250px");

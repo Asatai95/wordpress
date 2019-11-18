@@ -2,6 +2,9 @@ $(function(){
     if ($(".container.radio_content_view").length) {
         $("aside").addClass("page");
     }
+    if ($(".container.single").length){
+        $("aside").addClass("page");
+    }
     $(".footer_sub_img img").each(function(){
         $(this).on("mouseover", function(){
             var item = $('.footer_sub_img');

@@ -10,12 +10,12 @@ $(function(){
             var scroll = $(this).scrollTop();
             console.log(scroll)
 
-            if (scroll > 3050){
+            if (scroll > 2800){
                 $("#instagram_field").css("margin-top", "0");
             } else {
                 $("#instagram_field").css("margin-top", "250px");
             }
-            if (scroll > 2415){
+            if (scroll > 2190){
                 $(".travel_info_block").css("margin-top", "0");
             } else {
                 $(".travel_info_block").css("margin-top", "250px");

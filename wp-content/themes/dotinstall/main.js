@@ -5,6 +5,28 @@ $(function(){
     if ($(".container.single").length){
         $("aside").addClass("page");
     }
+    if($(".container.main.map_view").length){
+        $(window).scroll(function() {
+            var scroll = $(this).scrollTop();
+            console.log(scroll)
+
+            if (scroll > 3050){
+                $("#instagram_field").css("margin-top", "0");
+            } else {
+                $("#instagram_field").css("margin-top", "250px");
+            }
+            if (scroll > 2415){
+                $(".travel_info_block").css("margin-top", "0");
+            } else {
+                $(".travel_info_block").css("margin-top", "250px");
+            }
+            if(scroll > 1640){
+                $(".radio_mian_box").css("margin-top", "0");
+            } else {
+                $(".radio_mian_box").css("margin-top", "250px");
+            }
+        });
+    }
     $(".footer_sub_img img").each(function(){
         $(this).on("mouseover", function(){
             var item = $('.footer_sub_img');

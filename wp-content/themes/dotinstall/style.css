@@ -2530,6 +2530,8 @@ img.pin_icon_active {
     width: 79%;
     margin: auto;
     background: rgb(255,255,255);
+    margin-top: 250px;
+    transition: 1.5s;
 }
 
 .radio_mian_box .new_radio_content {
@@ -2741,6 +2743,11 @@ img.pin_icon_active {
     -webkit-line-clamp: 4;
 }
 
+#instagram_field {
+    margin-top : 250px;
+    transition: 1.5s;
+}
+
 .instagram_field_title {
     padding: 30px;
 }
@@ -2834,6 +2841,11 @@ img.pin_icon_active {
     font-weight: 800;
     -webkit-text-stroke: 1px #fff;
     text-stroke: 1px #FFF;
+}
+
+.travel_info_block {
+    transition: 1.5s;
+    margin-top : 250px;
 }
 
 .travel_info_block .travel_info_block_title {

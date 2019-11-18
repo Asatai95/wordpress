@@ -468,7 +468,7 @@
                     endif;
                 ?>
                 <div class="radios_button">
-                    <a href="http://localhost:8000/?page_id=150">
+                    <a href="http://awamori-in-the-pocket.herokuapp.com/awamori-in-the-pocket/">
                         <button type="button" class="button">More Podcast</button>
                     </a>
                 </div>

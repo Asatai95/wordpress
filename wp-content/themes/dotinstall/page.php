@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <?php
-        if ($_SERVER["REQUEST_URI"] == "/about") :
+        if (strpos($_SERVER["REQUEST_URI"],'about') !== false) :
     ?>
         <div id="main" class="container single">
             <div id="posts_page">

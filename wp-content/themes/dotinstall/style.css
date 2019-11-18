@@ -1620,7 +1620,7 @@ aside.page {
 
             .post-content {
                 float: left;
-                overflow: hidden;
+                /* overflow: hidden; */
                 width:100%;
             }
 

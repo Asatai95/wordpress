@@ -2531,7 +2531,7 @@ img.pin_icon_active {
     margin: auto;
     background: rgb(255,255,255);
     margin-top: 250px;
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .radio_mian_box .new_radio_content {
@@ -2745,7 +2745,7 @@ img.pin_icon_active {
 
 #instagram_field {
     margin-top : 250px;
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .instagram_field_title {
@@ -2844,7 +2844,7 @@ img.pin_icon_active {
 }
 
 .travel_info_block {
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
     margin-top : 250px;
 }
 

@@ -8,7 +8,6 @@ $(function(){
     if($(".container.main.map_view").length){
         $(window).scroll(function() {
             var scroll = $(this).scrollTop();
-            console.log(scroll)
 
             if (scroll > 2800){
                 $("#instagram_field").css("margin-top", "0");

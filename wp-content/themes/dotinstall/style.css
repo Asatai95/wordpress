@@ -1620,8 +1620,12 @@ aside.page {
 
             .post-content {
                 float: left;
-                /* overflow: hidden; */
+                overflow: hidden;
                 width:100%;
+            }
+
+            .radio_content_view #posts .post .post-content {
+                overflow: unset;
             }
 
             .post-content.single_main ul {

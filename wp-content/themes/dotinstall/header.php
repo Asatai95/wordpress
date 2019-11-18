@@ -6,7 +6,9 @@
         <link rel="shortcut icon" href="https://res.cloudinary.com/hchyaihwv/image/upload/v1572693478/fnig0z0fhngjkikcxvuv.png">
         <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link rel="stylesheet" media="screen and (min-width: 897px)" href="https://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/style.css" type="text/css">
         <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="https://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/style_tb.css" type="text/css">
         <link rel="stylesheet" media="screen and (max-width: 480px)" href="https://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/style_sp.css" type="text/css">
@@ -27,6 +29,7 @@
       <aside class="sidevar">
         <nav class="navbar navbar-dark bg-white">
           <a href="<?php echo home_url() ?>" class="navbar-brand"><img class="awamori-logo" src="/wp-content/uploads/2019/10/header_logo.png" alt=""></a>
+
           <button class="navbar-toggler" type="button"
             data-toggle="collapse"
             data-target="#navmenu1"

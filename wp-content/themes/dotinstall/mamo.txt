@@ -21,7 +21,7 @@
                         the_post();
                 ?>
 
-                
+
 
                 <?php
                     endwhile;
@@ -38,3 +38,26 @@
                     <div class="prev"><?php previous_posts_link('&lt; PREVIOUS'); ?></div>
                     <div class="next"><?php next_posts_link('NEXT &gt;'); ?></div>
                 </div>
+
+
+
+
+----------------------------------------
+header
+
+
+<?php
+            $url = $_SERVER["REQUEST_URI"];
+            if (strpos($url, "page_id") !== false) :
+          ?>
+            <div class="search_box">
+              <form action="" method="POST">
+                <?php wp_dropdown_categories('depth=0&order=DESC&orderby=name&hide_empty=0&hierarchical=1&depth=2&show_option_all=カテゴリー選択'); ?>
+                <button type="submit" class="search_submit_button">
+                  検索
+                </button>
+              </form>
+            </div>
+          <?php
+            endif;
+          ?>

@@ -2,7 +2,7 @@
         <div id="main" class="container single">
             <div class="next-stream">
                 <span class="next-stream_date">次回の配信日は
-                    <span id="js-next">2019年11月03日</span>です。
+                    <span id="js-next">2019年11月24日</span>です。
                 </span>
             </div>
             <div id="posts">
@@ -91,17 +91,35 @@
                 <?php endif ; ?>
             </div>
             <div class="support-title">
-                <div><p>supporter</p></div>
-                <div><ul>
-                <li>サポーター募集中！</li>
-                <li>サポーター募集中！</li>
-                <li class="support_form_link">
-                    応援していただける方は
-                    <a href="https://polca.jp/users/pockeawa">
-                        こちらへ！
-                    </a>
-                </li>
-                </ul></div>
+                <div><p>Awamori in The Pocket</p></div>
+                <div>
+                    <div class="user_info_block">
+                        <div class="user_info">
+                            <div class="user_image">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704906/iob6zfw5ipv0sffihf9s.jpg" alt="">
+                            </div>
+                            <div class="user_image_bottom">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704897/sbyavoe1ulg7vbjbkvkr.jpg" alt="">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704968/acvgh4hcnmccxobtvrmt.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="user_info_text">
+                            <p>
+                                「 沖縄 」をメインテーマに「ゆんたく」します。<br>
+                                僕らはたくさんの人と交流し、人と人がつながり<br>
+                                広い輪を創れたらと考えております。
+                            </p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="support_form_link">
+                            応援していただける方は
+                            <a href="https://polca.jp/users/pockeawa">
+                            こちらへ！
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 <?php get_footer(); ?>

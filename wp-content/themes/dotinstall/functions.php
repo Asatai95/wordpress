@@ -32,8 +32,6 @@ add_action( 'wp_footer', 'add_my_ajaxurl', 1 );
 
 function ajax_get_new_posts() {
   $mes = $_POST['mes'];
-  _log("mes");
-  _log($mes);
   $returnObj = array();
 
   $args = array(
@@ -80,17 +78,12 @@ function ajax_get_new_posts() {
       }
   }
 
-  _log("tmpreturnObj");
-  _log($tmpreturnObj);
   $cnt = count($tmpreturnObj);
-  _log("cnt");
-  _log($cnt);
   if ($cnt > 4) {
     $return = array_merge($returnObj,array('flag'=>true));
   } else {
     $return = array_merge($returnObj,array('flag'=>false));
   }
-  _log($return);
   wp_reset_postdata();
 
   echo json_encode( $return );
@@ -99,6 +92,38 @@ function ajax_get_new_posts() {
 add_action( 'wp_ajax_ajax_get_new_posts', 'ajax_get_new_posts' );
 add_action('wp_ajax_nopriv_ajax_get_new_posts', 'ajax_get_new_posts' );
 
+function ajax_get_search_posts() {
+  $mes = $_POST['mes'];
+  $returnObj = array();
+
+  $args = array(
+      'post_type' => 'post',
+      'category_name' => $mes,
+      'posts_per_page' => -1,
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'post_status' => 'publish',
+  );
+
+  $posts  = new WP_Query( $args );
+  if ($posts->have_posts()) {
+      while($posts->have_posts()) {
+          $posts->the_post();
+          $returnObj[] = array(
+              'post_title' => get_the_title(),
+              'permalink' => get_permalink(),
+              'thumbnail' => get_the_post_thumbnail_url(),
+              'excerpt' => get_the_excerpt(),
+          );
+      }
+  }
+  wp_reset_postdata();
+
+  echo json_encode( $returnObj );
+  die();
+}
+add_action( 'wp_ajax_ajax_get_search_posts', 'ajax_get_search_posts' );
+add_action('wp_ajax_nopriv_ajax_get_search_posts', 'ajax_get_search_posts' );
 
 add_theme_support('menus');
 

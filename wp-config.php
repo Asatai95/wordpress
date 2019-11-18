@@ -26,25 +26,6 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'wordpress');
-
-/** MySQL データベースのユーザー名 */
-define('DB_USER', 'wordpress');
-
-/** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'wordpress');
-
-/** MySQL のホスト名 */
-define('DB_HOST', 'wordpress_test_db:3306');
-
-/** データベースのテーブルを作成する際のデータベースの文字セット */
-define('DB_CHARSET', 'utf8');
-
-/** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
-define('DB_COLLATE', '');
-
-// ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
-/** WordPress のためのデータベース名 */
 // define('DB_NAME', 'wordpress');
 
 /** MySQL データベースのユーザー名 */
@@ -61,6 +42,25 @@ define('DB_COLLATE', '');
 
 /** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
 // define('DB_COLLATE', '');
+
+// ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
+/** WordPress のためのデータベース名 */
+define('DB_NAME', 'heroku_d25551a0587d95e');
+
+/** MySQL データベースのユーザー名 */
+define('DB_USER', 'b031bd5be0bbcd');
+
+/** MySQL データベースのパスワード */
+define('DB_PASSWORD', '4bcb7071');
+
+/** MySQL のホスト名 */
+define('DB_HOST', 'us-cdbr-iron-east-05.cleardb.net');
+
+/** データベースのテーブルを作成する際のデータベースの文字セット */
+define('DB_CHARSET', 'utf8');
+
+/** データベースの照合順序 (ほとんどの場合変更する必要はありません) */
+define('DB_COLLATE', '');
 /**#@+
  * 認証用ユニークキー
  *

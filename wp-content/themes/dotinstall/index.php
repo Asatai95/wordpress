@@ -5,8 +5,7 @@
         <div class="top_main_img">
             <div class="back_movie">
                 <div class="main_top_view_video">
-                    <video autoplay loop muted>
-                        <source src="https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_800/v1574258843/my_media_bg.mp4">
+                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_800/v1574258843/my_media_bg.mp4" preload="none" autoplay loop muted playsinline>
                     </video>
                     <div class="back_text">
                         <h2>Awamori in The Pocket</h2>

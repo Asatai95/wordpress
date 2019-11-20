@@ -1,5 +1,153 @@
 <?php get_header(); ?>
+    <?php
+        if (wp_is_mobile()):
+    ?>
+        <div class="main_block_sp">
+            <div class="radio_mian_box">
+                <div class="new_radio_content">
+                    <p>
+                        <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573907648/new.png" alt="">
+                        Radio
+                    </p>
+                </div>
+                <div class="radio_info_block">
+                    <?php
+                        if (have_posts()) :
+                            $myposts = get_posts('numberposts=4');
+                            foreach($myposts as $post) :
+                    ?>
+                    <div class="radio_content">
+                        <div class="post-content">
+                            <?php if (has_post_thumbnail()) : ?>
+                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(0, 0)); ?></a>
+                            <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.png" width="100" height="100">
+                            <?php endif; ?>
+                        </div>
+                        <div class="post-header">
+                            <p>
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </p>
+                            <div class="sub_text">
 
+                                <?php the_excerpt(); ?>
+
+                                <span>
+                                    <?php echo get_post_time('F d, Y'); ?>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <?php
+                            endforeach;
+                        endif;
+                    ?>
+                    <div class="radios_button">
+                        <a href="http://awamori-in-the-pocket.herokuapp.com/awamori-in-the-pocket/">
+                            <button type="button" class="button">More Podcast</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="travel_info_block">
+                <div class="travel_info_block_title">
+                    <p>
+                        TRAVEL <span>PLANNING</span>
+                    </p>
+                </div>
+                <div class="back_video">
+                    <video autoplay loop muted>
+                        <source src="https://res.cloudinary.com/hchyaihwv/video/upload/v1574001737/back_video.mp4">
+                    </video>
+                    <div class="travel_block_content">
+                        <p>
+                            僕らなりの旅行プランを提案します<br>
+                            ラジオで紹介した場所以外で気になる場所があれば<br>
+                            気軽にコメントください！！
+                        </p>
+                        <a href="https://www.facebook.com/awapocke/">
+                            <button type="button" class="info_button">Messenger</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="instagram_field">
+                <div class="instagram_field_title">
+                    <p>
+                        <a href="https://www.instagram.com/awamori_in_the_pocket/">
+                            @awamori_in_the_pocket
+                        </a>
+                        <span>on Instagram</span>
+                    </p>
+                </div>
+                <!-- <div class="error_log">
+                    <span>現在、表示可能な画像がありません</span>
+                </div> -->
+                <div class="insta_view_block first">
+                    <div class="main_box"></div>
+                </div>
+                <div class="insta_view_block last">
+                    <div class="main_box"></div>
+                </div>
+            </div>
+            <div class="tips">
+                <div class="sns_box">
+                    <div class="facebook_feed">
+                        <p class="sns">Facebook</p>
+                    </div>
+                    <?php if ( wp_is_mobile() ) : ?>
+                    <div class="device">
+                        <div class="sp">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&tabs=timeline&width=270px&height=500px&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=2165553107045876" width="270px" height="500px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                        <div class="tab_view">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&tabs=timeline&width=300&height=500px&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=2165553107045876" width="300" height="500px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                        <div class="tb">
+                            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&tabs=timeline&width=400px&height=500px&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=2165553107045876" width="400px" height="500px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                    </div>
+
+                    <?php else : ?>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FAwamori-in-The-Pocket-110103447082952%2F%3Fmodal%3Dadmin_todo_tour&tabs=timeline&width=500px&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=2165553107045876" width="500px" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                    <?php endif ; ?>
+                </div>
+                <div class="support-title">
+                    <div><p>Awamori in The Pocket</p></div>
+                    <div>
+                        <div class="user_info_block">
+                            <div class="user_info">
+                                <div class="user_image">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704906/iob6zfw5ipv0sffihf9s.jpg" alt="">
+                                </div>
+                                <div class="user_image_bottom">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704897/sbyavoe1ulg7vbjbkvkr.jpg" alt="">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704968/acvgh4hcnmccxobtvrmt.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="user_info_text">
+                                <p>
+                                    「 沖縄 」をメインテーマに「ゆんたく」します<br>
+                                    僕らはたくさんの人と交流し、人と人がつながり<br>
+                                    広い輪を創れたらと考えています
+                                </p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="support_form_link">
+                                応援していただける方は
+                                <a href="https://polca.jp/users/pockeawa">
+                                こちらへ！
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php
+        else:
+    ?>
         <div class="main_top_img">
             <div class="main_back">
                 <div class="top_main_img">
@@ -569,6 +717,8 @@
             </div>
 	    </div>
     </div>
-
+    <?php
+        endif;
+    ?>
 <?php get_footer(); ?>
 

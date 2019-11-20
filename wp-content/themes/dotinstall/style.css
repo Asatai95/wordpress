@@ -2952,11 +2952,13 @@ img.pin_icon_active {
     margin-bottom: 0;
     transition: 1s;
     cursor: pointer;
+    box-shadow: 0 1px 2px #222;
 }
 
 .travel_info_block .back_video .travel_block_content a button:hover {
     transform: scale(1.1);
     background: rgb(0,136,51);
+    box-shadow: 0 0 0 ;
 }
 
 .main_top_img {
@@ -3292,11 +3294,13 @@ img.pin_icon_active {
     font-weight: 800;
     transition: 1s;
     cursor: pointer;
+    box-shadow: 0 1px 2px #222;
 }
 
 .radios_button a button:hover {
     transform: scale(1.1);
     background: rgb(0,136,51);
+    box-shadow: 0 0 0;
 }
 
 .error_log {

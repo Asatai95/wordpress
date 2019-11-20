@@ -1,4 +1,34 @@
 $(function(){
+    $("a").each(function(e){
+        $(this).on("touchstart click", function(e){
+            if (e.type == "touchstart" || e.type == "click"){
+                e.preventDefault();
+                console.log("tasyvu")
+                return false;
+            }
+        });
+
+    });
+    var ua = navigator.userAgent;
+    if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
+        $(".insta_view_block .main_box .post a").on("touchstart click", function(e){
+            if (e.type == "touchstart" || e.type == "click"){
+                console.log("tets")
+                e.preventDefault();
+                return false;
+            }
+
+        });
+        $(".insta_view_block .main_box .post").on("touchstart", function(e){
+            console.log("tetss")
+            e.preventDefault();
+            $(this).find(".insta_box").fadeIn();
+            return false;
+        });
+    } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
+
+    }
+
     if ($(".container.radio_content_view").length) {
         $("aside").addClass("page");
     }

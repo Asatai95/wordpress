@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
 .awamori-logo{
     width: 100px;
     height: 60px;
@@ -132,13 +142,13 @@ aside{
 
 
 .navbar.navbar-dark.bg-white{
-    width: 95%;
+    width: 100%;
     margin: auto;
     justify-content: center;
 }
-#header {
+/* #header {
 
-}
+} */
 
 .header{
     width: 80%;
@@ -821,4 +831,171 @@ figure iframe {
     margin-bottom: 35px;
 }
 
+/* TRAVELPLANNING */
+.travel_info_block {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
 
+.travel_info_block .travel_info_block_title {
+    position: relative;
+}
+
+.travel_info_block .travel_info_block_title:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    height: 0;
+    width: 5rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    right: 91%;
+    margin-right: 1.5em;
+    border-top-style: dashed;
+}
+
+.travel_info_block .travel_info_block_title:after {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    height: 0;
+    width: 12rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    left: 46%;
+    margin-left: 0.6em;
+    border-top-style: dashed;
+}
+
+.travel_info_block .travel_info_block_title p {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 0 20px;
+}
+
+.travel_info_block .travel_info_block_title p span {
+    color: #666666;
+}
+
+.travel_info_block .back_video {
+    position: relative;
+}
+
+.travel_info_block .back_video video {
+    width: 100%;
+    opacity: .5;
+}
+
+.travel_info_block .back_video .travel_block_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 160px;
+    background: rgb(255,255,255,.8);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.travel_info_block .back_video .travel_block_content p {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    color: #222;
+}
+
+.travel_info_block .back_video .travel_block_content a button {
+    width: 120px;
+    height: 35px;
+    border: none;
+    background: rgb(81,165,255);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 0;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0 1px 2px #222;
+}
+
+/* instagram  */
+#instagram_field {
+    margin-bottom: 50px;
+}
+
+#instagram_field .instagram_field_title {
+    padding: 15px 0;
+}
+
+#instagram_field .instagram_field_title p {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    padding: 0;
+}
+
+#instagram_field .instagram_field_title p span {
+    color : #666666;
+}
+
+.insta_view_block {
+    width: 100%;
+}
+
+.insta_view_block .main_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.insta_view_block .main_box .post {
+    margin: 0;
+    width: 20%;
+    position: relative;
+}
+
+.insta_view_block .main_box .post a img {
+    width: 100%;
+}
+
+.insta_view_block .main_box .post .insta_box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 60px;
+    display:none;
+}
+
+.insta_view_block .main_box .post .insta_box div div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.insta_view_block .main_box .post .insta_box div div svg {
+    width: 30px;
+    height: 30px;
+}
+
+.insta_view_block .main_box .post .insta_box div div svg .text {
+    font-size: 16px;
+    font-weight: 800;
+}

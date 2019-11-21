@@ -8,6 +8,18 @@ $(function(){
                 return false;
             }
         });
+        $(".main_top_map img").each(function(){
+            $(this).on("click", function(e){
+                e.preventDefault();
+                return false;
+            });
+        });
+        $(".background_main_image").each(function(){
+            $(this).on("click", function(e){
+                e.preventDefault();
+                return false;
+            });
+        });
     } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
 
     }

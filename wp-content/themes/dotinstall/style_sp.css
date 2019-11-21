@@ -142,7 +142,7 @@ p {
 }
 
 .container.main.map_view_sp {
-    padding-top: 20px;
+    padding: 20px 0 ;
 }
 
 
@@ -229,7 +229,7 @@ aside{
 .next-stream .next-stream_date {
     display: inline-block;
     text-align: center;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
     letter-spacing: 0.1rem;
 }
@@ -240,8 +240,8 @@ aside{
     font-size: 15px;
     font-weight: normal;
     position: relative;
-    left: 4px;
-    top: 3px;
+    left: 2px;
+    top: 1px;
     color: rgb(81, 165, 255);
     -webkit-transform: scaleX(0.8);
     transform: scaleX(0.8);
@@ -254,8 +254,8 @@ aside{
     font-size: 15px;
     font-weight: normal;
     position: relative;
-    left: -15px;
-    top: 3px;
+    left: -13px;
+    top: 1px;
     color: rgb(81, 165, 255);
     -webkit-transform: scaleX(0.8);
     transform: scaleX(0.8);
@@ -306,6 +306,11 @@ aside{
         margin-bottom: 30px;
         margin: 0;
         width: 100%;
+    }
+
+    .map_view_sp.container.main .post {
+        position: relative;
+        height: 500px;
     }
 
         .post-header {
@@ -500,6 +505,7 @@ aside{
     height: 100%;
     display: none;
     background: rgb(255,255,255);
+    z-index: 80;
 }
 
 .nav_header_menu .navbar-nav {
@@ -899,6 +905,7 @@ figure iframe {
 }
 
 .travel_info_block .back_video {
+    height: 450px;
     position: relative;
 }
 
@@ -914,10 +921,14 @@ figure iframe {
     left: 0;
     bottom: 0;
     margin: auto;
-    height: 160px;
+    height: 230px;
     background: rgb(255,255,255,.8);
     padding: 10px 0;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .travel_info_block .back_video .travel_block_content p {
@@ -1269,11 +1280,24 @@ figure iframe {
 
 .main_top_map img.main_map_image {
     width: 100%;
+    margin: 5px 0;
 }
 
 .main_top_map .map_pin .nakizin_islands img,
 .main_top_map .map_pin .uruma_island img {
     width: 10%;
+}
+
+.main_top_map .map_pin .nakizin_islands {
+    position: absolute;
+    top: 112px;
+    left: 200px;
+}
+
+.main_top_map .map_pin .uruma_island {
+    position: absolute;
+    bottom: 157px;
+    left: 140px;
 }
 
 .name_text span {
@@ -1310,11 +1334,11 @@ figure iframe {
     left: 0;
     bottom: 0;
     margin: auto;
-    height: 70px;
+    height: 85px;
 }
 
 .top_main_img .back_movie .back_text h2 {
-    font-size: 35px;
+    font-size: 33px;
     font-weight: 800;
     color: #fff;
     font-family: 'Kaushan Script', cursive;
@@ -1375,13 +1399,13 @@ figure iframe {
     margin: auto;
     z-index: 1;
     width: 375px;
-    height: 50%;
+    height: 85%;
     -webkit-perspective: 130px;
     -ms-perspective: 130px;
     -o-perspective: 130px;
     perspective: 130px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     overflow: hidden;
 }
 
@@ -1395,7 +1419,7 @@ figure iframe {
     transform: translate3d(0,0,0) rotateX(30deg);
     -webkit-transition: all 1s cubic-bezier(.4,.85,.49,.99) 0s;
     transition: all 1.5s cubic-bezier(.4,.85,.49,.99) 0s;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.3);
+    box-shadow: 0 5px 3px 0 rgba(0,0,0,.3);
     border-radius: 4px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -1479,11 +1503,12 @@ figure iframe {
 }
 
 .video_back_image_box {
-    height: 350px;
+    height: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .video_back_image_box p {
@@ -1498,4 +1523,49 @@ figure iframe {
 .video_back_image_box p span {
     font-size: 20px;
     color: rgb(81, 165,255);
+}
+
+.video_back_image_box .anchor_button_box {
+    position: absolute;
+    bottom: 55px;
+    margin: auto;
+}
+
+.video_back_image_box .anchor_button_box a button {
+    width: 180px;
+    height: 35px;
+    border: none;
+    background: rgb(81,165,255);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 0;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0 1px 2px #222;
+}
+
+.background_main_image {
+    background: url("https://res.cloudinary.com/hchyaihwv/image/upload/c_scale,h_460,w_375/v1572851882/IMG_0033.jpg");
+    background-repeat: no-repeat;
+    background-size : 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    width: 100%;
+    opacity: .6;
+}
+
+.main_top_map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
 }

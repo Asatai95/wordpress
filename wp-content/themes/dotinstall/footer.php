@@ -218,7 +218,7 @@
                   }
                 });
                 if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
-                  $(".post").each(function(){
+                  $(".insta_view_block .post").each(function(){
                     $(this).on("touchstart click", function(e){
                       if (e.type == "touchstart" || e.type == "click"){
                         var link = $(this).find("a").attr("href");
@@ -229,7 +229,7 @@
                 } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
 
                 } else {
-                  $(".post").each(function(){
+                  $(".insta_view_block .post").each(function(){
                     $(this).on("mouseover mouseout click", function(e){
                       if (e.type=="mouseover") {
                         $(this).find("a img").css("transform", "scale(1.1)");

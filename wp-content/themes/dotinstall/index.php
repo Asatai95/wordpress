@@ -29,6 +29,11 @@
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573999241/picture_video_control.png" alt="">
                         </div>
                     </div>
+                    <div class="anchor_button_box">
+                        <a href="https://anchor.fm/pockeawa">
+                            <button type="button" class="check_anchor">Check Podcast</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,7 +46,7 @@
 
             <div id="posts">
                 <div class="post top_page">
-                    <div class="background_mian_image"></div>
+                    <div class="background_main_image"></div>
                     <div class="main_top_map">
                         <!-- <img src="https://res.cloudinary.com/dq14n6i0f/image/upload/c_scale,h_2133,w_1673/v1573822260/main_view_back_img.png" alt=""> -->
                         <img src="https://res.cloudinary.com/hchyaihwv/image/upload/c_scale,h_2124,w_1624/v1573825085/main_view_back_img.png" alt="" class="main_map_image">
@@ -66,29 +71,28 @@
                         <? foreach($alignedUnique as $value){
                             if ($value == "国頭村"): ?>
                             <div class="pins kunigami">
-                                <a href="#">
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572855551/kunigami.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>国頭村</span>
                                 </div>
                             </div>
                         <?php elseif ($value == "大宜味村"):?>
                             <div class="pins oogimi">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836540/oogimi.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>大宜味村</span>
                                 </div>
                             </div>
                         <?php elseif ($value == "東村"):?>
                             <div class="pins higashi">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836430/higashi.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>東村</span>
 
@@ -97,10 +101,10 @@
                             </div>
                         <?php elseif ($value == "名護市"):?>
                             <div class="pins nago">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572855808/nago.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>名護市</span>
 
@@ -113,10 +117,10 @@
                             </div>
                         <?php elseif ($value == "今帰仁村"):?>
                             <div class="pins nakizin">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572839600/nakizin.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>今帰仁村</span>
 
@@ -124,10 +128,10 @@
                             </div>
                         <?php elseif ($value == "本部町"):?>
                             <div class="pins motobu">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572840005/motobu.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>本部町</span>
 
@@ -135,10 +139,10 @@
                             </div>
                         <?php elseif ($value == "宜野座村"):?>
                             <div class="pins ginoza">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572839250/ginoza.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>宜野座村</span>
 
@@ -146,10 +150,10 @@
                             </div>
                         <?php elseif ($value == "恩納村"):?>
                             <div class="pins onna">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572840548/onna.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>恩納村</span>
 
@@ -158,10 +162,10 @@
                             </div>
                         <?php elseif ($value == "金武町"):?>
                             <div class="pins kin">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572840902/kin.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>金武町</span>
 
@@ -169,10 +173,10 @@
                             </div>
                         <?php elseif ($value == "うるま市"):?>
                             <div class="pins uruma">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572854149/uruma.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>うるま市</span>
 
@@ -184,10 +188,10 @@
                             </div>
                         <?php elseif ($value == "沖縄市"):?>
                             <div class="pins okinawa">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572841649/okinawa.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>沖縄市</span>
 
@@ -195,10 +199,10 @@
                             </div>
                         <?php elseif ($value == "読谷村"):?>
                             <div class="pins yomitan">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572854736/yomitan.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>読谷村</span>
 
@@ -206,10 +210,10 @@
                             </div>
                         <?php elseif ($value == "嘉手納町"):?>
                             <div class="pins kadena">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572842261/kadena.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>嘉手納町</span>
 
@@ -217,10 +221,10 @@
                             </div>
                         <?php elseif ($value == "北谷町") :?>
                             <div class="pins tyatan">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572842461/tyatan.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>北谷町</span>
 
@@ -228,10 +232,10 @@
                             </div>
                         <?php elseif ($value == "北中城村") :?>
                             <div class="pins kitanaka">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572842629/kitanaka.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>北中城村</span>
 
@@ -239,10 +243,10 @@
                             </div>
                         <?php elseif ($value == "宜野湾市") :?>
                             <div class="pins ginowan">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836412/ginowan.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>宜野湾市</span>
 
@@ -250,10 +254,10 @@
                             </div>
                         <?php elseif ($value == "浦添市") :?>
                             <div class="pins urasoe">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843440/urasoe.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>浦添市</span>
 
@@ -261,17 +265,17 @@
                             </div>
                         <?php elseif ($value == "西原町"):?>
                             <div class="pins nishihara">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843624/nishihara.png" alt="">
-                                </a>
+
                             </div>
                         <?php elseif ($value == "那覇市"):?>
                             <div class="pins naha">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843861/naha.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>那覇市</span>
 
@@ -280,17 +284,17 @@
 
                         <?php elseif ($value == "与那原町") :?>
                             <div class="pins yonabaru">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572844397/yonabaru.png" alt="">
-                                </a>
+
                             </div>
                         <?php elseif ($value == "南城市"):?>
                             <div class="pins nanzyou">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572844611/nanzyou.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>南城市</span>
 
@@ -298,16 +302,16 @@
                             </div>
                         <?php elseif ($value == "豊見城市"):?>
                             <div class="pins tomishiro">
-                                <a href="#">
+
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572845210/tomishiro.png" alt="">
-                                </a>
+
                             </div>
                         <?php elseif ($value == "八重瀬町"):?>
                             <div class="pins yaese">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572845435/yaese.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>八重瀬町</span>
 
@@ -315,10 +319,10 @@
                             </div>
                         <?php elseif ($value == "糸満市"):?>
                             <div class="pins itoman">
-                                <a href="#">
+
 
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836434/itoman.png" alt="">
-                                </a>
+
                                 <div class="name_text view">
                                     <span>糸満市</span>
 
@@ -349,9 +353,9 @@
                         ?>
                             <div class="pins nakagusuku">
                                 <?php if ( in_array("中城村", $stack_1) ):?>
-                                    <a href="#">
+
                                         <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843229/nakagusuku.png" alt="">
-                                    </a>
+
                                 <?php endif; ?>
                                 <div class="name_text view">
 
@@ -372,9 +376,9 @@
                         <?php if (in_array("南風原町", $stach_2) || in_array("豊見城市", $stach_2)): ?>
                             <div class="pins hae">
                                 <?php if (in_array("南風原町", $stach_2)) :?>
-                                    <a href="#">
+
                                         <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836424/haebaru.png" alt="">
-                                    </a>
+
                                 <?php endif ;?>
                                 <div class="name_text view">
                                     <?php if (in_array("豊見城市", $stach_2)) :?>
@@ -408,11 +412,10 @@
 
                         </div>
                         <div class="more_link">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"><path id="wave" d=""/></svg>
                             <div>
-                                <a href="#">
+                                <!-- <a href="http://awamori-in-the-pocket.herokuapp.com/awamori-in-the-pocket/">
                                     More Podcast...
-                                </a>
+                                </a> -->
                             </div>
 
                         </div>
@@ -477,8 +480,7 @@
                     </p>
                 </div>
                 <div class="back_video">
-                    <video autoplay loop muted>
-                        <source src="https://res.cloudinary.com/hchyaihwv/video/upload/v1574001737/back_video.mp4">
+                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_375/v1574001737/back_video.mp4" preload="none" autoplay loop muted playsinline>
                     </video>
                     <div class="travel_block_content">
                         <p>
@@ -642,7 +644,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>国頭村</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572861292/text_icon.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "大宜味村"):?>
@@ -653,8 +655,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>大宜味村</span>
-
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868721/text_icon_4.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "東村"):?>
@@ -665,8 +666,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>東村</span>
-
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572861292/text_icon.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "名護市"):?>
@@ -677,8 +677,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>名護市</span>
-
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572862998/text_icon_1.png" alt="">
                                 </div>
                             </div>
 
@@ -693,7 +692,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>今帰仁村</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868721/text_icon_4.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "本部町"):?>
@@ -704,7 +703,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>本部町</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868728/text_icon_6.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "宜野座村"):?>
@@ -715,7 +714,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>宜野座村</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572862998/text_icon_1.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "恩納村"):?>
@@ -726,8 +725,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>恩納村</span>
-
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868721/text_icon_4.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "金武町"):?>
@@ -738,7 +736,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>金武町</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572863500/text_icon_2.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "うるま市"):?>
@@ -749,7 +747,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>うるま市</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572862998/text_icon_1.png" alt="">
                                 </div>
                             </div>
 
@@ -764,7 +762,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>沖縄市</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572866042/text_icon_3.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "読谷村"):?>
@@ -775,7 +773,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>読谷村</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868721/text_icon_4.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "嘉手納町"):?>
@@ -786,7 +784,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>嘉手納町</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868721/text_icon_4.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "北谷町") :?>
@@ -797,7 +795,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>北谷町</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868721/text_icon_4.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "北中城村") :?>
@@ -808,7 +806,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>北中城村</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572866042/text_icon_3.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "宜野湾市") :?>
@@ -819,7 +817,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>宜野湾市</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572868721/text_icon_4.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "浦添市") :?>
@@ -830,7 +828,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>浦添市</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572874949/text_icon_9.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "西原町"):?>
@@ -848,7 +846,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>那覇市</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572871791/text_icon_7.png" alt="">
                                 </div>
                             </div>
 
@@ -867,7 +865,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>南城市</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572863500/text_icon_2.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "豊見城市"):?>
@@ -884,7 +882,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>八重瀬町</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572866042/text_icon_3.png" alt="">
                                 </div>
                             </div>
                         <?php elseif ($value == "糸満市"):?>
@@ -895,7 +893,7 @@
                                 </a>
                                 <div class="name_text view">
                                     <span>糸満市</span>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572871805/text_icon_8.png" alt="">
                                 </div>
                             </div>
                         <?php endif ;?>
@@ -939,7 +937,7 @@
                                     <?php if (in_array("与那原町", $stack_1)) :?>
                                         <span class="yona_text">与那原町</span>
                                     <?php endif; ?>
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572866042/text_icon_3.png" alt="">
                                 </div>
                             </div>
                         <?php endif ;?>
@@ -957,7 +955,7 @@
                                     <?php if (in_array("南風原町", $stach_2)):?>
                                         <span class="hae_text view">南風原町</span>
                                     <?php endif ;?>
-
+                                        <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572871791/text_icon_7.png" alt="">
                                 </div>
                             </div>
                         <?php endif ;?>
@@ -984,7 +982,7 @@
                         <div class="more_link">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg"><path id="wave" d=""/></svg>
                             <div>
-                                <a href="#">
+                                <a href="http://awamori-in-the-pocket.herokuapp.com/awamori-in-the-pocket/">
                                     More Podcast...
                                 </a>
                             </div>

@@ -1503,12 +1503,12 @@ figure iframe {
 }
 
 .video_back_image_box {
-    height: 300px;
+    height: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 .video_back_image_box p {
@@ -1527,7 +1527,7 @@ figure iframe {
 
 .video_back_image_box .anchor_button_box {
     position: absolute;
-    bottom: 55px;
+    bottom: 150px;
     margin: auto;
 }
 

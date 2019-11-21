@@ -298,8 +298,16 @@ aside{
 
     .post {
         margin-bottom: 30px;
-	width: 40%;
+	    width: 40%;
         margin: 20px auto;
+    }
+
+    .container.radio_content_view #posts {
+        flex-direction: column;
+    }
+
+    .container.radio_content_view #posts .post {
+        width: 100%;
     }
 
     .container.main .post {

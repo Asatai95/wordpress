@@ -1158,6 +1158,10 @@ figure iframe {
 }
 
 /* new radio */
+.radio_mian_box {
+    margin-bottom: 50px;
+}
+
 .radio_mian_box .new_radio_content {
     width: 90%;
     margin: auto;
@@ -1334,7 +1338,7 @@ figure iframe {
     left: 0;
     bottom: 0;
     margin: auto;
-    height: 85px;
+    height: 120px;
 }
 
 .top_main_img .back_movie .back_text h2 {

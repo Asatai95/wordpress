@@ -14,7 +14,7 @@
                 </div>
                 <div class="video_back_image_box">
                     <p>
-                        <span>このラジオで、今日も誰かを笑顔に</span><br>
+                        <span>このラジオで、誰かを笑顔に</span><br>
                         今日もどこかで収録しています
                     </p>
                     <div class="top_comment">

@@ -1730,3 +1730,7 @@ figure iframe {
 .marker {
     display: none;
 }
+
+.pins {
+    display: none;
+}

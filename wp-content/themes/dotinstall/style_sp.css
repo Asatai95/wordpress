@@ -310,6 +310,16 @@ aside{
         width: 100%;
     }
 
+    .container.radio_content_view #posts .post .post-header {
+        width: 90%;
+        margin-bottom:0;
+    }
+
+    .container.radio_content_view #posts .post .post-header p {
+        font-weight: 800;
+        font-size: 12px;
+    }
+
     .container.main .post {
         margin-bottom: 30px;
         margin: 0;

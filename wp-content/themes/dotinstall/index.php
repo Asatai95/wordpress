@@ -5,7 +5,7 @@
         <div class="top_main_img">
             <div class="back_movie">
                 <div class="main_top_view_video">
-                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_800/v1574258843/my_media_bg.mp4" preload="none" autoplay loop muted playsinline>
+                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_500,w_375/v1574258843/my_media_bg.mp4" preload="none" autoplay loop muted playsinline>
                     </video>
                     <div class="back_text">
                         <h2>Awamori in The Pocket</h2>
@@ -14,7 +14,7 @@
                 </div>
                 <div class="video_back_image_box">
                     <p>
-                        <span>このラジオで、誰かを笑顔に</span><br>
+                        <span>このラジオで、今日も誰かを笑顔に</span><br>
                         今日もどこかで収録しています
                     </p>
                     <div class="top_comment">
@@ -588,7 +588,7 @@
             </div>
             <div class="iphone_main_back_image">
                 <div class="iphone_main_back_image_text">
-                    <h2>このラジオで、誰かを笑顔に</h2>
+                    <h2>このラジオで、今日も誰かを笑顔に</h2>
                     <p>今日もどこかで収録しています</p>
                 </div>
                 <div class="back_img"></div>

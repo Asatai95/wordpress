@@ -1725,3 +1725,8 @@ figure iframe {
 .name_text.view.info_box .radio_content .post-header.top_sp.context_block .sub_text span {
     color: #666666;
 }
+
+
+.marker {
+    display: none;
+}

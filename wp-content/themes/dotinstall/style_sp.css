@@ -1294,12 +1294,12 @@ figure iframe {
 }
 
 .top_main_img .back_movie .main_top_view_video {
-    margin: 80px 0;
+    /* margin: 80px 0; */
     position: relative;
 }
 
 .top_main_img .back_movie video {
-    height: 400px;
+    height: 500px;
     opacity: .7;
 }
 

@@ -9,9 +9,6 @@
         <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-        <!-- <link rel="stylesheet" media="screen and (min-width: 897px)" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css" />
-        <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="<?php echo get_template_directory_uri(); ?>/style_tb.css" type="text/css" />
-        <link rel="stylesheet" media="screen and (max-width: 480px)" href="<?php echo get_template_directory_uri(); ?>/style_sp.css" type="text/css" /> -->
         <link rel="stylesheet" media="screen and (min-width: 897px)" href="https://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/style.css" type="text/css">
         <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 896px)" href="https://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/style_tb.css" type="text/css">
         <link rel="stylesheet" media="screen and (max-width: 480px)" href="https://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/style_sp.css" type="text/css">

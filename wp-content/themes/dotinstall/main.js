@@ -20,6 +20,12 @@ $(function(){
                 return false;
             });
         });
+        $(".map_pin .pins").each(function(){
+            $(this).find(".marker img.pin").on("click", function(e){
+                e.preventDefault();
+                return false;
+            });
+        });
     } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
 
     }

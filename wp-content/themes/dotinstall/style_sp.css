@@ -1282,6 +1282,15 @@ figure iframe {
 
 /* map */
 
+.main_top_map.active {
+    transform: scale(.45);
+    right: unset;
+    top: unset;
+    bottom: -130px;
+    margin: auto;
+    transition: all 1s ease-in-out;
+}
+
 .main_top_map img.main_map_image {
     width: 100%;
     margin: 5px 0;
@@ -1303,10 +1312,10 @@ figure iframe {
     bottom: 157px;
     left: 140px;
 }
-
+/*
 .name_text span {
     display: none;
-}
+} */
 
 .top_main_img {
     padding-top: 87px;
@@ -1570,6 +1579,149 @@ figure iframe {
     top: 0;
     right: 0;
     left: 0;
+    /* bottom: 0; */
+    margin: auto;
+    transition: all 1s ease-in-out;
+    transform: scale(1.0);
+}
+
+.map_pin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     bottom: 0;
     margin: auto;
+}
+
+.map_pin .pins {
+    position: absolute;
+    margin: auto;
+}
+
+.map_pin .pins .name_text {
+    position: absolute;
+    top: -300px;
+    margin: auto;
+}
+
+.map_pin .pins div img {
+    width: 30px;
+}
+
+.map_pin .pins.naha {
+    bottom: 66px;
+    left: 2px;
+}
+
+.map_pin .pins.naha .marker {
+    position: relative;
+    display: block;
+    height: 60px;
+    width: 50px;
+}
+
+.map_pin .pins.naha .marker .pin {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.map_pin .pins.naha .marker .icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    width: 56px;
+    transition: all 1s ease-in-out;
+    display: none;
+}
+
+.map_pin .pins.naha .marker .icon.active {
+    display:block;
+    transition: all 1s ease-in-out;
+    transform: translate(-3px, -3px);
+}
+
+.name_text.view.info_box {
+    position: absolute;
+    top: -360px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display:none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1.5s ease-in-out;
+    background: rgb(255,255,255,.7);
+    padding-bottom:10px;
+    z-index: -1;
+}
+
+.name_text.view.info_box.active {
+    background: rgb(255,255,255,.7);
+    padding-bottom: 15px;
+    z-index: 10;
+    display: flex;
+}
+
+.name_text.view.info_box .city_tag_text {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.name_text.view.info_box .city_tag_text p {
+    text-align: center;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.name_text.view.info_box .radio_content {
+    width : 100%;
+}
+
+.name_text.view.info_box .radio_content .post-content.sub_image_box {
+    border-radius: 0;
+    border: none;
+    float: unset;
+    width : 100%;
+    text-align: center;
+}
+
+.name_text.view.info_box .radio_content .post-content.sub_image_box a img {
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block {
+    margin: 10px 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block p {
+    padding: 0;
+    font-size: 15px;
+    font-weight: 800;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block .sub_text {
+    width: 70%;
+    margin: auto;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block .sub_text span {
+    color: #666666;
 }

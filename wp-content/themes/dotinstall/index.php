@@ -54,13 +54,18 @@
                         <?php
                         if (have_posts()) :
                             $post_array = array();
+                            $post_article = array();
                             $test_posts = get_posts(array(
                                 'posts_per_page'=> -1,
                             ));
                             foreach($test_posts as $post){
+                                setup_postdata( $post );
                                 $cat_name = get_the_category()[0]->cat_name;
+
                                 array_push($post_array, $cat_name);
+                                $post_article[] = array("cat_name"=>$cat_name, "link"=>get_the_permalink(), "thumbnail"=>get_the_post_thumbnail(), "title"=>get_the_title(), "date"=>get_post_time('F d, Y'));
                             }
+
                         ?>
                         <?php
 
@@ -274,14 +279,14 @@
                             </div>
                         <?php elseif ($value == "那覇市"):?>
                             <div class="pins naha">
-
-
-                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843861/naha.png" alt="">
-
-                                <div class="name_text view">
+                                <div class="marker">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843861/naha.png" alt="" class="icon">
+                                </div>
+                                <!-- <div class="name_text view">
                                     <span>那覇市</span>
 
-                                </div>
+                                </div> -->
                             </div>
 
                         <?php elseif ($value == "与那原町") :?>
@@ -333,6 +338,7 @@
                         <?php endif ;?>
                         <?php
                             }
+                            wp_reset_postdata();
                         endif ;
                         ?>
                         <?php
@@ -399,6 +405,44 @@
                         </div>
 
                     </div>
+                    <?php
+                        $list = array();
+                        $post_value = array();
+                        foreach($post_article as $item){
+                            if ($value == $item["cat_name"]):
+                                array_push($list, $item["cat_name"]);
+                                array_push($post_value , $item);
+                            endif;
+                        }
+                        if (count($list) > 0):
+                    ?>
+                        <div class="name_text view info_box">
+                            <div class="city_tag_text">
+                                <p>那覇市</p>
+                            </div>
+                            <div class="radio_content">
+                                <div class="post-content sub_image_box">
+                                    <?php if ($post_value[0]['thumbnail']) :?>
+                                    <a href="<?php echo $post_value[0]['link'] ?>"><?php echo $post_value[0]['thumbnail'];?></a>
+                                    <?php else: ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.png" width="100" height="100">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="post-header top_sp context_block">
+                                    <p>
+                                        <a href="<?php echo $post_value[0]['link'] ?>"><?php echo $post_value[0]['title'] ?></a>
+                                    </p>
+                                    <div class="sub_text">
+                                        <span>
+                                            <?php echo $post_value[0]['date'] ?>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                        endif;
+                    ?>
 
                     <div class="radio_box">
                         <div class="cancel">

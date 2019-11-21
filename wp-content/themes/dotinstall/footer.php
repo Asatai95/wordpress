@@ -28,11 +28,66 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
       <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-      <script>
+      <!-- <script>
         var ajaxurl = 'https://awamori-in-the-pocket.herokuapp.com/wp-admin/admin-ajax.php';
-      </script>
+      </script> -->
       <script>
         $(function(){
+          $(".map_pin").each(function(){
+            $(this).find(".pins .marker .pin").on("click touchstart", function(e){
+              e.preventDefault();
+              var text = $(this).parents(".marker").next(".name_text").find("span").text();
+              if (e.type == "click" || e.type == "touchstart"){
+                if ($(this).parents(".marker").find(".icon.active").length){
+                  $(this).parents(".marker").find(".icon").removeClass("active");
+                } else {
+                  $(this).parents(".marker").find(".icon").addClass("active");
+                }
+              }
+              if ($(this).parents(".maker").find(".pin.active").length){
+                $(this).parents(".maker").find(".pin").removeClass("active");
+                $(this).parents(".maker").find(".pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
+
+              } else {
+                $(this).parents(".maker").find(".pin").addClass("active");
+                $(this).parents(".maker").find(".pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+              }
+              if ($(".main_top_map.active").length) {
+                // $(".main_top_map.active").css("bottom", "0px");
+                // $(".main_top_map.active").removeClass("active");
+                $(".main_top_map").animate(
+                  {"bottom": "0px"}, 300, "swing" , function(){
+                    console.log("test")
+                    setTimeout(function(){
+                      $(".main_top_map.active").removeClass("active");
+                    },1000);
+                  });
+              } else {
+
+                $(".main_top_map").animate(
+                  {"bottom": "-130px"}, 200, "swing", function(){
+                    $(".main_top_map").addClass("active");
+                });
+              }
+              if($(".name_text.view.info_box.active").length){
+                $(".name_text.view.info_box.active").css("z-index", "-1");
+                $(".name_text.view.info_box.active").animate(
+                  {"top": "-360px"}, 100, "swing", function(){
+                      $(".name_text.view.info_box.active").removeClass("active");
+                });
+              } else {
+                $(".name_text.view.info_box").show();
+                $(".name_text.view.info_box").css("display", "flex");
+                $(".name_text.view.info_box").animate(
+                  {"top": "0px"}, 100, "swing", function(){
+                      $(".name_text.view.info_box").addClass("active");
+                });
+              }
+
+              return false;
+            });
+          });
+
           if ($(".radio_content_view").length){
               $(this).find("form").submit(function(e){
                 e.preventDefault();

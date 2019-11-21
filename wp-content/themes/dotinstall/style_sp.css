@@ -1369,7 +1369,7 @@ figure iframe {
 
 .top_comment {
     position :relative;
-    height: 70px;
+    height: 100px;
     width: 223px;
 }
 
@@ -1417,7 +1417,7 @@ figure iframe {
     position: absolute;
     left: 50%;
     width: 80px;
-    height: 50px;
+    height: 70px;
     margin-left: -170px;
     -webkit-transform: translate3d(0,0,0) rotateX(30deg);
     transform: translate3d(0,0,0) rotateX(30deg);

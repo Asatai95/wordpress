@@ -71,8 +71,10 @@
                         <? foreach($alignedUnique as $value){
                             if ($value == "国頭村"): ?>
                             <div class="pins kunigami">
+                                <div>
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572855551/kunigami.png" alt="">
-
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="">
+                                </div>
                                 <div class="name_text view">
                                     <span>国頭村</span>
                                 </div>

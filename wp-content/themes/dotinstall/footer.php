@@ -34,6 +34,38 @@
       </script>
       <script>
         $(function(){
+          $(".name_text.view.info_box .radio_box").each(function(){
+            $(this).find(".cancel .cancel_back").on("click touchstart",  function(e){
+              e.preventDefault();
+              $(this).parents(".map_pin").find(".pins.active").removeClass("active");
+                $(".map_pin .pins .marker .pin").removeClass("active");
+                $(".map_pin .pins .marker .pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
+                $(".map_pin .pins .marker .icon").removeClass("active");
+                if ($(".main_top_map.active").length) {
+                  $(".main_top_map").animate(
+                    {"bottom": "0px"}, 300, "swing" , function(){
+                      setTimeout(function(){
+                        $(".main_top_map.active").removeClass("active");
+                      },1000);
+                    });
+                }
+                if($(".name_text.view.info_box.active").length){
+                  $(".name_text.view.info_box.active").css("z-index", "-1");
+                  $(".name_text.view.info_box.active").animate(
+                    {"top": "-360px"}, 100, "swing", function(){
+                      $(".name_text.view.info_box.active").removeClass("active");
+                      setTimeout(function(){
+                        $("#posts").each(function(){
+                          $(this).find(".name_text.view.info_box .city_tag_text").remove();
+                          $(this).find(".name_text.view.info_box .radio_content").remove();
+                        });
+                      },1000);
+                  });
+
+                }
+              return false;
+            });
+          });
           $(".map_pin").each(function(){
             $(this).find(".pins .marker .pin").on("click touchstart", function(e){
               e.preventDefault();

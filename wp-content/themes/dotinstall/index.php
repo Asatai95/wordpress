@@ -367,34 +367,19 @@
                         if (count($list) > 0):
                     ?>
                         <div class="name_text view info_box">
-
+                            <div class="radio_box">
+                                <div class="cancel">
+                                    <div class="cancel_back">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     <?php
                         endif;
                     ?>
 
-                    <div class="radio_box">
-                        <div class="cancel">
-                            <div class="cancel_back">
-                                <span></span>
-                            </div>
-                        </div>
-                        <div class="contents">
 
-                            <div class="list_box">
-
-                            </div>
-
-                        </div>
-                        <div class="more_link">
-                            <div>
-                                <!-- <a href="http://awamori-in-the-pocket.herokuapp.com/awamori-in-the-pocket/">
-                                    More Podcast...
-                                </a> -->
-                            </div>
-
-                        </div>
-                    </div>
 
 
                 </div><!-- /post -->

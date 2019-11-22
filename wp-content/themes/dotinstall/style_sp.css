@@ -2546,3 +2546,48 @@ figure iframe {
 .pins {
     display: none;
 } */
+
+.name_text.view.info_box .radio_box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+}
+
+.cancel {
+    text-align: right;
+    padding: 10px 50px;
+    position: relative;
+    height: 55px;
+    z-index: 30px;
+}
+
+.cancel .cancel_back {
+    width: 7%;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.cancel span{
+    display: inline-block;
+    position: relative;
+    margin: 0 20px 0 7px;
+    padding: 0;
+    width: 5px;
+    height: 35px;
+    background: #000;
+    transform: rotate(45deg);
+}
+
+.cancel span:before{
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 35px;
+  height: 5px;
+  margin-top: -2px;
+  background: #000;
+}

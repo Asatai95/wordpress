@@ -2581,3 +2581,41 @@ figure iframe {
 .name_text.view.info_box .radio_content .post-header.top_sp.context_block .sub_text span {
     color: #666666;
 }
+
+.cancel {
+    text-align: right;
+    padding: 10px 50px;
+    position: relative;
+    height: 55px;
+    z-index: 30px;
+}
+
+.cancel .cancel_back {
+    width: 7%;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.cancel span{
+    display: inline-block;
+    position: relative;
+    margin: 0 20px 0 7px;
+    padding: 0;
+    width: 5px;
+    height: 35px;
+    background: #000;
+    transform: rotate(45deg);
+}
+
+.cancel span:before{
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 35px;
+  height: 5px;
+  margin-top: -2px;
+  background: #000;
+}

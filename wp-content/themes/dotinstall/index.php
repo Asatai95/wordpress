@@ -5,7 +5,7 @@
         <div class="top_main_img">
             <div class="back_movie">
                 <div class="main_top_view_video">
-                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_500,w_375/v1574258843/my_media_bg.mp4" webkit-playsinline playsinline autoplay loop>
+                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_820,w_420/v1574258843/my_media_bg.mp4" webkit-playsinline playsinline autoplay loop>
                     </video>
                     <div class="back_text">
                         <h2>Awamori in The Pocket</h2>

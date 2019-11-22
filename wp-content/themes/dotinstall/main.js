@@ -26,32 +26,33 @@ $(function(){
                 return false;
             });
         });
+
         $(".css-cancel").each(function(){
             $(this).on("click",function(){
                 $(this).fadeOut();
-                $(".top_main_img").css("background", "transparent");
+                $(".top_main_img").removeClass("active");
                 $("aside").fadeIn(800, function(){
                     $(".top_main_img").css("padding-top", "83px");
                     $(".top_main_img .back_movie video").css("opacity", ".7");
                     $(".top_main_img .back_movie video").addClass("active");
                     $("body").css("position", "absolute");
+                    date = new Date();
+                    date.setTime( date.getTime() + ( 15 * 60 * 1000 ));
+                    $.cookie("awamori", "active", { expires : date });
                 });
             });
         });
-        var list = [];
-        var count = 0;
-        $(document).ready(function(){
-            count += 1;
-        });
-        if (count > 1) {
+        if ($.cookie("awamori")){
             $(".css-cancel").hide();
             $("aside").show();
-            $(".top_main_img").css("background", "transparent");
             $(".top_main_img").css("padding-top", "83px");
             $(".top_main_img .back_movie video").css("opacity", ".7");
             $(".top_main_img .back_movie video").addClass("active");
             $("body").css("position", "absolute");
+        } else {
+            $(".top_main_img").addClass("active");
         }
+
     } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
 
     }

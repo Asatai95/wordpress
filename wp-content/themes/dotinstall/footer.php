@@ -45,13 +45,13 @@
                   $(this).parents(".marker").find(".icon").addClass("active");
                 }
               }
-              if ($(this).parents(".maker").find(".pin.active").length){
-                $(this).parents(".maker").find(".pin").removeClass("active");
-                $(this).parents(".maker").find(".pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
+              if ($(this).hasClass("active")){
+                $(this).removeClass("active");
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
 
               } else {
-                $(this).parents(".maker").find(".pin").addClass("active");
-                $(this).parents(".maker").find(".pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                $(this).addClass("active");
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
               }
               if ($(".main_top_map.active").length) {
                 // $(".main_top_map.active").css("bottom", "0px");
@@ -84,7 +84,45 @@
                       $(".name_text.view.info_box").addClass("active");
                 });
               }
-
+              var city_name = $(this).parents(".pins").find(".name_text span").text();
+              console.log(city_name)
+              $.ajax({
+                  type: 'POST',
+                  url: ajaxurl,
+                  data: {
+                      'action' : 'ajax_get_radio_contents_posts',
+                      'mes' : city_name,
+                  },
+                  success: function( response ){
+                    var jsonData = JSON.parse( response );
+                    console.log(jsonData.length)
+                    $.each(jsonData, function(i, value) {
+                      $(".name_text").each(function(){
+                        $(this).append(
+                          '<div class="city_tag_text">\
+                              <p>'+city_name+'</p>\
+                          </div>\
+                          <div class="radio_content">\
+                            <div class="post-content sub_image_box">\
+                                <a href="'+ value["permalink"]+'"><img src="'+ value["thumbnail"] +'" alt=""></a>\
+                            </div>\
+                            <div class="post-header top_sp context_block">\
+                                <p>\
+                                    <a href="'+ value["permalink"]+'">'+ value["post_title"]+'</a>\
+                                </p>\
+                                <div class="sub_text">\
+                                    <span>\
+                                      '+ value["date"]+'\
+                                    </span>\
+                                </div>\
+                            </div>\
+                          </div>\
+                          '
+                        );
+                      });
+                    });
+                  }
+              });
               return false;
             });
           });

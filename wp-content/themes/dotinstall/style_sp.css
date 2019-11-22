@@ -157,6 +157,9 @@ aside{
     display: none;
 }
 
+.sidevar.page {
+    display: block;
+}
 
 .navbar.navbar-dark.bg-white{
     width: 100%;
@@ -928,6 +931,10 @@ figure iframe {
 
 /* TRAVELPLANNING */
 
+.travel_info_block {
+    height: 540px;
+}
+
 .travel_info_block .travel_info_block_title {
     position: relative;
     margin: 10px 0;
@@ -1358,7 +1365,6 @@ figure iframe {
 
 .main_top_map.active {
     transform: scale(.45);
-    right: unset;
     top: unset;
     bottom: -130px;
     margin: auto;
@@ -1395,7 +1401,10 @@ figure iframe {
     background: transparent;
     padding-top: 50px;
     transition: all 1s ease-in-out;
+    z-index: 30;
+
 }
+
 
 .top_main_img.active {
     background: rgb(0,0,0);
@@ -1438,6 +1447,12 @@ figure iframe {
     bottom: 0;
     margin: auto;
     height: 120px;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
 }
 
 .top_main_img .back_movie .back_text h2 {
@@ -1607,6 +1622,7 @@ figure iframe {
 
 .video_back_image_box {
     height: 400px;
+    visibility: hidden;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -1665,6 +1681,8 @@ figure iframe {
 }
 
 .main_top_map {
+    width: 375px;
+    height: 500px;
     position: absolute;
     top: 0;
     right: 0;
@@ -1704,11 +1722,46 @@ figure iframe {
     left: 2px;
 }
 
+.map_pin .pins.yonabaru {
+    bottom: 73px;
+    left: 55px;
+}
+
+.map_pin .pins.yonabaru .pin {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 50px;
+    left: -4px;
+}
+
+.map_pin .pins.yonabaru img {
+    width: 15px;
+}
+
+.map_pin .pins.yonabaru img.icon {
+    display: none;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+}
+
 .map_pin .pins.naha .marker {
     position: relative;
     display: block;
     height: 60px;
     width: 50px;
+}
+
+.map_pin .pins .name_text {
+    display: none;
 }
 
 .map_pin .pins.naha .marker .pin {
@@ -1765,6 +1818,34 @@ figure iframe {
     margin: 10px 0;
 }
 
+.name_text.view.info_box .city_tag_text p:before {
+    content: '\FF3C';
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 800;
+    position: relative;
+    left: -10px;
+    top: 0px;
+    color: rgb(81, 165, 255);
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+    z-index: -1;
+}
+
+.name_text.view.info_box .city_tag_text p:after {
+    content: '\FF0F';
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 800;
+    position: relative;
+    left: 10px;
+    top: 0px;
+    color: rgb(81, 165, 255);
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+    z-index: -1;
+}
+
 .name_text.view.info_box .city_tag_text p {
     text-align: center;
     padding: 0;
@@ -1817,10 +1898,10 @@ figure iframe {
 }
 
 
-.marker {
+/* .marker {
     display: none;
 }
 
 .pins {
     display: none;
-}
+} */

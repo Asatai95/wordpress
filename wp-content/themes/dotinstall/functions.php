@@ -30,6 +30,40 @@ function add_my_ajaxurl() {
   }
 add_action( 'wp_footer', 'add_my_ajaxurl', 1 );
 
+function ajax_get_radio_contents_posts() {
+    $mes = $_POST['mes'];
+    _log($mes);
+    $returnObj = array();
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 1,
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_status' => 'publish',
+        'category_name' => $mes,
+    );
+
+    $posts  = new WP_Query( $args );
+    if ($posts->have_posts()) {
+        while($posts->have_posts()) {
+            $posts->the_post();
+            $returnObj[] = array(
+                'post_title' => get_the_title(),
+                'permalink' => get_permalink(),
+                'thumbnail' => get_the_post_thumbnail_url(),
+                'date' => get_post_time('F d, Y'),
+            );
+        }
+    }
+    wp_reset_postdata();
+
+    echo json_encode( $returnObj );
+    die();
+}
+add_action('wp_ajax_ajax_get_radio_contents_posts', 'ajax_get_radio_contents_posts' );
+add_action('wp_ajax_nopriv_ajax_radio_contents_posts', 'ajax_get_radio_contents_posts' );
+
 function ajax_get_new_posts() {
   $mes = $_POST['mes'];
   $returnObj = array();

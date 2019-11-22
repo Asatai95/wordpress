@@ -5,7 +5,7 @@
         <div class="top_main_img">
             <div class="back_movie">
                 <div class="main_top_view_video">
-                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_420/v1574258843/my_media_bg.mp4" muted webkit-playsinline playsinline autoplay loop>
+                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4" muted webkit-playsinline playsinline autoplay loop>
                     </video>
                     <div class="back_text">
                         <h2>Awamori in The Pocket</h2>
@@ -286,24 +286,20 @@
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843861/naha.png" alt="" class="icon">
                                 </div>
-                                <!-- <div class="name_text view">
+                                <div class="name_text view">
                                     <span>那覇市</span>
-
-                                </div> -->
+                                </div>
                             </div>
 
                         <?php elseif ($value == "与那原町") :?>
                             <div class="pins yonabaru">
-
-
-                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572844397/yonabaru.png" alt="">
-
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572844397/yonabaru.png" alt="" class="icon">
                             </div>
                         <?php elseif ($value == "南城市"):?>
                             <div class="pins nanzyou">
-
-
-                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572844611/nanzyou.png" alt="">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572844611/nanzyou.png" alt="" class="icon">
 
                                 <div class="name_text view">
                                     <span>南城市</span>
@@ -312,8 +308,8 @@
                             </div>
                         <?php elseif ($value == "豊見城市"):?>
                             <div class="pins tomishiro">
-
-                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572845210/tomishiro.png" alt="">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
+                                <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572845210/tomishiro.png" alt="" class="icon">
 
                             </div>
                         <?php elseif ($value == "八重瀬町"):?>
@@ -420,28 +416,7 @@
                         if (count($list) > 0):
                     ?>
                         <div class="name_text view info_box">
-                            <div class="city_tag_text">
-                                <p>那覇市</p>
-                            </div>
-                            <div class="radio_content">
-                                <div class="post-content sub_image_box">
-                                    <?php if ($post_value[0]['thumbnail']) :?>
-                                    <a href="<?php echo $post_value[0]['link'] ?>"><?php echo $post_value[0]['thumbnail'];?></a>
-                                    <?php else: ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/img/noimage.png" width="100" height="100">
-                                    <?php endif; ?>
-                                </div>
-                                <div class="post-header top_sp context_block">
-                                    <p>
-                                        <a href="<?php echo $post_value[0]['link'] ?>"><?php echo $post_value[0]['title'] ?></a>
-                                    </p>
-                                    <div class="sub_text">
-                                        <span>
-                                            <?php echo $post_value[0]['date'] ?>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     <?php
                         endif;
@@ -1098,7 +1073,7 @@
             </div>
             <div class="back_video">
                 <video autoplay loop muted>
-                    <source src="https://res.cloudinary.com/hchyaihwv/video/upload/v1574001737/back_video.mp4">
+                    <source src="https://res.cloudinary.com/hchyaihwv/video/upload/v1574001737/back_video.mp4" muted webkit-playsinline playsinline autoplay loop>
                 </video>
                 <div class="travel_block_content">
                     <p>

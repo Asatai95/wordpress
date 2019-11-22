@@ -1,6 +1,34 @@
 $(function(){
     var ua = navigator.userAgent;
     if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
+        var windowWidth = window.innerWidth;
+        var windowWidth_other = $(window).width();
+        if (windowWidth_other == 375){
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
+            });
+        } else if (windowWidth_other == 414) {
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
+            });
+        } else if (windowWidth_other == 320) {
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
+            });
+        }
+        if (windowWidth == 375) {
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
+            });
+        } else if (windowWidth == 414) {
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
+            });
+        } else if (windowWidth == 320) {
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
+            });
+        }
         $(".insta_view_block .main_box .post").on("touchstart click", function(e){
             if (e.type == "touchstart" || e.type == "click"){
                 e.preventDefault();
@@ -32,6 +60,7 @@ $(function(){
                 $(this).fadeOut();
                 $(".top_main_img").removeClass("active");
                 $("aside").fadeIn(800, function(){
+                    $(".video_back_image_box").css("visibility", "visible");
                     $(".top_main_img").css("padding-top", "83px");
                     $(".top_main_img .back_movie video").css("opacity", ".7");
                     $(".top_main_img .back_movie video").addClass("active");
@@ -45,6 +74,8 @@ $(function(){
         if ($.cookie("awamori")){
             $(".css-cancel").hide();
             $("aside").show();
+            $(".video_back_image_box").show();
+            $(".video_back_image_box").css("visibility", "visible");
             $(".top_main_img").css("padding-top", "83px");
             $(".top_main_img .back_movie video").css("opacity", ".7");
             $(".top_main_img .back_movie video").addClass("active");

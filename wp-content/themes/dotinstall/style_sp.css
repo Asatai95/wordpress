@@ -35,7 +35,7 @@ body {
 }
 
 .main_block_sp {
-    padding-top:100px;
+    padding-top:50px;
 }
 
 
@@ -353,6 +353,10 @@ aside{
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+}
+
+.container.main.map_view_sp #posts {
+    position: relative;
 }
 
     .post {
@@ -1723,8 +1727,6 @@ figure iframe {
 
 .map_pin .pins .marker .icon.active {
     display: block;
-    transition: all 1s ease-in-out;
-    transform: translate(-3px, -3px);
 }
 
 .map_pin .pins.naha {
@@ -1741,6 +1743,608 @@ figure iframe {
     bottom: 18px;
     left: 32px;
 }
+
+.map_pin .pins.nanzyou {
+    bottom: 38px;
+    left: 51px;
+}
+
+.map_pin .pins.hae {
+    bottom: 61px;
+    left: 40px;
+}
+
+.map_pin .pins.itoman {
+    bottom: 7px;
+    left: 8px;
+}
+
+.map_pin .pins.tomishiro {
+    bottom: 52px;
+    left: 6px;
+}
+
+.map_pin .pins.kin {
+    bottom: 225px;
+    left: 105px;
+}
+
+.map_pin .pins.higashi {
+    bottom: 320px;
+    left: 240px;
+}
+
+.map_pin .pins.motobu {
+    bottom: 330px;
+    left: 127px;
+}
+
+.map_pin .pins.onna {
+    bottom: 213px;
+    left: 51px;
+}
+
+.map_pin .pins.ginoza {
+    bottom: 242px;
+    left: 155px;
+}
+
+.map_pin .pins.oogimi {
+    bottom: 337px;
+    left: 235px;
+}
+
+.map_pin .pins.kunigami {
+    bottom: 368px;
+    left: 274px;
+}
+
+.map_pin .pins.nago {
+    bottom: 271px;
+    left: 140px;
+    z-index: 5;
+}
+
+.map_pin .pins.nakizin {
+    bottom: 349px;
+    left: 150px;
+}
+
+.map_pin .pins.nishihara {
+    bottom: 87px;
+    left: 52px;
+}
+
+.map_pin .pins.yomitan {
+    bottom: 181px;
+    left: 42px;
+}
+
+.map_pin .pins.urasoe {
+    bottom: 102px;
+    left: 20px;
+}
+
+.map_pin .pins.okinawa {
+    bottom: 146px;
+    left: 70px;
+}
+
+.map_pin .pins.ginowan {
+    bottom: 100px;
+    left: 47px;
+}
+
+.map_pin .pins.kadena {
+    bottom: 159px;
+    left: 55px;
+}
+
+.map_pin .pins.tyatan {
+    bottom: 140px;
+    left: 58px;
+}
+
+.map_pin .pins.kitanaka {
+    bottom: 119px;
+    left: 64px;
+}
+
+.map_pin .pins.nakagusuku {
+    bottom: 102px;
+    left: 62px;
+}
+
+.map_pin .pins.uruma {
+    bottom: 142px;
+    left: 80px;
+}
+
+.map_pin .pins.uruma .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 10px;
+    left: 45px;
+}
+
+.map_pin .pins.uruma .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 73px;
+}
+
+.map_pin .pins.nakagusuku .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 22px;
+    left: 10px;
+}
+
+.map_pin .pins.nakagusuku .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 32px;
+}
+
+.map_pin .pins.kitanaka .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 30px;
+    left: 13px;
+}
+
+.map_pin .pins.kitanaka .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 45px;
+}
+
+.map_pin .pins.tyatan .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 9px;
+    left: -3px;
+}
+
+.map_pin .pins.tyatan .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 33px;
+}
+
+.map_pin .pins.kadena .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 27px;
+    bottom: 22px;
+    left: 0px;
+}
+
+.map_pin .pins.kadena .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none ;
+    width: 39px;
+}
+
+.map_pin .pins.ginowan .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 20px;
+    left: 5px;
+}
+
+.map_pin .pins.ginowan .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 47px;
+}
+
+.map_pin .pins.okinawa .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 30px;
+    bottom: 20px;
+    left: 13px;
+}
+
+.map_pin .pins.okinawa .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 49px;
+}
+
+.map_pin .pins.urasoe .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 14px;
+    left: 5px;
+}
+
+.map_pin .pins.urasoe .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 40px;
+
+}
+
+.map_pin .pins.yomitan .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 30px;
+    left: -10px;
+}
+
+.map_pin .pins.yomitan .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 36px;
+}
+
+.map_pin .pins.nishihara .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 10px;
+    left: 14px;
+}
+
+.map_pin .pins.nishihara .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 28px;
+}
+
+.map_pin .pins.nakizin .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 30px;
+    left: 10px;
+}
+
+.map_pin .pins.nakizin .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 45px;
+}
+
+.map_pin .pins.nago .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 50px;
+    left: 50px;
+}
+
+.map_pin .pins.nago .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 130px;
+}
+
+.map_pin .pins.kunigami .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 50px;
+    left: 35px;
+}
+
+.map_pin .pins.kunigami .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 91px;
+}
+
+.map_pin .pins.oogimi .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 25px;
+    left: 0px;
+}
+
+.map_pin .pins.oogimi .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 62px;
+}
+
+.map_pin .pins.ginoza .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 20px;
+    left: 10px;
+}
+
+.map_pin .pins.ginoza .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 41px;
+}
+
+.map_pin .pins.onna .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 35px;
+    left: 39px;
+}
+
+.map_pin .pins.onna .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 110px;
+}
+
+.map_pin .pins.motobu .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 23px;
+    left: -8px;
+}
+
+.map_pin .pins.motobu .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 46px;
+}
+
+.map_pin .pins.higashi .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 35px;
+    left: 43px;
+}
+
+.map_pin .pins.higashi .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 93px;
+}
+
+.map_pin .pins.kin .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 16px;
+    left: 25px;
+}
+
+.map_pin .pins.kin .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 60px;
+}
+
+.map_pin .pins.tomishiro .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 5px;
+    left: 8px;
+}
+
+.map_pin .pins.tomishiro .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 32px;
+}
+
+.map_pin .pins.itoman .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 10px;
+    left: 5px;
+}
+
+.map_pin .pins.itoman .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 40px;
+}
+
+.map_pin .pins.hae .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 14px;
+    left: -6px;
+}
+
+.map_pin .pins.hae .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 18px;
+}
+
+.map_pin .pins.nanzyou .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 29px;
+    bottom: 25px;
+    left: 30px;
+}
+
+.map_pin .pins.nanzyou img.icon {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    width: 51px;
+    transition: all 1s ease-in-out;
+}
+
 
 .map_pin .pins.yaese .pin {
     z-index: 10;

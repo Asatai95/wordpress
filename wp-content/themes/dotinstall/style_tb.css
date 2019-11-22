@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
 .awamori-logo{
     width: 100px;
     height: 60px;
@@ -13,7 +23,19 @@ a {
 }
 
 body {
+    position: fixed;
     width: 100%;
+    background: rgba(81, 165, 255, 0.1);
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.main_block_sp {
+    padding-top:50px;
 }
 
 
@@ -120,6 +142,11 @@ p {
     padding-top: 130px;
 }
 
+.container.main.map_view_sp {
+    padding: 20px 0 ;
+    max-width: 100%;
+}
+
 
 /* header */
 
@@ -128,17 +155,21 @@ aside{
     position: fixed;
     box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.15);
     z-index: 100;
+    display: none;
 }
 
+.sidevar.page {
+    display: block;
+}
 
 .navbar.navbar-dark.bg-white{
-    width: 95%;
+    width: 100%;
     margin: auto;
     justify-content: center;
 }
-#header {
+/* #header {
 
-}
+} */
 
 .header{
     width: 80%;
@@ -190,8 +221,7 @@ aside{
 }
 
 .next-stream {
-    margin: 50px auto;
-    margin-top: 0px;
+    margin: 35px auto;
     text-align: center;
     margin-top: 0;
     -webkit-animation-name: fadeIn;
@@ -205,7 +235,7 @@ aside{
 .next-stream .next-stream_date {
     display: inline-block;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 13px;
     font-weight: bold;
     letter-spacing: 0.1rem;
 }
@@ -213,11 +243,11 @@ aside{
 .next-stream .next-stream_date:before {
     content: '\FF3C';
     display: inline-block;
-    font-size: 24px;
+    font-size: 15px;
     font-weight: normal;
     position: relative;
-    left: -10px;
-    top: 3px;
+    left: 2px;
+    top: 1px;
     color: rgb(81, 165, 255);
     -webkit-transform: scaleX(0.8);
     transform: scaleX(0.8);
@@ -227,11 +257,11 @@ aside{
 .next-stream .next-stream_date:after {
     content: '\FF0F';
     display: inline-block;
-    font-size: 24px;
+    font-size: 15px;
     font-weight: normal;
     position: relative;
-    left: 0px;
-    top: 3px;
+    left: -13px;
+    top: 1px;
     color: rgb(81, 165, 255);
     -webkit-transform: scaleX(0.8);
     transform: scaleX(0.8);
@@ -249,6 +279,60 @@ aside{
 
 /* posts */
 
+@keyframes purupuru {
+  0%   { transform: rotate(45deg) scale(1.0) ;}
+  20%  { transform: rotate(45deg) scale(1.05);}
+  50%  { transform: rotate(45deg) scale(1.075);}
+  65%  { transform: rotate(45deg) scale(1.1); }
+  80%  { transform: rotate(45deg) scale(1.05); }
+  100% { transform: rotate(45deg) scale(1.0); }
+}
+
+@keyframes purupuru_other {
+    0%   { transform: scale(1.0); }
+    20%  { transform: scale(1.05); }
+    50%  { transform: scale(1.075); }
+    65%  { transform: scale(1.1); }
+    80%  { transform: scale(1.05); }
+    100% { transform: scale(1.0); }
+  }
+
+.main_top_view_video .cancel_button_top {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    margin: auto;
+}
+
+.cancel_button_top .css-cancel {
+    display: inline-block;
+    position: relative;
+    margin: 0 20px 0 7px;
+    padding: 0;
+    width: 4px;
+    height: 50px;
+    background: #fff;
+    cursor: pointer;
+    transform: rotate(45deg);
+    animation: purupuru 1.8s linear 0s 100;
+    -webkit-animation:purupuru 1.8s linear 0s 100;
+}
+
+.cancel_button_top .css-cancel:before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -21px;
+    width: 47px;
+    height: 4px;
+    margin-top: -2px;
+    background: #fff;
+    cursor: pointer;
+    animation: purupuru_other 1.8s linear 0s 100;
+    -webkit-animation:purupuru_other 1.8s linear 0s 100;
+}
+
 .post-meta {
     display: none;
 }
@@ -258,6 +342,18 @@ aside{
     width:100%;
     display: flex;
     flex-wrap: wrap;
+}
+
+.container.radio_content_view #posts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    float: unset;
+}
+
+.container.radio_content_view #posts .post {
+    width: 75%;
 }
 
 .container.single #posts {
@@ -272,10 +368,32 @@ aside{
     flex-direction: column;
 }
 
+.container.main.map_view_sp #posts {
+    position: relative;
+}
+
     .post {
         margin-bottom: 30px;
-	width: 40%;
+	    width: 40%;
         margin: 20px auto;
+    }
+
+    .container.radio_content_view #posts {
+        flex-direction: column;
+    }
+
+    .container.radio_content_view #posts .post {
+        width: 100%;
+    }
+
+    .container.radio_content_view #posts .post .post-header {
+        width: 90%;
+        margin-bottom:0;
+    }
+
+    .container.radio_content_view #posts .post .post-header p {
+        font-weight: 800;
+        font-size: 12px;
     }
 
     .container.main .post {
@@ -284,8 +402,13 @@ aside{
         width: 100%;
     }
 
+    .map_view_sp.container.main .post {
+        position: relative;
+        height: 500px;
+    }
+
         .post-header {
-            width: 80%;
+            width: 75%;
             margin: 20px auto;
             margin-bottom: 70px;
         }
@@ -296,7 +419,7 @@ aside{
         }
 
             .post-header h2 {
-                font-size: 19px;
+                font-size: 17px;
                 font-weight: bold;
             }
 
@@ -321,10 +444,6 @@ aside{
                 width:100%;
             }
 
-            .post-content p {
-                font-size: 18px;
-            }
-
             .container.main .post-content {
                 width:90%;
                 float: none;
@@ -340,8 +459,23 @@ aside{
             .post-content img{
                 width:100%;
                 border-radius: 43px;
-                height: 350px;
+                height: 300px;
                 margin-bottom: 20px;
+            }
+
+            .container.radio_content_view #posts .post .post-content img {
+                height: 250px;
+                border-radius: 20px;
+            }
+
+            .container.radio_content_view #posts .post .post-header {
+                width: 90%;
+                margin: 20px auto;
+                margin-bottom: 0;
+            }
+
+            .container.radio_content_view #posts .post .post-header p {
+                font-weight: 800;
             }
 
             .container.main .post-content img {
@@ -360,8 +494,7 @@ aside{
 
 
 .single_title{
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 20px;
     font-weight: 800;
 }
 
@@ -374,19 +507,15 @@ aside{
     padding: 0;
 }
 
-.post-content.single_main ul li {
-    font-size: 18px ;
-}
-
 .single-image{
     padding: 0px;
     margin: 31px 0px;
 }
 
 .single-image > img{
-    border-radius: 36px;
-    height: 350px;
     width: 100%;
+    border-radius: 36px;
+    height: 200px;
 }
 /* navigation */
 
@@ -425,14 +554,14 @@ aside{
 
     .navigation.container.footer_nav .prev,
     .navigation.container.footer_nav .next {
-        height: 60px;
+        height: 50px;
         border: none;
         border-radius: 30px;
         /* background-color: rgb(81, 165, 255);
         box-shadow: 0 2px 10px 2px rgb(26, 13, 171, 0.25); */
         float: none;
         text-align: center;
-        width: 140px;
+        width: 110px;
         margin: auto 10px;
     }
 
@@ -485,6 +614,7 @@ aside{
     height: 100%;
     display: none;
     background: rgb(255,255,255);
+    z-index: 80;
 }
 
 .nav_header_menu .navbar-nav {
@@ -551,7 +681,7 @@ aside{
   font-size: 15px;
   background-color: rgb(81, 165, 255);
   z-index: 30;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 
 .footer_view .footer_info {
@@ -599,27 +729,27 @@ aside{
 .sns {
     font-size: 20px;
     font-weight: bold;
+    width: 70%;
+    margin: auto;
 }
 
 .tips{
     display:flex;
     justify-content: space-around;
-    width: 85%;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
     margin: 0 auto;
     overflow: hidden;
     margin-bottom: 50px;
 }
 
-.tips .facebook_feed {
-    width: 50%;
-}
-
-.tips .support-title {
-    width: 45%;
-}
-
 li{
     list-style: none;
+}
+
+.support-title {
+    margin: 30px 0;
 }
 
 .support-title p {
@@ -636,15 +766,13 @@ li{
 }
 
 .support-title ul li.support_form_link {
-    font-size: 15px;
     text-align: center;
 }
 
 .support-title ul li img {
-    width: 60%;
+    width: 80%;
     margin: 30px auto;
 }
-
 
 .device div {
     display: none;
@@ -667,7 +795,7 @@ figure iframe {
 
 .main_information {
     margin: 30px auto;
-    height: 1100px;
+    height: 1150px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -683,26 +811,6 @@ figure iframe {
     font-size: 15px;
 }
 
-.main_information .share_box {
-    width : 100%;
-}
-
-.main_information.single .share_box,
-.main_information.single .google_form {
-    width : 95%;
-}
-
-.google_form .contact_form_box {
-    margin: auto;
-    text-align: center;
-}
-
-.main_information .google_form iframe {
-    margin: auto;
-}
-
-
-
 
 
 .container.single #posts_page {
@@ -713,7 +821,7 @@ figure iframe {
 }
 
 #posts_page .single-post {
-    width: 95%;
+    width: 80%;
 }
 
 .single_title.page ,
@@ -742,16 +850,13 @@ figure iframe {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: column;
 }
 
 .box_info .profile {
-    width: 30%;
+    width: 100%;
     text-align: center;
-}
-
-.user_info .box_info .profile.tb {
-    width: 75%;
-    margin: 30px auto ;
+    margin: 30px auto;
 }
 
 .box_info .profile img {
@@ -820,8 +925,6 @@ figure iframe {
     font-weight: 800;
 }
 
-
-
 .cast {
     text-align: center;
 }
@@ -848,4 +951,1633 @@ figure iframe {
 
 .navbar-brand img:hover {
     transform: scale(1.1);
+}
+
+.main_information.single .share_box,
+.main_information.single .google_form {
+    width : 95%;
+}
+
+.main_information.page {
+    margin: 30px auto;
+    margin-bottom: 35px;
+}
+
+/* TRAVELPLANNING */
+
+.travel_info_block {
+    height: 540px;
+}
+
+.travel_info_block .travel_info_block_title {
+    position: relative;
+    margin: 10px 0;
+    margin-top: 30px;
+}
+
+.travel_info_block .travel_info_block_title:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    height: 0;
+    width: 3rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    right: 82%;
+    margin-right: 1.5em;
+    border-top-style: dashed;
+}
+
+.travel_info_block .travel_info_block_title:after {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    height: 0;
+    width: 19rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    left: 46%;
+    margin-left: 0.6em;
+    border-top-style: dashed;
+}
+
+.travel_info_block .travel_info_block_title p {
+    width: 71%;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 0 20px;
+}
+
+.travel_info_block .travel_info_block_title p span {
+    color: #666666;
+}
+
+.travel_info_block .back_video {
+    height: 450px;
+    position: relative;
+}
+
+.travel_info_block .back_video video {
+    width: 100%;
+    opacity: .5;
+}
+
+.travel_info_block .back_video .travel_block_content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 230px;
+    background: rgb(255,255,255,.8);
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.travel_info_block .back_video .travel_block_content p {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    color: #222;
+}
+
+.travel_info_block .back_video .travel_block_content a button {
+    width: 180px;
+    height: 35px;
+    border: none;
+    background: rgb(81,165,255);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 0;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0 1px 2px #222;
+}
+
+/* instagram  */
+/* #instagram_field {
+    margin-bottom: 50px;
+} */
+
+#instagram_field .instagram_field_title {
+    padding: 15px 0;
+}
+
+#instagram_field .instagram_field_title p {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    padding: 0;
+}
+
+#instagram_field .instagram_field_title p span {
+    color : #666666;
+}
+
+.insta_view_block {
+    width: 100%;
+}
+
+.insta_view_block .main_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.insta_view_block .main_box .post {
+    margin: 0;
+    width: 20%;
+    position: relative;
+}
+
+.insta_view_block .main_box .post a img {
+    width: 100%;
+}
+
+.insta_view_block .main_box .post .insta_box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 60px;
+    display:none;
+}
+
+.insta_view_block .main_box .post .insta_box div div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.insta_view_block .main_box .post .insta_box div div svg {
+    width: 30px;
+    height: 30px;
+}
+
+.insta_view_block .main_box .post .insta_box div div svg .text {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* Awamori in the pocket */
+.tips .support-title {
+    width: 90%;
+}
+
+.tips .support-title .tips_title {
+    width: 100%;
+    position: relative;
+}
+
+.tips .support-title .tips_title:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 35%;
+    height: 0;
+    width: 3rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    right: 84%;
+    margin-right: 1.5em;
+    border-top-style: dashed;
+}
+
+.tips .support-title .tips_title:after {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 35%;
+    height: 0;
+    width: 16rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    left: 53%;
+    margin-left: 0.6em;
+    border-top-style: dashed;
+}
+
+.tips .support-title div p {
+    font-size: 18px;
+    font-weight: 800;
+    width: 70%;
+    margin: auto;
+}
+
+.tips .support-title div .user_info_block .user_info {
+    background: url("https://res.cloudinary.com/dq14n6i0f/image/upload/v1573822260/main_view_back_img.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 280px;
+}
+
+.tips .support-title div .user_info_block .user_image,
+.tips .support-title div .user_info_block .user_image_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tips .support-title div .user_info_block .user_image img,
+.tips .support-title div .user_info_block .user_image_bottom img {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 100px;
+}
+
+.tips .support-title div .user_info_block .user_image_bottom img {
+    margin:0 5px;
+}
+
+.tips .support-title div .user_info_block .user_info_text {
+    margin: 15px 0;
+    margin-bottom: 5px;
+}
+
+.tips .support-title div .user_info_block .user_info_text p {
+    font-size: 14px;
+    padding: 0;
+}
+
+.tips .support-title div ul li.support_form_link {
+    text-align: left;
+}
+
+.tips .support-title div .user_info_block {
+    width: 65%;
+    margin: auto;
+}
+
+.tips .support-title div ul {
+    width: 65%;
+    margin: auto;
+}
+
+/* facebook */
+.sns_box {
+    width: 90%;
+}
+
+.sns_box .facebook_feed {
+    position: relative;
+}
+
+.sns_box .facebook_feed:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 35%;
+    height: 0;
+    width: 3rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    right: 84%;
+    margin-right: 1.5em;
+    border-top-style: dashed;
+}
+
+.sns_box .facebook_feed:after {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 35%;
+    height: 0;
+    width: 22rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    left: 36%;
+    margin-left: 0.6em;
+    border-top-style: dashed;
+}
+
+.sns_box .device {
+    text-align: center;
+}
+
+/* new radio */
+.radio_mian_box {
+    margin-bottom: 50px;
+}
+
+.radio_mian_box .new_radio_content {
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+.radio_mian_box .new_radio_content:before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 35%;
+    height: 0;
+    width: 3rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    right: 99%;
+    margin-right: 1.5em;
+    border-top-style: dashed;
+}
+
+.radio_mian_box .new_radio_content:after {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 35%;
+    height: 0;
+    width: 24rem;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #666666;
+    opacity: .3;
+    left: 30%;
+    margin-left: 0.6em;
+    border-top-style: dashed;
+}
+
+.radio_mian_box .new_radio_content p {
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+}
+
+.radio_mian_box .new_radio_content p img {
+    width: 50px;
+    margin-right: 5px;
+}
+
+.radio_info_block .radio_content .post-content {
+    float: unset;
+}
+
+.radio_info_block .radio_content .post-content img {
+    border-radius: 10px;
+    margin-bottom : 10px;
+}
+
+.radio_info_block .radio_content .post-header.top_sp,
+.radio_info_block .radio_content .post-header.top_sp .sub_text {
+    overflow: hidden;
+    width:100%;
+}
+
+.radio_info_block .radio_content .post-header.top_sp p {
+    font-size: 16px;
+    font-weight: 800;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.radio_info_block .radio_content .post-header.top_sp .sub_text p {
+    padding: 0;
+    font-size: 13px;
+    font-weight: 800;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.radio_info_block .radio_content .post-header.top_sp .sub_text span {
+    color: #666666;
+}
+
+.radio_mian_box .radio_info_block {
+    width: 65%;
+    margin: auto;
+}
+
+.post-header.top_sp {
+    width: 100%;
+    margin: 25px 0;
+    margin-top: 0;
+}
+
+.radios_button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.radios_button a button {
+    width: 180px;
+    height: 35px;
+    border: none;
+    background: rgb(81,165,255);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 1px 2px #222;
+}
+
+/* map */
+
+.main_top_map.active {
+    transform: scale(.45);
+    top: unset;
+    bottom: -130px;
+    margin: auto;
+    transition: all 1s ease-in-out;
+}
+
+.main_top_map img.main_map_image {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.main_top_map .map_pin .nakizin_islands img,
+.main_top_map .map_pin .uruma_island img {
+    width: 10%;
+}
+
+.main_top_map .map_pin .nakizin_islands {
+    position: absolute;
+    top: 112px;
+    left: 200px;
+}
+
+.main_top_map .map_pin .uruma_island {
+    position: absolute;
+    bottom: 157px;
+    left: 140px;
+}
+/*
+.name_text span {
+    display: none;
+} */
+
+.top_main_img {
+    background: transparent;
+    padding-top: 50px;
+    transition: all 1s ease-in-out;
+    z-index: 30;
+
+}
+
+
+.top_main_img.active {
+    background: rgb(0,0,0);
+}
+
+.top_main_img .back_movie {
+    /* height: 450px; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top_main_img .back_movie .main_top_view_video {
+    /* margin: 80px 0; */
+    position: relative;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.top_main_img .back_movie video {
+    height: 500px;
+    opacity: 1;
+}
+
+.top_main_img .back_movie video.active {
+    width :auto;
+}
+
+.top_main_img .back_movie .back_text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    height: 120px;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.top_main_img .back_movie .back_text h2 {
+    font-size: 33px;
+    font-weight: 800;
+    color: #fff;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+}
+
+.top_main_img .back_movie .back_text p {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.back_movie .top_comment p {
+    font-size: 16px;
+    font-weight: 800;
+    color : #666666;
+}
+
+.back_movie .top_comment p span {
+    color: rgb(81, 165,255);
+}
+
+.top_comment {
+    position: relative;
+    height: 100px;
+    width: 500px;
+}
+
+.main_top_img.back_img.active {
+    display: block!important;
+    position: absolute;
+    background: url("https://res.cloudinary.com/hchyaihwv/image/upload/v1573992830/iphone_back.png");
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+    background-position: bottom;
+    height: 100%;
+    width: 40%;
+    top: 0;
+    bottom: 0px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    z-index: 10;
+}
+
+.sliding_pictures.active {
+    position: absolute;
+    top: 0px;
+    bottom: -20px;
+    right: 0;
+    left: -50px;
+    margin: auto;
+    z-index: 1;
+    width: 600px;
+    height: 85%;
+    -webkit-perspective: 130px;
+    -ms-perspective: 130px;
+    -o-perspective: 130px;
+    perspective: 130px;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.sliding_pictures .picture {
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    height: 70px;
+    margin-left: -170px;
+    -webkit-transform: translate3d(0,0,0) rotateX(30deg);
+    transform: translate3d(0,0,0) rotateX(30deg);
+    -webkit-transition: all 1s cubic-bezier(.4,.85,.49,.99) 0s;
+    transition: all 1.5s cubic-bezier(.4,.85,.49,.99) 0s;
+    box-shadow: 0 5px 3px 0 rgba(0,0,0,.3);
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sliding_pictures.active .picture.left.near {
+    -webkit-transform: translate3d(-30px,0,0) rotateX(20deg);
+    transform: translate3d(-30px,0,0) rotateX(20deg);
+}
+
+.sliding_pictures.active .picture.left.far {
+    -webkit-transform: translate3d(-135px,0,0) rotateX(20deg);
+    transform: translate3d(-135px,0,0) rotateX(20deg);
+}
+
+.sliding_pictures.active .picture.right.near {
+    -webkit-transform: translate3d(280px,0,0) rotateX(20deg);
+    transform: translate3d(280px,0,0) rotateX(20deg);
+}
+
+.sliding_pictures.active .picture.right.far {
+    -webkit-transform: translate3d(385px,0,0) rotateX(20deg);
+    transform: translate3d(385px,0,0) rotateX(20deg);
+}
+
+.sliding_pictures .picture.near {
+    z-index: 2;
+}
+
+.sliding_pictures .picture.far {
+    z-index: 1;
+}
+
+.sliding_pictures .sliding_picture2 {
+    background: url('https://res.cloudinary.com/hchyaihwv/image/upload/v1572693478/fnig0z0fhngjkikcxvuv.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sliding_pictures .sliding_picture3 {
+    background: url("https://res.cloudinary.com/hchyaihwv/image/upload/v1573910226/IMG_2669.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sliding_pictures .sliding_picture1 {
+    background: url("https://res.cloudinary.com/hchyaihwv/image/upload/v1572693453/it7ssf3geasxloyvh9mt.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.sliding_pictures .sliding_picture4 {
+    background: url("https://res.cloudinary.com/hchyaihwv/image/upload/v1572851882/IMG_0033.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.nav_bar_icon {
+    position: absolute;
+    bottom: -70px;
+    width: 75%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 1s cubic-bezier(.4,.85,.49,.99) 0s;
+    transition: opacity 1s cubic-bezier(.4,.85,.49,.99) 0s;
+    z-index: -1;
+}
+
+.nav_bar_icon.active {
+    opacity: 1;
+    -webkit-transition: opacity 1s cubic-bezier(.4,.85,.49,.99) .5s;
+    transition: opacity 1s cubic-bezier(.4,.85,.49,.99) .5s;
+    z-index: -1;
+}
+
+.nav_bar_icon img {
+    width: 100%;
+}
+
+.video_back_image_box {
+    height: 400px;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.video_back_image_box p {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.video_back_image_box p span {
+    font-size: 20px;
+    color: rgb(81, 165,255);
+}
+
+.video_back_image_box .anchor_button_box {
+    position: absolute;
+    bottom: 100px;
+    margin: auto;
+}
+
+.video_back_image_box .anchor_button_box a button {
+    width: 180px;
+    height: 35px;
+    border: none;
+    background: rgb(81,165,255);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 0;
+    transition: 1s;
+    cursor: pointer;
+    box-shadow: 0 1px 2px #222;
+}
+
+.background_main_image {
+    background: url("https://res.cloudinary.com/hchyaihwv/image/upload/c_scale,h_460,w_375/v1572851882/IMG_0033.jpg");
+    background-repeat: no-repeat;
+    background-size : 100% 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    width: 100%;
+    opacity: .6;
+}
+
+.main_top_map {
+    width: 375px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    /* bottom: 0; */
+    margin: auto;
+    transition: all 1s ease-in-out;
+    transform: scale(1.0);
+}
+
+.map_pin {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.map_pin .pins {
+    position: absolute;
+    margin: auto;
+}
+
+.map_pin .pins .name_text {
+    position: absolute;
+    top: -300px;
+    margin: auto;
+}
+
+.map_pin .pins div img {
+    width: 30px;
+}
+
+.map_pin .pins div img.icon {
+    display: none;
+}
+
+.map_pin .pins .marker .icon.active {
+    display: block;
+}
+
+.map_pin .pins.naha {
+    bottom: 66px;
+    left: 2px;
+}
+
+.map_pin .pins.yonabaru {
+    bottom: 73px;
+    left: 55px;
+}
+
+.map_pin .pins.yaese {
+    bottom: 18px;
+    left: 32px;
+}
+
+.map_pin .pins.nanzyou {
+    bottom: 38px;
+    left: 51px;
+}
+
+.map_pin .pins.hae {
+    bottom: 61px;
+    left: 40px;
+}
+
+.map_pin .pins.itoman {
+    bottom: 7px;
+    left: 8px;
+}
+
+.map_pin .pins.tomishiro {
+    bottom: 52px;
+    left: 6px;
+}
+
+.map_pin .pins.kin {
+    bottom: 225px;
+    left: 105px;
+}
+
+.map_pin .pins.higashi {
+    bottom: 320px;
+    left: 240px;
+}
+
+.map_pin .pins.motobu {
+    bottom: 330px;
+    left: 127px;
+}
+
+.map_pin .pins.onna {
+    bottom: 213px;
+    left: 51px;
+}
+
+.map_pin .pins.ginoza {
+    bottom: 242px;
+    left: 155px;
+}
+
+.map_pin .pins.oogimi {
+    bottom: 337px;
+    left: 235px;
+}
+
+.map_pin .pins.kunigami {
+    bottom: 368px;
+    left: 274px;
+}
+
+.map_pin .pins.nago {
+    bottom: 271px;
+    left: 140px;
+    z-index: 5;
+}
+
+.map_pin .pins.nakizin {
+    bottom: 349px;
+    left: 150px;
+}
+
+.map_pin .pins.nishihara {
+    bottom: 87px;
+    left: 52px;
+}
+
+.map_pin .pins.yomitan {
+    bottom: 181px;
+    left: 42px;
+}
+
+.map_pin .pins.urasoe {
+    bottom: 102px;
+    left: 20px;
+}
+
+.map_pin .pins.okinawa {
+    bottom: 146px;
+    left: 70px;
+}
+
+.map_pin .pins.ginowan {
+    bottom: 100px;
+    left: 47px;
+}
+
+.map_pin .pins.kadena {
+    bottom: 159px;
+    left: 55px;
+}
+
+.map_pin .pins.tyatan {
+    bottom: 140px;
+    left: 58px;
+}
+
+.map_pin .pins.kitanaka {
+    bottom: 119px;
+    left: 64px;
+}
+
+.map_pin .pins.nakagusuku {
+    bottom: 102px;
+    left: 62px;
+}
+
+.map_pin .pins.uruma {
+    bottom: 142px;
+    left: 80px;
+}
+
+.map_pin .pins.uruma .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 10px;
+    left: 45px;
+}
+
+.map_pin .pins.uruma .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 73px;
+}
+
+.map_pin .pins.nakagusuku .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 22px;
+    left: 10px;
+}
+
+.map_pin .pins.nakagusuku .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 32px;
+}
+
+.map_pin .pins.kitanaka .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 30px;
+    left: 13px;
+}
+
+.map_pin .pins.kitanaka .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 45px;
+}
+
+.map_pin .pins.tyatan .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 9px;
+    left: -3px;
+}
+
+.map_pin .pins.tyatan .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 33px;
+}
+
+.map_pin .pins.kadena .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 27px;
+    bottom: 22px;
+    left: 0px;
+}
+
+.map_pin .pins.kadena .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none ;
+    width: 39px;
+}
+
+.map_pin .pins.ginowan .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 20px;
+    left: 5px;
+}
+
+.map_pin .pins.ginowan .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 47px;
+}
+
+.map_pin .pins.okinawa .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 30px;
+    bottom: 20px;
+    left: 13px;
+}
+
+.map_pin .pins.okinawa .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 49px;
+}
+
+.map_pin .pins.urasoe .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 14px;
+    left: 5px;
+}
+
+.map_pin .pins.urasoe .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 40px;
+
+}
+
+.map_pin .pins.yomitan .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 30px;
+    left: -10px;
+}
+
+.map_pin .pins.yomitan .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 36px;
+}
+
+.map_pin .pins.nishihara .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 10px;
+    left: 14px;
+}
+
+.map_pin .pins.nishihara .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 28px;
+}
+
+.map_pin .pins.nakizin .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 30px;
+    left: 10px;
+}
+
+.map_pin .pins.nakizin .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 45px;
+}
+
+.map_pin .pins.nago .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 50px;
+    left: 50px;
+}
+
+.map_pin .pins.nago .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 130px;
+}
+
+.map_pin .pins.kunigami .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 50px;
+    left: 35px;
+}
+
+.map_pin .pins.kunigami .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 91px;
+}
+
+.map_pin .pins.oogimi .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 25px;
+    left: 0px;
+}
+
+.map_pin .pins.oogimi .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 62px;
+}
+
+.map_pin .pins.ginoza .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 20px;
+    left: 10px;
+}
+
+.map_pin .pins.ginoza .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 41px;
+}
+
+.map_pin .pins.onna .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 35px;
+    left: 39px;
+}
+
+.map_pin .pins.onna .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 110px;
+}
+
+.map_pin .pins.motobu .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 23px;
+    left: -8px;
+}
+
+.map_pin .pins.motobu .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 46px;
+}
+
+.map_pin .pins.higashi .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 40px;
+    bottom: 35px;
+    left: 43px;
+}
+
+.map_pin .pins.higashi .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 93px;
+}
+
+.map_pin .pins.kin .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 35px;
+    bottom: 16px;
+    left: 25px;
+}
+
+.map_pin .pins.kin .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 60px;
+}
+
+.map_pin .pins.tomishiro .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 5px;
+    left: 8px;
+}
+
+.map_pin .pins.tomishiro .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 32px;
+}
+
+.map_pin .pins.itoman .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 25px;
+    bottom: 10px;
+    left: 5px;
+}
+
+.map_pin .pins.itoman .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 40px;
+}
+
+.map_pin .pins.hae .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 14px;
+    left: -6px;
+}
+
+.map_pin .pins.hae .icon {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    display: none;
+    width: 18px;
+}
+
+.map_pin .pins.nanzyou .pin {
+    z-index: 10;
+    position: absolute;
+    margin: auto;
+    cursor: pointer;
+    width: 29px;
+    bottom: 25px;
+    left: 30px;
+}
+
+.map_pin .pins.nanzyou img.icon {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    width: 51px;
+    transition: all 1s ease-in-out;
+}
+
+
+.map_pin .pins.yaese .pin {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 50px;
+    left: 9px;
+}
+
+.map_pin .pins.yaese img.icon {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    width: 33px;
+}
+
+.map_pin .pins.yonabaru .pin {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 50px;
+    left: -4px;
+}
+
+.map_pin .pins.yonabaru img {
+    width: 15px;
+}
+
+.map_pin .pins.yonabaru img.icon {
+    display: none;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+}
+
+.map_pin .pins.naha .marker {
+    position: relative;
+    display: block;
+    height: 60px;
+    width: 50px;
+}
+
+.map_pin .pins .name_text {
+    display: none;
+}
+
+.map_pin .pins.naha .marker .pin {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    cursor: pointer;
+}
+
+.map_pin .pins.naha .marker .icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    width: 56px;
+    transition: all 1s ease-in-out;
+    display: none;
+}
+
+.map_pin .pins.naha .marker .icon.active {
+    display:block;
+    transition: all 1s ease-in-out;
+    transform: translate(-3px, -3px);
+}
+
+.name_text.view.info_box {
+    position: absolute;
+    top: -360px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display:none;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 1.5s ease-in-out;
+    background: rgb(255,255,255,.7);
+    padding-bottom:10px;
+    z-index: -1;
+}
+
+.name_text.view.info_box.active {
+    background: rgb(255,255,255,.7);
+    padding-bottom: 15px;
+    z-index: 10;
+    display: flex;
+}
+
+.name_text.view.info_box .city_tag_text {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.name_text.view.info_box .city_tag_text p:before {
+    content: '\FF3C';
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 800;
+    position: relative;
+    left: -10px;
+    top: 0px;
+    color: rgb(81, 165, 255);
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+    z-index: -1;
+}
+
+.name_text.view.info_box .city_tag_text p:after {
+    content: '\FF0F';
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 800;
+    position: relative;
+    left: 10px;
+    top: 0px;
+    color: rgb(81, 165, 255);
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+    z-index: -1;
+}
+
+.name_text.view.info_box .city_tag_text p {
+    text-align: center;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.name_text.view.info_box .radio_content {
+    width : 100%;
+}
+
+.name_text.view.info_box .radio_content .post-content.sub_image_box {
+    border-radius: 0;
+    border: none;
+    float: unset;
+    width : 100%;
+    text-align: center;
+}
+
+.name_text.view.info_box .radio_content .post-content.sub_image_box a img {
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block {
+    margin: 10px 0;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block p {
+    padding: 0;
+    font-size: 15px;
+    font-weight: 800;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block .sub_text {
+    width: 70%;
+    margin: auto;
+}
+
+.name_text.view.info_box .radio_content .post-header.top_sp.context_block .sub_text span {
+    color: #666666;
 }

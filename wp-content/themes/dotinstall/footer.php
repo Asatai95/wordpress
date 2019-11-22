@@ -37,89 +37,115 @@
           $(".map_pin").each(function(){
             $(this).find(".pins .marker .pin").on("click touchstart", function(e){
               e.preventDefault();
-              var text = $(this).parents(".marker").next(".name_text").find("span").text();
-              if (e.type == "click" || e.type == "touchstart"){
-                if ($(this).parents(".marker").find(".icon.active").length){
-                  $(this).parents(".marker").find(".icon").removeClass("active");
-                } else {
-                  $(this).parents(".marker").find(".icon").addClass("active");
+              if ($(this).parents(".map_pin").find(".pins.active").length){
+                $(this).parents(".map_pin").find(".pins.active").removeClass("active");
+                $(".map_pin .pins .marker .pin").removeClass("active");
+                $(".map_pin .pins .marker .pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
+                $(".map_pin .pins .marker .icon").removeClass("active");
+                if ($(".main_top_map.active").length) {
+                  $(".main_top_map").animate(
+                    {"bottom": "0px"}, 300, "swing" , function(){
+                      setTimeout(function(){
+                        $(".main_top_map.active").removeClass("active");
+                      },1000);
+                    });
                 }
-              }
-              if ($(this).hasClass("active")){
-                $(this).removeClass("active");
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
-
-              } else {
-                $(this).addClass("active");
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
-              }
-              if ($(".main_top_map.active").length) {
-                // $(".main_top_map.active").css("bottom", "0px");
-                // $(".main_top_map.active").removeClass("active");
-                $(".main_top_map").animate(
-                  {"bottom": "0px"}, 300, "swing" , function(){
-                    setTimeout(function(){
-                      $(".main_top_map.active").removeClass("active");
-                    },1000);
+                if($(".name_text.view.info_box.active").length){
+                  $(".name_text.view.info_box.active").css("z-index", "-1");
+                  $(".name_text.view.info_box.active").animate(
+                    {"top": "-360px"}, 100, "swing", function(){
+                      $(".name_text.view.info_box.active").removeClass("active");
+                      setTimeout(function(){
+                        $("#posts").each(function(){
+                          $(this).find(".name_text.view.info_box .city_tag_text").remove();
+                          $(this).find(".name_text.view.info_box .radio_content").remove();
+                        });
+                      },1000);
                   });
+
+                }
               } else {
+                var text = $(this).parents(".marker").next(".name_text").find("span").text();
+                if (e.type == "click" || e.type == "touchstart"){
+                  if ($(this).parents(".marker").find(".icon.active").length){
+                    $(this).parents(".marker").find(".icon").removeClass("active");
+                  } else {
+                    $(this).parents(".marker").find(".icon").addClass("active");
+                  }
+                }
+                if ($(this).hasClass("active")){
+                  $(this).removeClass("active");
+                  $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
 
-                $(".main_top_map").animate(
-                  {"bottom": "-130px"}, 200, "swing", function(){
-                    $(".main_top_map").addClass("active");
-                });
-              }
-              if($(".name_text.view.info_box.active").length){
-                $(".name_text.view.info_box.active").css("z-index", "-1");
-                $(".name_text.view.info_box.active").animate(
-                  {"top": "-360px"}, 100, "swing", function(){
-                    $(".name_text.view.info_box.active").removeClass("active");
-                    setTimeout(function(){
-                      $(".top_page").each(function(){
-                        $(this).find(".name_text .city_tag_text").remove();
-                        $(this).find(".name_text .radio_content").remove();
-                      });
-                    },1000);
-                });
+                } else {
+                  $(this).addClass("active");
+                  $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png");
+                }
+                if ($(".main_top_map.active").length) {
+                  // $(".main_top_map.active").css("bottom", "0px");
+                  // $(".main_top_map.active").removeClass("active");
+                  $(".main_top_map").animate(
+                    {"bottom": "0px"}, 300, "swing" , function(){
+                      setTimeout(function(){
+                        $(".main_top_map.active").removeClass("active");
+                      },1000);
+                    });
+                } else {
 
-              } else {
-                $(".name_text.view.info_box").show();
-                $(".name_text.view.info_box").css("display", "flex");
-                $(".name_text.view.info_box").animate(
-                  {"top": "0px"}, 100, "swing", function(){
-                      $(".name_text.view.info_box").addClass("active");
-                });
-              }
-              var city_name = $(this).parents(".pins").find(".name_text span").text();
-              console.log(city_name)
-              $.ajax({
-                  type: 'POST',
-                  url: ajaxurl,
-                  data: {
-                      'action' : 'ajax_get_radio_contents_posts',
-                      'mes' : city_name,
-                  },
-                  success: function( response ){
-                    var jsonData = JSON.parse( response );
-                    console.log(jsonData)
-                    $.each(jsonData, function(i, value) {
+                  $(".main_top_map").animate(
+                    {"bottom": "-130px"}, 200, "swing", function(){
+                      $(".main_top_map").addClass("active");
+                  });
+                }
+                if($(".name_text.view.info_box.active").length){
+                  $(".name_text.view.info_box.active").css("z-index", "-1");
+                  $(".name_text.view.info_box.active").animate(
+                    {"top": "-360px"}, 100, "swing", function(){
+                      $(".name_text.view.info_box.active").removeClass("active");
+                      setTimeout(function(){
+                        $("#posts").each(function(){
+                          $(this).find(".name_text.view.info_box .city_tag_text").remove();
+                          $(this).find(".name_text.view.info_box .radio_content").remove();
+                        });
+                      },1000);
+                  });
 
-                      $(".name_text").each(function(){
+                } else {
+                  $(".name_text.view.info_box").show();
+                  $(".name_text.view.info_box").css("display", "flex");
+                  $(".name_text.view.info_box").animate(
+                    {"top": "0px"}, 100, "swing", function(){
+                        $(".name_text.view.info_box").addClass("active");
+                  });
+                }
+                var city_name = $(this).parents(".pins").find(".name_text span").text();
+
+                $(this).parents(".pins").addClass("active");
+                $.ajax({
+                    type: 'POST',
+                    url: ajaxurl,
+                    data: {
+                        'action' : 'ajax_get_radio_contents_posts',
+                        'mes' : city_name,
+                    },
+                    success: function( response ){
+                      var jsonData = JSON.parse( response );
+                      $(".name_text.info_box").each(function(){
                         $(this).append(
                           '<div class="city_tag_text">\
                               <p>'+city_name+'</p>\
                           </div>\
                           <div class="radio_content">\
                             <div class="post-content sub_image_box">\
-                                <a href="'+ value["permalink"]+'"><img src="'+ value["thumbnail"] +'" alt=""></a>\
+                                <a href="'+ jsonData["permalink"]+'"><img src="'+ jsonData["thumbnail"] +'" alt=""></a>\
                             </div>\
                             <div class="post-header top_sp context_block">\
                                 <p>\
-                                    <a href="'+ value["permalink"]+'">'+ value["post_title"]+'</a>\
+                                    <a href="'+ jsonData["permalink"]+'">'+ jsonData["post_title"]+'</a>\
                                 </p>\
                                 <div class="sub_text">\
                                     <span>\
-                                      '+ value["date"]+'\
+                                      '+ jsonData["date"]+'\
                                     </span>\
                                 </div>\
                             </div>\
@@ -127,9 +153,10 @@
                           '
                         );
                       });
-                    });
-                  }
-              });
+
+                    }
+                });
+              }
               return false;
             });
           });

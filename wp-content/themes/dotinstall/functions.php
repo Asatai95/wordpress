@@ -41,25 +41,27 @@ function ajax_get_radio_contents_posts() {
         'orderby' => 'date',
         'order' => 'DESC',
         'post_status' => 'publish',
-        'category_name' => $mes,
     );
 
     $posts  = new WP_Query( $args );
     if ($posts->have_posts()) {
         while($posts->have_posts()) {
             $posts->the_post();
-            $returnObj[] = array(
-                'post_title' => get_the_title(),
-                'permalink' => get_permalink(),
-                'thumbnail' => get_the_post_thumbnail_url(),
-                'date' => get_post_time('F d, Y'),
-            );
+            _log(get_the_category());
+            if (get_the_category()[0] ->cat_name == $mes){
+                $returnObj[] = array(
+                    'post_title' => get_the_title(),
+                    'permalink' => get_permalink(),
+                    'thumbnail' => get_the_post_thumbnail_url(),
+                    'date' => get_post_time('F d, Y'),
+                );
+            }
         }
     }
     _log($returnObj);
     wp_reset_postdata();
 
-    echo json_encode( $returnObj );
+    echo json_encode( $returnObj[0] );
     die();
 }
 add_action('wp_ajax_ajax_get_radio_contents_posts', 'ajax_get_radio_contents_posts' );

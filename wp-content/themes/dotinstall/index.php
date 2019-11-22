@@ -64,7 +64,7 @@
                             foreach($test_posts as $post){
                                 setup_postdata( $post );
                                 $cat_name = get_the_category()[0]->cat_name;
-
+                                _log($cat_name);
                                 array_push($post_array, $cat_name);
                                 $post_article[] = array("cat_name"=>$cat_name, "link"=>get_the_permalink(), "thumbnail"=>get_the_post_thumbnail(), "title"=>get_the_title(), "date"=>get_post_time('F d, Y'));
                             }
@@ -80,8 +80,9 @@
                             if ($value == "国頭村"): ?>
                             <div class="pins kunigami">
                                 <div class="marker">
-                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572855551/kunigami.png" alt="">
-                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="">
+
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572855551/kunigami.png" alt="" class="icon">
                                 </div>
                                 <div class="name_text view">
                                     <span>国頭村</span>
@@ -125,6 +126,7 @@
                                 <div class="marker">
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572839600/nakizin.png" alt="" class="icon">
+                                </div>
                                 <div class="name_text view">
                                     <span>今帰仁村</span>
                                 </div>
@@ -193,6 +195,7 @@
                                 </div>
                             </div>
                         <?php elseif ($value == "読谷村"):?>
+
                             <div class="pins yomitan">
                                 <div class="marker">
                                     <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
@@ -230,6 +233,16 @@
                                 </div>
                                 <div class="name_text view">
                                     <span>北中城村</span>
+                                </div>
+                            </div>
+                        <?php elseif ($value == "中城村") :?>
+                            <div class="pins nakagusuku">
+                                <div class="marker">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843229/nakagusuku.png" alt="" class="icon">
+                                </div>
+                                <div class="name_text view">
+                                    <span>中城村</span>
                                 </div>
                             </div>
                         <?php elseif ($value == "宜野湾市") :?>
@@ -313,6 +326,16 @@
                                     <span>八重瀬町</span>
                                 </div>
                             </div>
+                        <?php elseif ($value == "南風原町"):?>
+                            <div class="pins hae">
+                                <div class="marker">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin">
+                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836424/haebaru.png" alt="" class="icon">
+                                </div>
+                                <div class="name_text view">
+                                    <span>南風原町</span>
+                                </div>
+                            </div>
                         <?php elseif ($value == "糸満市"):?>
                             <div class="pins itoman">
                                 <div class="marker">
@@ -329,64 +352,7 @@
                             wp_reset_postdata();
                         endif ;
                         ?>
-                        <?php
-                            if (have_posts()) :
-                                $stack_1 = array();
-                                $stach_2 = array();
-                                foreach($test_posts as $post){
-                                    $cat_name = get_the_category()[0]->cat_name;
-                                    if ($cat_name == "中城村" || $cat_name == "西原町" || $cat_name == "与那原町" ) {
-                                        array_push($stack_1, $cat_name);
-                                    }
-                                    if ($cat_name == "南風原町" || $cat_name == "豊見城市") {
-                                        array_push($stach_2, $cat_name);
-                                    }
-                                }
-                        ?>
-                        <?php
-
-                            if (in_array("中城村", $stack_1) || in_array("西原町", $stack_1) || in_array("与那原町", $stack_1) ):
-                        ?>
-                            <div class="pins nakagusuku">
-                                <?php if ( in_array("中城村", $stack_1) ):?>
-
-                                        <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843229/nakagusuku.png" alt="">
-
-                                <?php endif; ?>
-                                <div class="name_text view">
-
-                                    <?php if (in_array("中城村", $stack_1)) :?>
-                                        <span class="naka_text">中城村</span>
-                                    <?php endif; ?>
-                                    <?php if (in_array("西原町", $stack_1)) :?>
-
-                                        <span class="nishi_text">西原町</span>
-                                    <?php endif; ?>
-                                    <?php if (in_array("与那原町", $stack_1)) :?>
-                                        <span class="yona_text">与那原町</span>
-                                    <?php endif; ?>
-
-                                </div>
-                            </div>
-                        <?php endif ;?>
-                        <?php if (in_array("南風原町", $stach_2) || in_array("豊見城市", $stach_2)): ?>
-                            <div class="pins hae">
-                                <?php if (in_array("南風原町", $stach_2)) :?>
-                                    <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572836424/haebaru.png" alt="">
-                                <?php endif ;?>
-                                <div class="name_text view">
-                                    <?php if (in_array("豊見城市", $stach_2)) :?>
-                                        <span class="tomi_text">豊見城市</span>
-                                    <?php endif; ?>
-                                    <?php if (in_array("南風原町", $stach_2)):?>
-                                        <span class="hae_text view">南風原町</span>
-                                    <?php endif ;?>
-                                </div>
-                            </div>
-                        <?php endif ;?>
-                        <?php
-                        endif ;
-                        ?>
+                         </div>
                         </div>
                     </div>
                     <?php

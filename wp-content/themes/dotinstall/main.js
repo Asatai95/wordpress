@@ -38,7 +38,12 @@ $(function(){
                 });
             });
         });
+        var list = [];
+        var count = 0;
         $(document).ready(function(){
+            count += 1;
+        });
+        if (count > 1) {
             $(".css-cancel").hide();
             $("aside").show();
             $(".top_main_img").css("background", "transparent");
@@ -46,7 +51,7 @@ $(function(){
             $(".top_main_img .back_movie video").css("opacity", ".7");
             $(".top_main_img .back_movie video").addClass("active");
             $("body").css("position", "absolute");
-        });
+        }
     } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
 
     }

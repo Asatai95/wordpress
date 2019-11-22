@@ -1417,7 +1417,7 @@ figure iframe {
 }
 
 .top_main_img .back_movie video.active {
-    width :100%;
+    width :auto;
 }
 
 .top_main_img .back_movie .back_text {

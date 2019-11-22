@@ -28,11 +28,11 @@ $(function(){
         });
         $(".css-cancel").each(function(){
             $(this).on("click",function(){
-                console.log("tet")
                 $(this).fadeOut();
+                $(".top_main_img").css("background", "transparent");
                 $("aside").fadeIn(800, function(){
-                    $(".top_main_img").css("padding-top", "-87px");
-                    $(".top_main_img").css("background", "transparent");
+                    $(".top_main_img").css("padding-top", "87px");
+                    $(".top_main_img .back_movie video").css("opacity", ".7");
                     $("body").css("position", "absolute");
                 });
             });

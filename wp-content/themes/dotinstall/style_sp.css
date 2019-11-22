@@ -1413,7 +1413,7 @@ figure iframe {
 
 .top_main_img .back_movie video {
     height: 500px;
-    opacity: .7;
+    opacity: 1;
 }
 
 .top_main_img .back_movie .back_text {

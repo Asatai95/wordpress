@@ -1393,7 +1393,8 @@ figure iframe {
 
 .top_main_img {
     background: rgb(0,0,0);
-    padding-top: 87px;
+    padding-top: 50px;
+    transition: all 1s ease-in-out;
 }
 
 .top_main_img .back_movie {

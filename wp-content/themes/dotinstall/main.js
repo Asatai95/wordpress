@@ -31,6 +31,7 @@ $(function(){
                 console.log("tet")
                 $(this).fadeOut();
                 $("aside").fadeIn(800, function(){
+                    $(".top_main_img").css("padding-top", "-87px");
                     $(".top_main_img").css("background", "transparent");
                     $("body").css("position", "absolute");
                 });

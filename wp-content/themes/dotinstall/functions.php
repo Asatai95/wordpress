@@ -37,7 +37,7 @@ function ajax_get_radio_contents_posts() {
 
     $args = array(
         'post_type' => 'post',
-        'posts_per_page' => 1,
+        'posts_per_page' => -1,
         'orderby' => 'date',
         'order' => 'DESC',
         'post_status' => 'publish',
@@ -56,6 +56,7 @@ function ajax_get_radio_contents_posts() {
             );
         }
     }
+    _log($returnObj);
     wp_reset_postdata();
 
     echo json_encode( $returnObj );

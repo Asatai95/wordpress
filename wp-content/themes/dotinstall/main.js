@@ -3,6 +3,26 @@ $(function(){
     if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
         var windowWidth = window.innerWidth;
         var windowWidth_other = $(window).width();
+        ua_window = window.navigator.userAgent.toLowerCase()
+        if ((ua_window.indexOf('safari') !== -1) && (ua.indexOf('chrome') === -1) && (ua.indexOf('mac') !== -1)) {
+            var scrollBar = isMacSafari ? window.innerWidth - document.body.clientWidth : 0;
+            var window_width = window.innerWidth - scrollBar;
+            if (windowWidth_other == 375){
+                $(".main_top_view_video").each(function(){
+                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
+                });
+            } else if (windowWidth_other == 414) {
+                $(".main_top_view_video").each(function(){
+                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
+                });
+            } else if (windowWidth_other == 320) {
+                $(".main_top_view_video").each(function(){
+                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
+                });
+            }
+        } else {
+            console.log(ua_window)
+        }
         if (windowWidth_other == 375){
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");

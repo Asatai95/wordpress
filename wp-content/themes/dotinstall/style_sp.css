@@ -1717,6 +1717,16 @@ figure iframe {
     width: 30px;
 }
 
+.map_pin .pins div img.icon {
+    display: none;
+}
+
+.map_pin .pins .marker .icon.active {
+    display: block;
+    transition: all 1s ease-in-out;
+    transform: translate(-3px, -3px);
+}
+
 .map_pin .pins.naha {
     bottom: 66px;
     left: 2px;
@@ -1725,6 +1735,33 @@ figure iframe {
 .map_pin .pins.yonabaru {
     bottom: 73px;
     left: 55px;
+}
+
+.map_pin .pins.yaese {
+    bottom: 18px;
+    left: 32px;
+}
+
+.map_pin .pins.yaese .pin {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    cursor: pointer;
+    width: 20px;
+    bottom: 50px;
+    left: 9px;
+}
+
+.map_pin .pins.yaese img.icon {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 1;
+    transition: all 1s ease-in-out;
+    width: 33px;
 }
 
 .map_pin .pins.yonabaru .pin {

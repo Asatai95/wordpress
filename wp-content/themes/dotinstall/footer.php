@@ -58,7 +58,6 @@
                 // $(".main_top_map.active").removeClass("active");
                 $(".main_top_map").animate(
                   {"bottom": "0px"}, 300, "swing" , function(){
-                    console.log("test")
                     setTimeout(function(){
                       $(".main_top_map.active").removeClass("active");
                     },1000);
@@ -74,8 +73,15 @@
                 $(".name_text.view.info_box.active").css("z-index", "-1");
                 $(".name_text.view.info_box.active").animate(
                   {"top": "-360px"}, 100, "swing", function(){
-                      $(".name_text.view.info_box.active").removeClass("active");
+                    $(".name_text.view.info_box.active").removeClass("active");
+                    setTimeout(function(){
+                      $(".top_page").each(function(){
+                        $(this).find(".name_text .city_tag_text").remove();
+                        $(this).find(".name_text .radio_content").remove();
+                      });
+                    },1000);
                 });
+
               } else {
                 $(".name_text.view.info_box").show();
                 $(".name_text.view.info_box").css("display", "flex");
@@ -95,8 +101,9 @@
                   },
                   success: function( response ){
                     var jsonData = JSON.parse( response );
-                    console.log(jsonData.length)
+                    console.log(jsonData)
                     $.each(jsonData, function(i, value) {
+
                       $(".name_text").each(function(){
                         $(this).append(
                           '<div class="city_tag_text">\

@@ -31,11 +31,21 @@ $(function(){
                 $(this).fadeOut();
                 $(".top_main_img").css("background", "transparent");
                 $("aside").fadeIn(800, function(){
-                    $(".top_main_img").css("padding-top", "87px");
+                    $(".top_main_img").css("padding-top", "83px");
                     $(".top_main_img .back_movie video").css("opacity", ".7");
+                    $(".top_main_img .back_movie video").addClass("active");
                     $("body").css("position", "absolute");
                 });
             });
+        });
+        $(document).ready(function(){
+            $(".css-cancel").hide();
+            $("aside").show();
+            $(".top_main_img").css("background", "transparent");
+            $(".top_main_img").css("padding-top", "83px");
+            $(".top_main_img .back_movie video").css("opacity", ".7");
+            $(".top_main_img .back_movie video").addClass("active");
+            $("body").css("position", "absolute");
         });
     } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
 

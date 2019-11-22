@@ -1416,6 +1416,10 @@ figure iframe {
     opacity: 1;
 }
 
+.top_main_img .back_movie video.active {
+    width :100%;
+}
+
 .top_main_img .back_movie .back_text {
     position: absolute;
     top: 0;

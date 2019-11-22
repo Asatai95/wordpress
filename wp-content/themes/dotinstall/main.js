@@ -26,6 +26,16 @@ $(function(){
                 return false;
             });
         });
+        $(".css-cancel").each(function(){
+            $(this).on("click",function(){
+                console.log("tet")
+                $(this).fadeOut();
+                $("aside").fadeIn(800, function(){
+                    $(".top_main_img").css("background", "transparent");
+                    $("body").css("position", "absolute");
+                });
+            });
+        });
     } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
 
     }

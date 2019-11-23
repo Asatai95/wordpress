@@ -36,6 +36,260 @@ $(function(){
     if (windowWidth > 896 && windowWidth < 1350) {
         $(".sp_display_view").show();
         $(".pc_display_view").hide();
+        $(".device div").hide();
+        $(".device.tab_view").show();
+        var windowWidth = window.innerWidth;
+        var windowWidth_other = $(window).width();
+        $(".insta_view_block .main_box .post").on("touchstart click", function(e){
+            if (e.type == "touchstart" || e.type == "click"){
+                e.preventDefault();
+                $(this).css("transform", "scale(1.0)");
+                return false;
+            }
+        });
+        $(".main_top_map img").each(function(){
+            $(this).on("click", function(e){
+                e.preventDefault();
+                return false;
+            });
+        });
+        $(".background_main_image").each(function(){
+            $(this).on("click", function(e){
+                e.preventDefault();
+                return false;
+            });
+        });
+        $(".map_pin .pins").each(function(){
+            $(this).find(".marker img.pin").on("click", function(e){
+                e.preventDefault();
+                return false;
+            });
+        });
+
+        $(".css-cancel").each(function(){
+            $(this).on("click",function(){
+                $(this).fadeOut();
+                $(".top_main_img").removeClass("active");
+                $("aside").fadeIn(800, function(){
+                    $(".video_back_image_box").css("visibility", "visible");
+                    $(".top_main_img").css("padding-top", "83px");
+                    $(".top_main_img .back_movie video").css("opacity", ".7");
+                    $(".top_main_img .back_movie video").addClass("active");
+                    $("body").css("position", "absolute");
+                    date = new Date();
+                    date.setTime( date.getTime() + ( 15 * 60 * 1000 ));
+                    $.cookie("awamori", "active", { expires : date });
+                });
+            });
+        });
+        if ($.cookie("awamori")){
+            $(".css-cancel").hide();
+            $("aside").show();
+            $(".video_back_image_box").show();
+            $(".video_back_image_box").css("visibility", "visible");
+            $(".top_main_img").css("padding-top", "83px");
+            $(".top_main_img .back_movie video").css("opacity", ".7");
+            $(".top_main_img .back_movie video").addClass("active");
+            $("body").css("position", "absolute");
+        } else {
+            $(".top_main_img").addClass("active");
+        }
+        console.log("tetsaaaaaaa")
+        if (windowWidth == 375) {
+            if (wH == 812) {
+                $(".top_main_img").css("padding-top", "150px");
+            } else if (wH == 568){
+                $(".top_main_img").css("padding-top", "35px");
+            } else if (wH == 667) {
+
+            }
+            $(".top_main_img.active").css("padding-top", "35px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_375/v1574001737/back_video.mp4");
+            });
+        } else if (screen_width == 414) {
+            if (wH == 736) {
+                $(".top_main_img").addClass("tag_736");
+            } else if (wH == 896){
+                $(".top_main_img").addClass("tag_896");
+            } else if (wH == 812){
+                $(".top_main_img").addClass("tag_812");
+            }
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_414/v1574001737/back_video.mp4");
+            });
+        } else if (windowWidth == 320) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_320/v1574001737/back_video.mp4");
+            });
+        } else if (windowWidth == 360) {
+            if (wH == 640) {
+                $(".top_main_img").addClass("tag_640");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_360/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_360/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 375) {
+            if (wH == 667) {
+                $(".top_main_img").addClass("tag_667");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_667/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_667/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 640){
+            if (wH == 360) {
+                $(".top_main_img").addClass("tag_640");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_640/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_640/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 667) {
+            if (wH == 375) {
+                $(".top_main_img").addClass("tag_667");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_667/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_667/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 736) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_736/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_736/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 568	) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_568/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_568/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 667) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_667/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_667/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 896) {
+            if (wH == 414) {
+                $(".top_main_img").addClass("tag_896");
+            }
+
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_896/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_896/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 1024) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_500,w_1024/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1024/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 1112) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1112/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1112/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 1194) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1194/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1194/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 1366) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1366/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1366/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 812) {
+            if (wH == 375) {
+                $(".top_main_img").addClass("tag_812");
+            } else if (wH == 414) {
+                $(".top_main_img").addClass("tag_414");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_812/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_812/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 768) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 418) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_418/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_418/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth < 770 || windowWidth > 765) {
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            });
+        } else {
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/v1574258843/my_media_bg.mp4");
+            });
+            $(this).find("video").css("width", "100%");
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/v1574001737/back_video.mp4");
+            });
+        }
     } else if (windowWidth > 1350) {
         $(".sp_display_view").hide();
         $(".pc_display_view").show();

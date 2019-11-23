@@ -29,9 +29,9 @@
       <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.wavify.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
-      <script>
+      <!-- <script>
         var ajaxurl = 'https://awamori-in-the-pocket.herokuapp.com/wp-admin/admin-ajax.php';
-      </script>
+      </script> -->
       <script>
         $(function(){
           $(".name_text.view.info_box .radio_box").each(function(){

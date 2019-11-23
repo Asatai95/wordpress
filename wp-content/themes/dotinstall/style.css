@@ -1885,6 +1885,9 @@ aside.page {
     height: 100%;
   }
 
+.footer_view .footer_info .copy img {
+  width: 550px;
+}
 
 .footer_view .footer_info .copy a img {
   width: 120px;

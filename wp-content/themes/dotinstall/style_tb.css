@@ -1257,7 +1257,7 @@ figure iframe {
 .sns_box .facebook_feed {
     position: relative;
 }
-
+/*
 .sns_box .facebook_feed:before {
     content: '';
     display: inline-block;
@@ -1290,7 +1290,7 @@ figure iframe {
     left: 36%;
     margin-left: 0.6em;
     border-top-style: dashed;
-}
+} */
 
 .sns_box .device {
     text-align: center;
@@ -2604,15 +2604,15 @@ figure iframe {
     padding: 0;
     font-size: 15px;
     font-weight: 800;
-    width: 70%;
     margin: auto;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 43%;
 }
 
 .name_text.view.info_box .radio_content .post-header.top_sp.context_block .sub_text {
-    width: 70%;
+    width: 40%;
     margin: auto;
 }
 

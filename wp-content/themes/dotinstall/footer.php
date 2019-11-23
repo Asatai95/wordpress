@@ -37,7 +37,7 @@
           $(".name_text.view.info_box .radio_box").each(function(){
             $(this).find(".cancel .cancel_back").on("click touchstart",  function(e){
               e.preventDefault();
-              $(this).parents(".map_pin").find(".pins.active").removeClass("active");
+              $(".map_pin .pins.active").removeClass("active");
                 $(".map_pin .pins .marker .pin").removeClass("active");
                 $(".map_pin .pins .marker .pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
                 $(".map_pin .pins .marker .icon").removeClass("active");

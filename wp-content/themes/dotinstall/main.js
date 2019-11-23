@@ -43,19 +43,11 @@ $(function(){
             if (windowWidth < 481) {
                 $(".device div").hide();
                 $(".device.sp").show();
-                $(".device iframe").each(function(){
-                    $(this).attr("src", "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&tabs=timeline&width=300&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=2165553107045876");
-                    $(this).css("width", "300px");
-                    $(this).css("height", "500px");
-                });
+
             } else if (windowWidth > 481 && windowWidth < 896) {
                 $(".device div").hide();
                 $(".device.tab_view").show();
-                $(".device iframe").each(function(){
-                    $(this).attr("src", "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&tabs=timeline&width=400&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=2165553107045876");
-                    $(this).css("width", "400px");
-                    $(this).css("height", "500px");
-                });
+
             } else if (windowWidth > 896) {
                 $(".device iframe").each(function(){
                     $(this).attr("src", "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fawapocke%2F&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId=2165553107045876");

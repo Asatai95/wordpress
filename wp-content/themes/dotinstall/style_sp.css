@@ -1203,7 +1203,7 @@ figure iframe {
 .sns_box .facebook_feed {
     position: relative;
 }
-
+/*
 .sns_box .facebook_feed:before {
     content: '';
     display: inline-block;
@@ -1236,7 +1236,7 @@ figure iframe {
     left: 30%;
     margin-left: 0.6em;
     border-top-style: dashed;
-}
+} */
 
 .sns_box .device {
     text-align: center;

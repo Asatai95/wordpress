@@ -21,6 +21,14 @@ if(!function_exists('_log')){
   }
 }
 
+function add_my_ajaxurl() {
+  ?>
+      <script>
+          var ajaxurl = '<?php echo admin_url( 'admin-ajax.php'); ?>';
+      </script>
+  <?php
+  }
+add_action( 'wp_footer', 'add_my_ajaxurl', 1 );
 
 function ajax_get_radio_contents_posts() {
     $mes = $_POST['mes'];

@@ -8,6 +8,16 @@
     100% {opacity: 1}
 }
 
+
+@keyframes purun {
+  0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  15%  { transform: scale(0.9, 0.9) translate(0%, 5%); }
+  30%  { transform: scale(1.3, 0.8) translate(0%, 10%); }
+  50%  { transform: scale(0.8, 1.3) translate(0%, -10%); }
+  70%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+  100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+
 .awamori-logo{
     width: 100px;
     height: 60px;
@@ -1926,6 +1936,10 @@ figure iframe {
 .map_pin .pins.uruma {
     bottom: 142px;
     left: 80px;
+}
+
+.map_pin .pins .pin {
+    animation: purun 0.8s linear 0s 1;
 }
 
 .map_pin .pins.uruma .pin {

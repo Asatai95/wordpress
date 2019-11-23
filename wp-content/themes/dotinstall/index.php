@@ -1064,6 +1064,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         <div class="pc_display_view">
                 <div class="main_top_img">

@@ -15,7 +15,7 @@ $(function(){
         } catch {}
     }
     var ua = navigator.userAgent;
-    var windowWidth = window.innerWidth;
+    var windowWidth = screen.availWidth;
     var wH = $(window).height();
     console.log(wH)
     console.log(windowWidth)

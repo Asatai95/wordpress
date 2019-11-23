@@ -1984,6 +1984,10 @@ figure iframe {
     margin: 50px auto;
 }
 
+.main_information.single {
+    width: 73%;
+}
+
 .main_information .share_box,
 .main_information .google_form {
     width: 80%;
@@ -3353,106 +3357,3 @@ body {
 
 
 
-
-/* シングルページ、snsボタン類管理ボックス */
-
-
-.contact_form_box.tb {
-    display: none;
-    text-align: center;
-}
-
-.main_information {
-    margin: 30px auto;
-    height: 1150px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.main_information h2 {
-    font-size: 25px;
-    font-weight: 800;
-}
-
-.main_information p {
-    font-size: 15px;
-}
-
-
-
-.container.single #posts_page {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 80px;
-}
-
-#posts_page .single-post {
-    width: 80%;
-}
-
-.single_title.page ,
-.user_info h2 {
-    font-size: 25px;
-    font-weight: 800;
-    margin-bottom: 40px;
-}
-
-.single_title.page .post-content.contents {
-    margin: 60px auto;
-    margin-top: 0;
-}
-
-.post-content.contents {
-    float: none;
-    margin: 60px auto;
-    margin-top: 0;
-}
-
-.post-content.contents p {
-    font-size: 17px;
-}
-
-.support_form_link {
-    font-weight: 800;
-}
-
-.cast {
-    text-align: center;
-}
-
-.cast h3 {
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.cast div ul {
-    padding: 0;
-}
-
-.cast div ul li a {
-    color: rgba(0, 117, 255, 0.5)!important;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-}
-
-.cast div ul li a:hover {
-    color: rgba(0, 117, 255)!important;
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.1);
-}
-
-.main_information.single .share_box,
-.main_information.single .google_form {
-    width : 95%;
-}
-
-.main_information.page {
-    margin: 30px auto;
-    margin-bottom: 35px;
-}

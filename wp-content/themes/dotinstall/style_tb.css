@@ -514,9 +514,10 @@ aside{
 }
 
 .single-post .single_title {
-    width: 60%;
+    width: 100%;
     margin: auto;
 }
+
 
 .single-post .post-header.single {
     width: 55%;

@@ -1047,7 +1047,7 @@ $(function(){
         $(window).scroll(function() {
             var scroll = $(this).scrollTop();
 
-            if (scroll > 2500){
+            if (scroll > 2100){
                 $("#instagram_field").css("margin-top", "0");
             } else {
                 $("#instagram_field").css("margin-top", "250px");

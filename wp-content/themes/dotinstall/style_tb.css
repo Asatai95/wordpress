@@ -2026,7 +2026,7 @@ figure iframe {
     cursor: pointer;
     width: 35px;
     bottom: 18px;
-    left: -7px;
+    left: -10px;
 }
 
 .map_pin .pins.tyatan .icon {
@@ -2087,8 +2087,8 @@ figure iframe {
     position: absolute;
     margin: auto;
     cursor: pointer;
-    width: 30px;
-    bottom: 20px;
+    width: 35px;
+    bottom: 8px;
     left: 13px;
 }
 
@@ -2153,7 +2153,7 @@ figure iframe {
     cursor: pointer;
     width: 35px;
     bottom: 9px;
-    left: 0px;
+    left: -5px;
 }
 
 .map_pin .pins.nishihara .icon {

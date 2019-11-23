@@ -2055,7 +2055,7 @@ figure iframe {
     cursor: pointer;
     width: 35px;
     bottom: 9px;
-    left: 0px;
+    left: -5px;
 }
 
 .map_pin .pins.nishihara .icon {

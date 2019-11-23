@@ -2736,7 +2736,7 @@ img.pin_icon_active {
 }
 
 #instagram_field {
-    margin-top : 250px;
+    /* margin-top : 250px; */
     transition: all 1s ease-in-out;
 }
 

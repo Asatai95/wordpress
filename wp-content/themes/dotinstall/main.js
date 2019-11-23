@@ -1,4 +1,8 @@
 $(function(){
+
+    if ($(".top_main_img").length) {} else {
+        $(".top_main_img").css("position", "absolute");
+    }
     if ($(".top_main_img.active").length) {} else {
         var placelist = $(".top_main_img").attr("class").split(" ");
         $.each(placelist, function(index, val) {

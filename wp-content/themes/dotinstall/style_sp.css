@@ -2591,3 +2591,27 @@ figure iframe {
   margin-top: -2px;
   background: #000;
 }
+
+.video_tag.tag_414 {
+    display:none;
+}
+
+@media screen and (max-width: 376px),
+       screen and (orientation: portrait) {
+        .video_tag.tag_414 {
+            display:none;
+        }
+        .video_tag.tag_375 {
+            display:block;
+        }
+}
+
+@media screen and (max-width: 415px),
+       screen and (orientation: portrait) {
+        .video_tag.tag_414 {
+            display:block;
+        }
+        .video_tag.tag_375 {
+            display:none;
+        }
+}

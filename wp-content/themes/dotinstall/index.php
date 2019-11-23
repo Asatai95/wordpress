@@ -5,8 +5,14 @@
         <div class="top_main_img">
             <div class="back_movie">
                 <div class="main_top_view_video">
-                    <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4" muted webkit-playsinline playsinline autoplay loop>
-                    </video>
+                    <div class="video_tag tag_375">
+                        <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4" muted webkit-playsinline playsinline autoplay loop>
+                        </video>
+                    </div>
+                    <div class="video_tag tag_414">
+                        <video src="https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4" muted webkit-playsinline playsinline autoplay loop>
+                        </video>
+                    </div>
                     <div class="back_text">
                         <h2>Awamori in The Pocket</h2>
                         <p>RADIO BY KOU, ASUKA, ASATAI</p>

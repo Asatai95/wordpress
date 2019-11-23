@@ -138,7 +138,7 @@
 
                     <?php if ( wp_is_mobile() ) : ?>
                         <div class="contact_form_box sp">
-                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUjZumzA-zrJ439t9rgE95nuTKK_9EJAu0VfvfiBfhC5ckig/viewform?embedded=true" width="340" height="797" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUjZumzA-zrJ439t9rgE95nuTKK_9EJAu0VfvfiBfhC5ckig/viewform?embedded=true" width="350" height="797" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
                         </div>
                         <div class="contact_form_box tb">
                             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUjZumzA-zrJ439t9rgE95nuTKK_9EJAu0VfvfiBfhC5ckig/viewform?embedded=true" width="500" height="797" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>

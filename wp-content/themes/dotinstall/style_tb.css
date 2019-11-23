@@ -2678,3 +2678,7 @@ figure iframe {
   margin-top: -2px;
   background: #000;
 }
+
+.contact_form_box.sp {
+    text-align: center;
+}

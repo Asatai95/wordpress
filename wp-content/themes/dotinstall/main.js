@@ -11,6 +11,7 @@ $(function(){
     var windowWidth = window.innerWidth;
     var wH = $(window).height();
     console.log(wH)
+    console.log(windowWidth)
     var windowWidth_other = $(window).width();
     var screen_width = screen.width;
     console.log(screen_width)

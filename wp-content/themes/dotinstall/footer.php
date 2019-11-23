@@ -151,7 +151,7 @@
                   });
                 }
                 var city_name = $(this).parents(".pins").find(".name_text span").text();
-
+                console.log(city_name)
                 $(this).parents(".pins").addClass("active");
                 $.ajax({
                     type: 'POST',
@@ -161,6 +161,7 @@
                         'mes' : city_name,
                     },
                     success: function( response ){
+                      console.log(response)
                       var jsonData = JSON.parse( response );
                       $(".name_text.info_box").each(function(){
                         $(this).append(

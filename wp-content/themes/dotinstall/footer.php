@@ -539,8 +539,8 @@
           });
         });
       </script>
-      <!-- <script type='text/javascript' src='/wp-content/themes/dotinstall/main.js'></script> -->
-      <script type='text/javascript' src='http://awamori-in-the-pocket.herokuapp.com/wp-content/themes/dotinstall/main.js'></script>
+      <script type='text/javascript' src='/wp-content/themes/dotinstall/main.js'></script>
+
   </body>
 
 </html>

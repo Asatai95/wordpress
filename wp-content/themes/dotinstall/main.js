@@ -21,7 +21,7 @@ $(function(){
     console.log(windowWidth)
     var windowWidth_other = $(window).width();
     var screen_width = screen.width;
-    console.log(screen_width)
+    console.log(windowWidth_other)
     ua_window = window.navigator.userAgent.toLowerCase()
     var timer = false;
     $(window).on("orientationchange resize",function(){

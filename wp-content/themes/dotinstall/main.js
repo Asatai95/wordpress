@@ -5,12 +5,14 @@ $(function(){
         $("aside").css("display", "block");
     }
     if ($(".top_main_img.active").length) {} else {
-        var placelist = $(".top_main_img").attr("class").split(" ");
-        $.each(placelist, function(index, val) {
-        if(val.indexOf("tag") != -1){
-            $(".top_main_img").removeClass(""+placelist[1]+"");
-        }
-        });
+        try{
+            var placelist = $(".top_main_img").attr("class").split(" ");
+            $.each(placelist, function(index, val) {
+            if(val.indexOf("tag") != -1){
+                $(".top_main_img").removeClass(""+placelist[1]+"");
+            }
+            });
+        } catch {}
     }
     var ua = navigator.userAgent;
     var windowWidth = window.innerWidth;

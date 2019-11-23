@@ -1655,10 +1655,6 @@ aside.page {
                 margin-bottom: 20px;
             }
 
-            .radio_content_view .post .post-content img {
-                height: 250px;
-                transition: 1s;
-            }
 
             .container.main .post-content img {
                 cursor: pointer;

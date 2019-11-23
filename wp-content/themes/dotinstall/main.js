@@ -2,7 +2,7 @@ $(function(){
     $(".radio_content_view .post .post-content img").each(function(){
         $(this).on("mouseover mouseout", function(e){
             if (e.type == "mouseover"){
-                $(this).css("transform", "scale(1.15)");
+                $(this).css("transform", "scale(1.10)");
             }
             if (e.type == "mouseout"){
                 $(this).css("transform", "scale(1.0)");

@@ -1114,40 +1114,6 @@ figure iframe {
     width: 100%;
     position: relative;
 }
-/*
-.tips .support-title .tips_title:before {
-    content: '';
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
-    top: 35%;
-    height: 0;
-    width: 1rem;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-color: #666666;
-    opacity: .3;
-    right: 95%;
-    margin-right: 1.5em;
-    border-top-style: dashed;
-}
-
-.tips .support-title .tips_title:after {
-    content: '';
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
-    top: 35%;
-    height: 0;
-    width: 9rem;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-color: #666666;
-    opacity: .3;
-    left: 60%;
-    margin-left: 0.6em;
-    border-top-style: dashed;
-} */
 
 .tips .support-title div p {
     font-size: 18px;

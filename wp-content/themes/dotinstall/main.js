@@ -1,7 +1,7 @@
 $(function(){
 
     if ($(".top_main_img").length) {} else {
-        $(".top_main_img").css("position", "absolute");
+        $("body").css("position", "absolute");
         $("aside").css("display", "block");
     }
     if ($(".top_main_img.active").length) {} else {

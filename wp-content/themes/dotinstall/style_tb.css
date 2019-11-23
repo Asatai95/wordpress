@@ -2620,6 +2620,13 @@ figure iframe {
     color: #666666;
 }
 
+.name_text.view.info_box .radio_box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: auto;
+}
+
 .cancel {
     text-align: right;
     padding: 10px 50px;

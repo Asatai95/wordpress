@@ -42,11 +42,11 @@ $(function(){
         timer = setTimeout(function() {
             if (windowWidth < 481) {
                 $(".device div").hide();
-                $(".device.sp").show();
+                $(".device div.sp").show();
 
             } else if (windowWidth > 481 && windowWidth < 896) {
                 $(".device div").hide();
-                $(".device.tab_view").show();
+                $(".device div.tab_view").show();
 
             } else if (windowWidth > 896) {
                 $(".device iframe").each(function(){

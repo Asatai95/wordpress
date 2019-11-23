@@ -33,6 +33,13 @@ $(function(){
     console.log(windowWidth_other)
     ua_window = window.navigator.userAgent.toLowerCase()
     var timer = false;
+    if (windowWidth > 896 && windowWidth < 1350) {
+        $(".sp_display_view").show();
+        $(".pc_display_view").hide();
+    } else if (windowWidth > 1350) {
+        $(".sp_display_view").hide();
+        $(".pc_display_view").show();
+    }
     $(window).on("orientationchange resize",function(){
         try {
             if ($(".top_main_img.active").length) {} else {
@@ -49,6 +56,13 @@ $(function(){
             clearTimeout(timer);
         }
         timer = setTimeout(function() {
+            if (windowWidth > 896 && windowWidth < 1350) {
+                $(".sp_display_view").show();
+                $(".pc_display_view").hide();
+            } else if (windowWidth > 1350) {
+                $(".sp_display_view").hide();
+                $(".pc_display_view").show();
+            }
             if (windowWidth < 481) {
                 $(".device div").hide();
                 $(".device div.sp").show();

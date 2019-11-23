@@ -35,10 +35,10 @@
       <script>
         $(function(){
           $(".name_text.view.info_box .radio_box").each(function(){
-            $(this).find(".cancel .cancel_back").on("click touchstart",  function(e){
+            $(this).find(".cancel .cancel_back").on("click touch",  function(e){
               e.preventDefault();
               console.log("click")
-              if (e.type == "click" || e.type == "touchstart") {
+              if (e.type == "click" || e.type == "touch") {
                 $(".map_pin .pins.active").removeClass("active");
                 $(".map_pin .pins .marker .pin").removeClass("active");
                 $(".map_pin .pins .marker .pin").attr("src", "https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png");
@@ -69,9 +69,9 @@
             });
           });
           $(".map_pin").each(function(){
-            $(this).find(".pins .marker .pin").on("click touchstart", function(e){
+            $(this).find(".pins .marker .pin").on("click touch", function(e){
               e.preventDefault();
-              if (e.type == "click" || e.type == "touchstart") {
+              if (e.type == "click" || e.type == "touch") {
                 if ($(this).parents(".map_pin").find(".pins.active").length){
                   $(this).parents(".map_pin").find(".pins.active").removeClass("active");
                   $(".map_pin .pins .marker .pin").removeClass("active");
@@ -101,7 +101,7 @@
                   }
                 } else {
                   var text = $(this).parents(".marker").next(".name_text").find("span").text();
-                  if (e.type == "click" || e.type == "touchstart"){
+                  if (e.type == "click" || e.type == "touch"){
                     if ($(this).parents(".marker").find(".icon.active").length){
                       $(this).parents(".marker").find(".icon").removeClass("active");
                     } else {

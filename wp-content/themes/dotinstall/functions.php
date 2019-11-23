@@ -65,7 +65,7 @@ function ajax_get_radio_contents_posts() {
     die();
 }
 add_action('wp_ajax_ajax_get_radio_contents_posts', 'ajax_get_radio_contents_posts' );
-add_action('wp_ajax_nopriv_ajax_radio_contents_posts', 'ajax_get_radio_contents_posts' );
+add_action('wp_ajax_nopriv_ajax_get_radio_contents_posts', 'ajax_get_radio_contents_posts' );
 
 function ajax_get_new_posts() {
   $mes = $_POST['mes'];

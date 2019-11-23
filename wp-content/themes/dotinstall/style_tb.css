@@ -1169,7 +1169,7 @@ figure iframe {
     width: 100%;
     position: relative;
 }
-
+/*
 .tips .support-title .tips_title:before {
     content: '';
     display: inline-block;
@@ -1202,7 +1202,7 @@ figure iframe {
     left: 53%;
     margin-left: 0.6em;
     border-top-style: dashed;
-}
+} */
 
 .tips .support-title div p {
     font-size: 18px;

@@ -3343,7 +3343,7 @@ a {
 }
 
 body {
-    position: fixed;
+    position: absolute;
     width: 100%;
     background: rgba(81, 165, 255, 0.1);
     -webkit-animation-name: fadeIn;

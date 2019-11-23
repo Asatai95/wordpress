@@ -920,8 +920,6 @@
 
                     </div><!-- /post -->
                 </div><!-- /posts -->
-
-            </div>
             <div class="main_block_sp">
                 <div class="radio_mian_box">
                     <div class="new_radio_content">

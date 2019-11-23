@@ -1403,7 +1403,7 @@ figure iframe {
 
 .top_main_img {
     background: transparent;
-    padding-top: 50px;
+    padding-top: 83px!important;
     transition: all 1s ease-in-out;
     z-index: 30;
 
@@ -1412,6 +1412,38 @@ figure iframe {
 
 .top_main_img.active {
     background: rgb(0,0,0);
+}
+
+.top_main_img.active.tag_812 {
+    padding-top: 150px!important;
+}
+
+.top_main_img.active.tag_568 {
+    padding-top: 35px!important;
+}
+
+.top_main_img.active.tag_667 {
+    padding-top: 83px!important;
+}
+
+.top_main_img.active.tag_736 {
+    padding-top: 120px!important;
+}
+
+.top_main_img.active.tag_896 {
+    padding-top: 180px!important;
+}
+
+.top_main_img.active.tag_812 {
+    padding-top: 150px!important;
+}
+
+.top_main_img.active.tag_414 {
+    padding-top: 150px!important;
+}
+
+.top_main_img.active.tag_640 {
+    padding-top: 70px!important;
 }
 
 .top_main_img .back_movie {
@@ -1928,9 +1960,9 @@ figure iframe {
     position: absolute;
     margin: auto;
     cursor: pointer;
-    width: 25px;
-    bottom: 9px;
-    left: -3px;
+    width: 35px;
+    bottom: 18px;
+    left: -7px;
 }
 
 .map_pin .pins.tyatan .icon {
@@ -2055,9 +2087,9 @@ figure iframe {
     position: absolute;
     margin: auto;
     cursor: pointer;
-    width: 20px;
-    bottom: 10px;
-    left: 14px;
+    width: 35px;
+    bottom: 9px;
+    left: 0px;
 }
 
 .map_pin .pins.nishihara .icon {

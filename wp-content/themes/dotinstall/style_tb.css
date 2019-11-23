@@ -1235,7 +1235,7 @@ figure iframe {
 }
 
 .tips .support-title div ul {
-    width: 65%;
+    width: 46%;
     margin: auto;
 }
 
@@ -1447,16 +1447,26 @@ figure iframe {
 
 .top_main_img {
     background: transparent;
-    padding-top: 50px;
+    padding-top: 83px!important;
     transition: all 1s ease-in-out;
     z-index: 30;
-
 }
 
 
 .top_main_img.active {
     background: rgb(0,0,0);
 }
+
+.top_main_img.active.tag_812,
+.top_main_img.active.tag_896,
+.top_main_img.active.tag_736,
+.top_main_img.active.tag_896,
+.top_main_img.active.tag_812,
+.top_main_img.active.tag_414,
+.top_main_img.active.tag_640 {
+    padding-top: 0!important;
+}
+
 
 .top_main_img .back_movie {
     /* height: 450px; */
@@ -1465,6 +1475,11 @@ figure iframe {
     position: relative;
     flex-direction: column;
     justify-content: center;
+}
+
+.top_main_img .back_movie.active {
+    position: relative;
+    height: 1050px;
 }
 
 .top_main_img .back_movie .main_top_view_video {
@@ -1476,6 +1491,14 @@ figure iframe {
     animation-duration: 1s;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
+}
+
+.top_main_img .back_movie .main_top_view_video.active {
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: 85px;
+    margin: auto;
 }
 
 .top_main_img .back_movie video {
@@ -1504,7 +1527,7 @@ figure iframe {
 }
 
 .top_main_img .back_movie .back_text h2 {
-    font-size: 33px;
+    font-size: 50px;
     font-weight: 800;
     color: #fff;
     font-family: 'Kaushan Script', cursive;
@@ -1515,7 +1538,7 @@ figure iframe {
     font-family: 'Anton', sans-serif;
     text-align: center;
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 800;
 }
 
@@ -1972,9 +1995,9 @@ figure iframe {
     position: absolute;
     margin: auto;
     cursor: pointer;
-    width: 25px;
-    bottom: 9px;
-    left: -3px;
+    width: 35px;
+    bottom: 18px;
+    left: -7px;
 }
 
 .map_pin .pins.tyatan .icon {
@@ -2099,9 +2122,9 @@ figure iframe {
     position: absolute;
     margin: auto;
     cursor: pointer;
-    width: 20px;
-    bottom: 10px;
-    left: 14px;
+    width: 35px;
+    bottom: 9px;
+    left: 0px;
 }
 
 .map_pin .pins.nishihara .icon {

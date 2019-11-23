@@ -289,7 +289,11 @@
                                 </a>\
                               </div>';
                     } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
-                        console.log("tab")
+                      html_first +='<div class="post">\
+                                <a href="' + insta[i].permalink + '" target="_blank">\
+                                  <img src="' + insta[i].media_url + '">\
+                                </a>\
+                              </div>';
                     } else {
                       html_first +='<div class="post">\
                                 <a href="' + insta[i].permalink + '" target="_blank">\
@@ -387,7 +391,14 @@
                     });
                   });
                 } else if (ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0) {
-
+                  $(".insta_view_block .post").each(function(){
+                    $(this).on("touchstart click", function(e){
+                      if (e.type == "touchstart" || e.type == "click"){
+                        var link = $(this).find("a").attr("href");
+                        window.location.href = link;
+                      }
+                    });
+                  });
                 } else {
                   $(".insta_view_block .post").each(function(){
                     $(this).on("mouseover mouseout click", function(e){

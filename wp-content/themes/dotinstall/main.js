@@ -1,39 +1,51 @@
 $(function(){
+    if ($(".top_main_img.active").length) {} else {
+        var placelist = $(".top_main_img").attr("class").split(" ");
+        $.each(placelist, function(index, val) {
+        if(val.indexOf("tag") != -1){
+            $(".top_main_img").removeClass(""+placelist[1]+"");
+        }
+        });
+    }
     var ua = navigator.userAgent;
-    if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
-        var windowWidth = window.innerWidth;
-        var windowWidth_other = $(window).width();
-        var screen_width = screen.width;
-        console.log(screen_width)
-        ua_window = window.navigator.userAgent.toLowerCase()
-        if ((ua_window.indexOf('safari') !== -1) && (ua.indexOf('chrome') === -1) && (ua.indexOf('mac') !== -1)) {
-            var scrollBar = isMacSafari ? window.innerWidth - document.body.clientWidth : 0;
-            var window_width = window.innerWidth - scrollBar;
-            var screen_width = screen_width - scrollBar;
-            console.log("ua_window")
-            console.log(ua_window)
-            if (windowWidth_other == 375){
-                $(".main_top_view_video").each(function(){
-                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
-                });
-            } else if (screen_width == 414) {
-                console.log("test")
-                $(".main_top_view_video").each(function(){
-                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
-                });
-            } else if (windowWidth_other == 320) {
-                $(".main_top_view_video").each(function(){
-                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
-                });
+    var windowWidth = window.innerWidth;
+    var wH = $(window).height();
+    console.log(wH)
+    var windowWidth_other = $(window).width();
+    var screen_width = screen.width;
+    console.log(screen_width)
+    ua_window = window.navigator.userAgent.toLowerCase()
+    var timer = false;
+    $(window).on("orientationchange resize",function(){
+        if ($(".top_main_img.active").length) {} else {
+            var placelist = $(".top_main_img").attr("class").split(" ");
+            $.each(placelist, function(index, val) {
+            if(val.indexOf("tag") != -1){
+                $(".top_main_img").removeClass(""+placelist[1]+"");
             }
-            if (windowWidth_other == 375) {
+            });
+        }
+        var windowWidth = window.innerWidth;
+        if (timer !== false) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function() {
+            if (windowWidth == 375) {
+                if (wH == 812) {
+                    $(".top_main_img").addClass("tag_812");
+                } else if (wH == 568){
+                    $(".top_main_img").addClass("tag_568");
+                } else if (wH == 667) {
+                    $(".top_main_img").addClass("tag_667");
+                }
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
                 });
                 $(".travel_info_block .back_video video").each(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_375/v1574001737/back_video.mp4");
                 });
-            } else if (screen_width == 414) {
+            } else if (windowWidth == 414) {
+                $(".top_main_img").css("padding-top", "83px");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
                 });
@@ -41,11 +53,27 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_414/v1574001737/back_video.mp4");
                 });
             } else if (windowWidth == 320) {
+                $(".top_main_img").css("padding-top", "83px");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
                 });
                 $(".travel_info_block .back_video video").each(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_320/v1574001737/back_video.mp4");
+                });
+            } else if (windowWidth == 360){
+                if (wH == 640) {
+                    $(".top_main_img").addClass("tag_640");
+                }
+                $(".main_top_view_video").each(function(){
+                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_360/v1574258843/my_media_bg.mp4");
+                });
+            } else if ( windowWidth == 640){
+                $(".top_main_img").css("padding-top", "0px");
+                $(".main_top_view_video").each(function(){
+                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_640/v1574258843/my_media_bg.mp4");
+                });
+                $(".travel_info_block .back_video video").each(function(){
+                    $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_640/v1574001737/back_video.mp4");
                 });
             } else if ( windowWidth == 667) {
                 $(".top_main_img").css("padding-top", "0px");
@@ -64,7 +92,7 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_736/v1574001737/back_video.mp4");
                 });
             } else if ( windowWidth == 568	) {
-                $(".top_main_img").css("padding-top", "0px");
+                $(".top_main_img").css("padding-top", "83px");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_568/v1574258843/my_media_bg.mp4");
                 });
@@ -88,6 +116,9 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_896/v1574001737/back_video.mp4");
                 });
             } else if ( windowWidth == 1024) {
+                $(".top_main_img").css("padding-top", "0px");
+                $(".top_main_img .back_movie").removeClass("active");
+            $(".top_main_img .back_movie .main_top_view_video").removeClass("active");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1024/v1574258843/my_media_bg.mp4");
                 });
@@ -116,7 +147,7 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1366/v1574001737/back_video.mp4");
                 });
             } else if ( windowWidth == 812) {
-                $(".top_main_img").css("padding-top", "0px");
+                $(".top_main_img").css("padding-top", "83px");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_812/v1574258843/my_media_bg.mp4");
                 });
@@ -132,6 +163,7 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
                 });
             } else if ( windowWidth == 418) {
+                $(".top_main_img").css("padding-top", "83px");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_418/v1574258843/my_media_bg.mp4");
                 });
@@ -155,23 +187,56 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/v1574001737/back_video.mp4");
                 });
             }
-        } else {
-            console.log(ua_window)
-        }
+        }, 100);
+    });
+
+    if ((ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) && ua.indexOf('Mobile') > 0) {
+        console.log("tets")
+        console.log(wH)
         if (windowWidth_other == 375){
+            if (wH == 812) {
+                $(".top_main_img").addClass("tag_812");
+            } else if (wH == 568){
+                $(".top_main_img").addClass("tag_568");
+            } else if (wH == 667) {
+                $(".top_main_img").addClass("tag_667");
+            }
+
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
             });
+        } else if (windowWidth_other == 360){
+            if (wH == 640) {
+                $(".top_main_img").addClass("tag_640");
+            }
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_360/v1574258843/my_media_bg.mp4");
+            });
         } else if (screen_width == 414) {
+            if (wH == 736) {
+                $(".top_main_img").addClass("tag_736");
+            } else if (wH == 896){
+                $(".top_main_img").addClass("tag_896");
+            } else if (wH == 812) {
+                $(".top_main_img").addClass("tag_812");
+            }
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
             });
         } else if (windowWidth_other == 320) {
+            if (wH == 812) {
+                $(".top_main_img").addClass("tag_812");
+            } else if (wH == 568){
+                $(".top_main_img").addClass("tag_568");
+            } else if (wH == 667) {
+                $(".top_main_img").addClass("tag_667");
+            }
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
             });
         }
         if (windowWidth == 375) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
             });
@@ -179,6 +244,13 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_375/v1574001737/back_video.mp4");
             });
         } else if (windowWidth == 414) {
+            if (wH == 736) {
+                $(".top_main_img").addClass("tag_736");
+            } else if (wH == 896){
+                $(".top_main_img").addClass("tag_896");
+            } else if (wH == 812){
+                $(".top_main_img").addClass("tag_812");
+            }
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
             });
@@ -186,14 +258,37 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_414/v1574001737/back_video.mp4");
             });
         } else if (windowWidth == 320) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
             });
             $(".travel_info_block .back_video video").each(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_320/v1574001737/back_video.mp4");
             });
+        } else if (windowWidth == 360) {
+            if (wH == 640) {
+                $(".top_main_img").addClass("tag_640");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_360/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_360/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 640){
+            if (wH == 360) {
+                $(".top_main_img").addClass("tag_640");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_640/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_640/v1574001737/back_video.mp4");
+            });
         } else if ( windowWidth == 667) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_667/v1574258843/my_media_bg.mp4");
             });
@@ -201,7 +296,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_667/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 736) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_736/v1574258843/my_media_bg.mp4");
             });
@@ -209,7 +304,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_736/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 568	) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_568/v1574258843/my_media_bg.mp4");
             });
@@ -217,7 +312,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_568/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 667) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_667/v1574258843/my_media_bg.mp4");
             });
@@ -225,7 +320,10 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_667/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 896) {
-            $(".top_main_img").css("padding-top", "0px");
+            if (wH == 414) {
+                $(".top_main_img").addClass("tag_896");
+            }
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_896/v1574258843/my_media_bg.mp4");
             });
@@ -233,6 +331,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_896/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 1024) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1024/v1574258843/my_media_bg.mp4");
             });
@@ -240,6 +339,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1024/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 1112) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1112/v1574258843/my_media_bg.mp4");
             });
@@ -247,6 +347,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1112/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 1194) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1194/v1574258843/my_media_bg.mp4");
             });
@@ -261,7 +362,12 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1366/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 812) {
-            $(".top_main_img").css("padding-top", "0px");
+            if (wH == 375) {
+                $(".top_main_img").addClass("tag_812");
+            } else if (wH == 414) {
+                $(".top_main_img").addClass("tag_414");
+            }
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_812/v1574258843/my_media_bg.mp4");
             });
@@ -269,7 +375,9 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_812/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 768) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
+            $(".top_main_img .back_movie").addClass("active");
+            $(".top_main_img .back_movie .main_top_view_video").addClass("active");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
             });
@@ -284,7 +392,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_418/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth < 770 || windowWidth > 765) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
             });
@@ -412,7 +520,16 @@ $(function(){
         } else {
             $(".top_main_img").addClass("active");
         }
+        console.log("tetsaaaaaaa")
         if (windowWidth == 375) {
+            if (wH == 812) {
+                $(".top_main_img").css("padding-top", "150px");
+            } else if (wH == 568){
+                $(".top_main_img").css("padding-top", "35px");
+            } else if (wH == 667) {
+
+            }
+            $(".top_main_img.active").css("padding-top", "35px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_375/v1574258843/my_media_bg.mp4");
             });
@@ -420,6 +537,13 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_375/v1574001737/back_video.mp4");
             });
         } else if (screen_width == 414) {
+            if (wH == 736) {
+                $(".top_main_img").addClass("tag_736");
+            } else if (wH == 896){
+                $(".top_main_img").addClass("tag_896");
+            } else if (wH == 812){
+                $(".top_main_img").addClass("tag_812");
+            }
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_414/v1574258843/my_media_bg.mp4");
             });
@@ -427,14 +551,37 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_414/v1574001737/back_video.mp4");
             });
         } else if (windowWidth == 320) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_320/v1574258843/my_media_bg.mp4");
             });
             $(".travel_info_block .back_video video").each(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_320/v1574001737/back_video.mp4");
             });
+        } else if (windowWidth == 360) {
+            if (wH == 640) {
+                $(".top_main_img").addClass("tag_640");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_360/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_360/v1574001737/back_video.mp4");
+            });
+        } else if ( windowWidth == 640){
+            if (wH == 360) {
+                $(".top_main_img").addClass("tag_640");
+            }
+            $(".top_main_img").css("padding-top", "83px");
+            $(".main_top_view_video").each(function(){
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_640/v1574258843/my_media_bg.mp4");
+            });
+            $(".travel_info_block .back_video video").each(function(){
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_640/v1574001737/back_video.mp4");
+            });
         } else if ( windowWidth == 667) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_667/v1574258843/my_media_bg.mp4");
             });
@@ -442,7 +589,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_667/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 736) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_736/v1574258843/my_media_bg.mp4");
             });
@@ -450,7 +597,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_736/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 568	) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_568/v1574258843/my_media_bg.mp4");
             });
@@ -458,7 +605,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_568/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 667) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_667/v1574258843/my_media_bg.mp4");
             });
@@ -466,7 +613,11 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_667/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 896) {
-            $(".top_main_img").css("padding-top", "0px");
+            if (wH == 414) {
+                $(".top_main_img").addClass("tag_896");
+            }
+
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_896/v1574258843/my_media_bg.mp4");
             });
@@ -474,13 +625,15 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_896/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 1024) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1024/v1574258843/my_media_bg.mp4");
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_768,w_1024/v1574258843/my_media_bg.mp4");
             });
             $(".travel_info_block .back_video video").each(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1024/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 1112) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1112/v1574258843/my_media_bg.mp4");
             });
@@ -488,6 +641,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1112/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 1194) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1194/v1574258843/my_media_bg.mp4");
             });
@@ -495,6 +649,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1194/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 1366) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_1366/v1574258843/my_media_bg.mp4");
             });
@@ -502,7 +657,12 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_1366/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 812) {
-            $(".top_main_img").css("padding-top", "0px");
+            if (wH == 375) {
+                $(".top_main_img").addClass("tag_812");
+            } else if (wH == 414) {
+                $(".top_main_img").addClass("tag_414");
+            }
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_812/v1574258843/my_media_bg.mp4");
             });
@@ -510,7 +670,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_812/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 768) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
             });
@@ -518,6 +678,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 418) {
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_418/v1574258843/my_media_bg.mp4");
             });
@@ -525,7 +686,7 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_418/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth < 770 || windowWidth > 765) {
-            $(".top_main_img").css("padding-top", "0px");
+            $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
             });

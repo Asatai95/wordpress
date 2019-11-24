@@ -1202,7 +1202,7 @@ $(function(){
         speed: .25
     });
 
-    if ($(".map_view_sp").length){} else {
+    if ($(".radio_box.pc").length) {
         $(".cancel .cancel_back").each(function(){
             $(this).on("mouseover mouseout click", function(e){
                 if(e.type == "mouseover") {

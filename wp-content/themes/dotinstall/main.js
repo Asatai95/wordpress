@@ -1214,9 +1214,12 @@ $(function(){
                     $(this).find("span:before").css("transform", "rotate(45deg) scale(1.0)");
                 }
                 if(e.type == "click") {
+                    console.log("test1")
                     e.preventDefault();
                     if($(".container.main .post .main_top_map .map_pin.active").length){
+                        console.log("test_1")
                     } else {
+                        console.log("test_2")
                         $(".container.main .post .main_top_map .map_pin").addClass("active");
                     }
 
@@ -1226,7 +1229,9 @@ $(function(){
                             if ($.inArray("text_color" ,list) > -1){
                                 $(this).removeClass("text_color");
                             }
+                            console.log("test_3")
                         } catch {
+                            console.log("test_4")
                             var list = $(this).attr("class");
                             if (list == "text_color"){
                                 $(this).removeClass("text_color");
@@ -1235,30 +1240,37 @@ $(function(){
                     });
 
                     if ($(this).parents(".name_text.view").length){
+                        console.log("test_5")
                         $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
                     }
                     if ($(".container.main .post .main_top_map .map_pin .pins .name_text.disactive").length){
+                        console.log("test_6")
                         $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("disactive");
                     } else {
+                        console.log("test_7")
                         $(".container.main .post .main_top_map .map_pin .pins .name_text").addClass("disactive");
                     }
 
                     $(this).parents(".name_text").removeClass("disactive");
                     if ($(".container.main .post .main_top_map.active").length){
+                        console.log("test_8")
                         $(".container.main .post .main_top_map").addClass("map");
                     } else {
+                        console.log("test_9")
                         $(".container.main .post .main_top_map").addClass("active");
                         $(".container.main .post .main_top_map.active").css("transform", "scale(.5)");
 
                     }
 
                     if ($(".pins a img.pin_icon_active").length){
+                        console.log("test_10")
                         $(".pins a img.pin_icon_active").remove();
 
                         $(".pins a img").each(function(){
                             $(this).removeClass("active");
                         });
                     } else {
+                        console.log("test_11")
                         $(".pins a").prepend(
                             '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
                         );
@@ -1269,6 +1281,7 @@ $(function(){
                     }
 
                     if ($(".container.main .post .main_top_map.active.map").length){
+                        console.log("test_12")
                         $(".container.main .post .main_top_map .map_pin.active").removeClass("map_view");
                         $(".container.main .post .main_top_map .map_pin").css("width", "auto");
                         $(".container.main .post .main_top_map .map_pin").css("height", "auto");
@@ -1304,8 +1317,9 @@ $(function(){
                                         if ($(".container.main .post .main_top_map.active").length){
                                             $(".container.main .post .main_top_map").removeClass("map");
                                             $(".container.main .post .main_top_map").removeClass("active");
-
+                                            console.log("test")
                                         } else {
+                                            console.log("testaaaaaaaaaaaaaaaa")
                                             $(".container.main .post .main_top_map").addClass("active");
                                         }
 
@@ -1314,6 +1328,7 @@ $(function(){
                             );
                         });
                     } else {
+                        console.log("test_15")
 
                         $(document).ready(function(){
 

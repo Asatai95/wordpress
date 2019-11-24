@@ -3,6 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="twitter:card" content="summary">
+        <meta property="og:title" content="Awamori in The Pocket">
+        <meta property="og:description" content="沖縄在住の若者がディープな沖縄の観光をお届けするラジオ, Awamori in The Pocket (ポケットに泡盛)">
+        <meta property="og:url" content="https://awamori-in-the-pocket.herokuapp.com/">
+        <meta property="og:image" content="https://res.cloudinary.com/hchyaihwv/image/upload/v1572851146/main_top_image_1.png">
         <link rel="shortcut icon" href="https://res.cloudinary.com/hchyaihwv/image/upload/v1572693478/fnig0z0fhngjkikcxvuv.png">
         <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">

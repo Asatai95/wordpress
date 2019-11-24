@@ -1205,6 +1205,7 @@ $(function(){
     if ($(".radio_box.pc").length) {
         $(".cancel .cancel_back").each(function(){
             $(this).on("mouseover mouseout click", function(e){
+                e.preventDefault();
                 if(e.type == "mouseover") {
                     $(this).find("span").css("transform", "rotate(45deg) scale(1.1)");
                     $(this).find("span:before").css("transform", "rotate(45deg) scale(1.1)");
@@ -1310,6 +1311,7 @@ $(function(){
                                                     $(this).css("transform", "scale(1.0)");
                                                     $(this).find(".map_pin").css("width", "410px");
                                                     $(this).find(".map_pin").css("height", "562px");
+                                                    $(this).find(".map_pin").removeClass("active");
                                                 });
                                             }
                                         );
@@ -1317,7 +1319,7 @@ $(function(){
                                         if ($(".container.main .post .main_top_map.active").length){
                                             $(".container.main .post .main_top_map").removeClass("map");
                                             $(".container.main .post .main_top_map").removeClass("active");
-                                            console.log("test")
+                                            console.log("testaaaaaaaaaaaaaaaaa")
                                         } else {
                                             console.log("testaaaaaaaaaaaaaaaa")
                                             $(".container.main .post .main_top_map").addClass("active");

@@ -1958,26 +1958,6 @@ $(function(){
                     $(this).find("span:before").css("transform", "rotate(45deg) scale(1.0)");
                 }
                 if(e.type == "click") {
-                    e.preventDefault();
-                    if($(".container.main .post .main_top_map .map_pin.active").length){
-                    } else {
-                        $(".container.main .post .main_top_map .map_pin").addClass("active");
-                    }
-
-                    $(".pins .name_text span").each(function(){
-                        try {
-                            var list = $(this).attr("class").split(" ");
-                            if ($.inArray("text_color" ,list) > -1){
-                                $(this).removeClass("text_color");
-                            }
-                        } catch {
-                            var list = $(this).attr("class");
-                            if (list == "text_color"){
-                                $(this).removeClass("text_color");
-                            }
-                        }
-                    });
-
                     if ($(this).parents(".name_text.view").length){
                         $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
                     }
@@ -1993,29 +1973,8 @@ $(function(){
                     } else {
                         $(".container.main .post .main_top_map").addClass("active");
                         $(".container.main .post .main_top_map.active").css("transform", "scale(.5)");
-
                     }
-
-                    if ($(".pins a img.pin_icon_active").length){
-                        $(".pins a img.pin_icon_active").remove();
-
-                        $(".pins a img").each(function(){
-                            $(this).removeClass("active");
-                        });
-                    } else {
-                        $(".pins a").prepend(
-                            '<img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794792/map_pin_icon_after.png" alt="" class="pin_icon_active">'
-                        );
-
-                        $(".pins a img").each(function(){
-                            $(this).addClass("active");
-                        });
-                    }
-
                     if ($(".container.main .post .main_top_map.active.map").length){
-                        $(".container.main .post .main_top_map .map_pin.active").removeClass("map_view");
-                        $(".container.main .post .main_top_map .map_pin").css("width", "auto");
-                        $(".container.main .post .main_top_map .map_pin").css("height", "auto");
                         $(".radio_box").each(function(){
                             $(this).css("transform", "scale(.5)");
                             $(this).animate(
@@ -2030,7 +1989,6 @@ $(function(){
                                         // $(".container.main .post .main_top_map.active.map").animate(
                                         //     {}, 800
                                         // );
-                                        $(".container.main .post .main_top_map .map_pin").css("padding-bottom", "0px");
                                         $(".container.main .post .main_top_map.active.map").animate(
                                             {
                                             "top": 0,
@@ -2039,8 +1997,6 @@ $(function(){
                                             "left": 0}, 800 , function(){
                                                 $(".container.main .post .main_top_map").delay(1000).queue(function(){
                                                     $(this).css("transform", "scale(1.0)");
-                                                    $(this).find(".map_pin").css("width", "410px");
-                                                    $(this).find(".map_pin").css("height", "562px");
                                                 });
                                             }
                                         );
@@ -2058,31 +2014,17 @@ $(function(){
                             );
                         });
                     } else {
-
                         $(document).ready(function(){
-
-                            $(".container.main .post .main_top_map .map_pin.active").addClass("map_view");
                             $(".container.main .post .main_top_map.active").stop().animate(
                                 {
                                     'top': '200px',
                                     'right': '700px',
                                     'left': '55px',
                                     'bottom': '0px'
-                                }, 800, function(){
-
-                                    $(".container.main .post .main_top_map .map_pin").delay(1000).queue(function(){
-                                        $(this).css("width","410px");
-                                        $(this).css("height","562px");
-                                    });
-                                    setTimeout(function(){
-                                        $(".container.main .post .main_top_map .map_pin.active").removeClass("map_view");
-                                    },1500);
-
-                                });
-
+                                }, 800);
                         });
+
                     }
-                    return false;
                 }
             });
         });

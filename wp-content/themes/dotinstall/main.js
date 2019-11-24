@@ -1239,7 +1239,7 @@ $(function(){
                         }
                     });
 
-                    if ($(this).parents(".name_text.view").length){
+                    if ($(".container.main .post .main_top_map .map_pin .pins .name_text.view").length){
                         console.log("test_5")
                         $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("view");
                     }
@@ -1251,7 +1251,7 @@ $(function(){
                         $(".container.main .post .main_top_map .map_pin .pins .name_text").addClass("disactive");
                     }
 
-                    $(this).parents(".name_text").removeClass("disactive");
+                    $(".container.main .post .main_top_map .map_pin .pins .name_text").removeClass("disactive");
                     if ($(".container.main .post .main_top_map.active").length){
                         console.log("test_8")
                         $(".container.main .post .main_top_map").addClass("map");

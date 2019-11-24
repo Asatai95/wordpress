@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:card" content="summary">
         <meta property="og:type" content="app">
         <meta property="og:title" content="Awamori in The Pocket">
         <meta property="og:description" content="沖縄在住の若者がディープな沖縄の観光をお届けするラジオ, Awamori in The Pocket (ポケットに泡盛)">

@@ -1,8 +1,8 @@
 <?php get_header(); ?>
         <div id="main" class="container single">
             <div class="next-stream">
-                <span class="next-stream_date">次回の配信日は
-                    <span id="js-next">2019年11月24日</span>です。
+                <span class="next-stream_date">次回の収録日は
+                    <span id="js-next">2019年12月01日</span>です。
                 </span>
             </div>
             <div id="posts">

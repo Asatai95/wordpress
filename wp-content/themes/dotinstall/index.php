@@ -903,7 +903,7 @@
                             if (count($list) > 0):
                         ?>
                             <div class="name_text view info_box">
-                                <div class="radio_box">
+                                <div class="radio_box pc">
                                     <div class="cancel">
                                         <div class="cancel_back">
                                             <span></span>
@@ -1460,7 +1460,7 @@
 
                             </div>
 
-                            <div class="radio_box">
+                            <div class="radio_box pc">
                                 <div class="cancel">
                                     <div class="cancel_back">
                                         <span></span>

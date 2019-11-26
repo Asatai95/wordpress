@@ -559,10 +559,10 @@ $(function(){
         if (windowWidth > 580 && windowWidth < 590) {
             $(".top_main_img").css("padding-top", "50px");
             $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_585/v1574258843/my_media_bg.mp4");
+                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_580/v1574258843/my_media_bg.mp4");
             });
             $(".travel_info_block .back_video video").each(function(){
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_585/v1574001737/back_video.mp4");
+                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_580/v1574001737/back_video.mp4");
             });
         }
         if (windowWidth == 375){

@@ -272,7 +272,7 @@ aside.page {
     font-size: 32px;
     font-weight: normal;
     position: relative;
-    left: 8px;
+    left: 0;
     top: 8px;
     color: rgb(81, 165, 255);
     -webkit-transform: scaleX(0.8);
@@ -318,6 +318,7 @@ aside.page {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    z-index: 50;
 }
 
     .post {
@@ -338,6 +339,7 @@ aside.page {
         margin: 0;
         width: 100%;
         height: 736px;
+        z-index: 50;
     }
 
     .container.main .post.top_page .background_mian_image {
@@ -363,6 +365,12 @@ aside.page {
         left: 0;
         bottom :0;
         display: block;
+        transform: scale(1.0)!important;
+        z-index: 50;
+    }
+
+    .container.main .post .main_top_map.main_map_view {
+        transform: scale(.5)!important;
     }
 
     .container.main .post .main_top_map.active {
@@ -384,6 +392,7 @@ aside.page {
         margin: auto;
         width: 410px;
         height: 562px;
+        z-index: 50;
         /* display: none; */
     }
 
@@ -405,6 +414,7 @@ aside.page {
         animation-duration: 2.2s;
         -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
+        z-index: 50;
     }
 
     .container.main .post .main_top_map .map_pin .pins img {
@@ -1879,6 +1889,7 @@ aside.page {
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+    z-index: 50;
   }
 
 .footer_view .footer_info .copy img {
@@ -1899,6 +1910,7 @@ aside.page {
   position: absolute;
   top: -68px;
   left: 0;
+  z-index: 30;
 }
 
 .footer_sub_img img {
@@ -1918,15 +1930,20 @@ aside.page {
     overflow: hidden;
     margin-top: 100px;
     margin-bottom: 50px;
+    z-index: 50;
 }
 
-/* .tips .sns_box {
-    width: 45%;
+.tips .sns_box {
+    z-index: 50;
+    transform: translate3d(-600px, 0, 0);
+    transition : all 2s ease-in-out;
 }
 
 .tips .support-title {
-    width: 40%;
-} */
+    transform: translate3d(600px, 0, 0);
+    transition : all 1.8s ease-in-out;
+    z-index: 50;
+}
 
 li{
     list-style: none;
@@ -2523,7 +2540,7 @@ img.pin_icon_active {
     margin: auto;
     background: rgb(255,255,255);
     margin-top: 250px;
-    transition: all 1s ease-in-out;
+    transition: all 2s ease-in-out;
 }
 
 .radio_mian_box .new_radio_content {
@@ -2587,6 +2604,7 @@ img.pin_icon_active {
     flex-wrap: wrap;
     justify-content: flex-start;
     padding-bottom: 50px;
+    overflow : hidden;
 }
 
 .radio_info_block .radio_content {
@@ -2594,6 +2612,12 @@ img.pin_icon_active {
     margin: 40px 20px;
     display: flex;
     align-items: center;
+    transition:all 2s ease-in-out;
+    z-index :50;
+}
+
+.radio_info_block .radio_content.tag_1 {
+    transform: translate3d(-300px, -250px, 0px);
 }
 
 .radio_info_block .radio_content .post-content {
@@ -2736,8 +2760,8 @@ img.pin_icon_active {
 }
 
 #instagram_field {
-    /* margin-top : 250px; */
-    transition: all 1s ease-in-out;
+    margin-top : 250px;
+    transition: all 2s ease-in-out;
 }
 
 .instagram_field_title {
@@ -2762,6 +2786,13 @@ img.pin_icon_active {
 
 .instagram_field_title span {
     color: #666666;
+}
+
+.user_info_block .back_bg {
+    background: url("https://res.cloudinary.com/hchyaihwv/image/upload/e_art:peacock,q_100/v1572851882/IMG_0033.jpg");
+    background-repeat:no-repeat;
+    background-size : 100% 100%;
+    border-radius: 5px;
 }
 
 .user_info_block .user_info {
@@ -2836,7 +2867,7 @@ img.pin_icon_active {
 }
 
 .travel_info_block {
-    transition: all 1s ease-in-out;
+    transition: all 2s ease-in-out;
     margin-top : 250px;
 }
 
@@ -2920,6 +2951,7 @@ img.pin_icon_active {
     text-align: center;
     height: 350px;
     width: 750px;
+    z-index: 50;
 }
 
 .travel_info_block .back_video .travel_block_content p {
@@ -2955,17 +2987,18 @@ img.pin_icon_active {
 
 .main_top_img {
     width: 100%;
-    height: 200vh;
+    height: 850vh;
     position: relative;
     opacity: 1;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-out;
+    /* -webkit-transition: all .8s ease-out;
+    transition: all .8s ease-out; */
 }
 
 .main_top_img.disactive {
     opacity: 0;
     -webkit-transition: all .8s ease-in-out;
     transition: all .8s ease-out;
+    z-index: 10;
 }
 
 .main_top_img .main_back {
@@ -2979,8 +3012,8 @@ img.pin_icon_active {
     position: relative;
     opacity: 1;
     transform:scale(1.0);
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
     border-radius: 10px;
     padding-top: 0px!important;
 }
@@ -3274,6 +3307,7 @@ img.pin_icon_active {
     text-align: center;
     margin: 25px 0;
     margin-bottom: 0;
+    z-index: 50;
 }
 
 .radios_button a button {

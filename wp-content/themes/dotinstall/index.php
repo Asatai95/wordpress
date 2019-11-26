@@ -402,9 +402,10 @@
                         if (have_posts()) :
                             $myposts = get_posts('numberposts=4');
                             foreach($myposts as $post) :
+
                     ?>
                     <div class="radio_content">
-                        <div class="post-content">
+                        <div class="post-content <?php $count;?>">
                             <?php if (has_post_thumbnail()) : ?>
                             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(0, 0)); ?></a>
                             <?php else: ?>
@@ -1064,7 +1065,7 @@
             </div>
             </div>
         </div>
-        <div class="pc_display_view">
+        <div class="pc_display_view pc_view">
                 <div class="main_top_img">
                     <div class="main_back">
                         <div class="top_main_img">
@@ -1500,9 +1501,12 @@
                         <?php
                             if (have_posts()) :
                                 $myposts = get_posts('numberposts=4');
+                                $count = 0;
                                 foreach($myposts as $post) :
+                                    $count += 1;
+                                    _log($count);
                         ?>
-                        <div class="radio_content">
+                        <div class="radio_content tag_<?php echo $count;?>">
                             <div class="post-content">
                                 <?php if (has_post_thumbnail()) : ?>
                                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(0, 0)); ?></a>
@@ -1557,7 +1561,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="instagram_field">
+                <div id="instagram_field" class="instagram_block">
                     <div class="instagram_field_title">
                         <p>
                             <a href="https://www.instagram.com/awamori_in_the_pocket/">
@@ -1602,13 +1606,15 @@
                         <div><p>Awamori in The Pocket</p></div>
                         <div>
                             <div class="user_info_block">
-                                <div class="user_info">
-                                    <div class="user_image">
-                                        <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704906/iob6zfw5ipv0sffihf9s.jpg" alt="">
-                                    </div>
-                                    <div class="user_image_bottom">
-                                        <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704897/sbyavoe1ulg7vbjbkvkr.jpg" alt="">
-                                        <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704968/acvgh4hcnmccxobtvrmt.jpg" alt="">
+                                <div class="back_bg">
+                                    <div class="user_info">
+                                        <div class="user_image">
+                                            <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704906/iob6zfw5ipv0sffihf9s.jpg" alt="">
+                                        </div>
+                                        <div class="user_image_bottom">
+                                            <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704897/sbyavoe1ulg7vbjbkvkr.jpg" alt="">
+                                            <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572704968/acvgh4hcnmccxobtvrmt.jpg" alt="">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="user_info_text">

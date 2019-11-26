@@ -1933,13 +1933,22 @@ aside.page {
     z-index: 50;
 }
 
+
 .tips .sns_box {
+    z-index: 50;
+}
+
+.pc_display_view .tips .sns_box {
     z-index: 50;
     transform: translate3d(-600px, 0, 0);
     transition : all 2s ease-in-out;
 }
 
 .tips .support-title {
+    z-index: 50;
+}
+
+.pc_display_view .tips .support-title {
     transform: translate3d(600px, 0, 0);
     transition : all 1.8s ease-in-out;
     z-index: 50;

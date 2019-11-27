@@ -284,13 +284,13 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_812/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 768) {
-            $(".top_main_img").css("padding-top", "83px");
-            $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-            });
-            $(".travel_info_block .back_video video").each(function(){
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-            });
+            // $(".top_main_img").css("padding-top", "83px");
+            // $(".main_top_view_video").each(function(){
+            //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            // });
+            // $(".travel_info_block .back_video video").each(function(){
+            //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            // });
         } else if ( windowWidth == 418) {
             $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
@@ -300,13 +300,13 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_418/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth < 770 || windowWidth > 765) {
-            $(".top_main_img").css("padding-top", "83px");
-            $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-            });
-            $(".travel_info_block .back_video video").each(function(){
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-            });
+            // $(".top_main_img").css("padding-top", "83px");
+            // $(".main_top_view_video").each(function(){
+            //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            // });
+            // $(".travel_info_block .back_video video").each(function(){
+            //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            // });
         } else {
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/v1574258843/my_media_bg.mp4");
@@ -520,13 +520,13 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_812/v1574001737/back_video.mp4");
                 });
             } else if ( windowWidth == 768) {
-                $(".top_main_img").css("padding-top", "0px");
-                $(".main_top_view_video").each(function(){
-                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-                });
-                $(".travel_info_block .back_video video").each(function(){
-                    $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-                });
+                // $(".top_main_img").css("padding-top", "0px");
+                // $(".main_top_view_video").each(function(){
+                //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+                // });
+                // $(".travel_info_block .back_video video").each(function(){
+                //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+                // });
             } else if ( windowWidth == 418) {
                 $(".top_main_img").css("padding-top", "83px");
                 $(".main_top_view_video").each(function(){
@@ -536,13 +536,13 @@ $(function(){
                     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_418/v1574001737/back_video.mp4");
                 });
             } else if ( windowWidth < 770 || windowWidth > 765) {
-                $(".top_main_img").css("padding-top", "0px");
-                $(".main_top_view_video").each(function(){
-                    $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-                });
-                $(".travel_info_block .back_video video").each(function(){
-                    $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-                });
+                // $(".top_main_img").css("padding-top", "0px");
+                // $(".main_top_view_video").each(function(){
+                //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+                // });
+                // $(".travel_info_block .back_video video").each(function(){
+                //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+                // });
             } else {
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/v1574258843/my_media_bg.mp4");
@@ -782,15 +782,15 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_812/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 768) {
-            $(".top_main_img").css("padding-top", "83px");
-            $(".top_main_img .back_movie").addClass("active");
-            $(".top_main_img .back_movie .main_top_view_video").addClass("active");
-            $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-            });
-            $(".travel_info_block .back_video video").each(function(){
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-            });
+            // $(".top_main_img").css("padding-top", "83px");
+            // $(".top_main_img .back_movie").addClass("active");
+            // $(".top_main_img .back_movie .main_top_view_video").addClass("active");
+            // $(".main_top_view_video").each(function(){
+            //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            // });
+            // $(".travel_info_block .back_video video").each(function(){
+            //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            // });
         } else if ( windowWidth == 418) {
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_418/v1574258843/my_media_bg.mp4");
@@ -799,13 +799,13 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_418/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth < 770 || windowWidth > 765) {
-            $(".top_main_img").css("padding-top", "83px");
-            $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-            });
-            $(".travel_info_block .back_video video").each(function(){
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-            });
+            // $(".top_main_img").css("padding-top", "83px");
+            // $(".main_top_view_video").each(function(){
+            //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            // });
+            // $(".travel_info_block .back_video video").each(function(){
+            //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            // });
         } else {
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/v1574258843/my_media_bg.mp4");
@@ -1110,13 +1110,13 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_812/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth == 768) {
-            $(".top_main_img").css("padding-top", "83px");
-            $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-            });
-            $(".travel_info_block .back_video video").each(function(){
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-            });
+            // $(".top_main_img").css("padding-top", "83px");
+            // $(".main_top_view_video").each(function(){
+            //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            // });
+            // $(".travel_info_block .back_video video").each(function(){
+            //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            // });
         } else if ( windowWidth == 418) {
             $(".top_main_img").css("padding-top", "83px");
             $(".main_top_view_video").each(function(){
@@ -1126,13 +1126,13 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_418/v1574001737/back_video.mp4");
             });
         } else if ( windowWidth < 770 || windowWidth > 765) {
-            $(".top_main_img").css("padding-top", "83px");
-            $(".main_top_view_video").each(function(){
-                $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
-            });
-            $(".travel_info_block .back_video video").each(function(){
-                $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
-            });
+            // $(".top_main_img").css("padding-top", "83px");
+            // $(".main_top_view_video").each(function(){
+            //     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_768/v1574258843/my_media_bg.mp4");
+            // });
+            // $(".travel_info_block .back_video video").each(function(){
+            //     $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_768/v1574001737/back_video.mp4");
+            // });
         } else {
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/v1574258843/my_media_bg.mp4");

@@ -361,6 +361,8 @@ $(function(){
                 });
             }
             if (windowWidth == 585){
+                console.log("windowWidthaaaaaaaaaaaa")
+                console.log(windowWidth)
                 $(".top_main_img").css("padding-top", "50px");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_585/v1574258843/my_media_bg.mp4");
@@ -370,6 +372,7 @@ $(function(){
                 });
             }
             if (windowWidth > 580 && windowWidth < 590) {
+                console.log("windowWidthaaaaaaacssssssssaaaaaa")
                 $(".top_main_img").css("padding-top", "50px");
                 $(".main_top_view_video").each(function(){
                     $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_585/v1574258843/my_media_bg.mp4");
@@ -567,9 +570,10 @@ $(function(){
                 $(this).attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_scale,h_450,w_375/v1574001737/back_video.mp4");
             });
         }
-        console.log("windowWidth")
-        console.log(windowWidth)
+
         if (windowWidth == 585){
+            console.log("windowWidth")
+            console.log(windowWidth)
             $(".top_main_img").css("padding-top", "50px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_585/v1574258843/my_media_bg.mp4");
@@ -579,6 +583,8 @@ $(function(){
             });
         }
         if (windowWidth > 580 && windowWidth < 590) {
+            console.log("windowWidthcssacac")
+            console.log(windowWidth)
             $(".top_main_img").css("padding-top", "50px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_580/v1574258843/my_media_bg.mp4");

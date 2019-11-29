@@ -12,5 +12,9 @@
   Satisfy any
   Allow from all
 </Files>
-
+<Files wp-login.php>
+  Order deny,allow
+  Deny from all
+  Allow from 192.168.11.4
+</Files>
 # END WordPress

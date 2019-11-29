@@ -100,7 +100,7 @@ $(function(){
     $(".pc_display_view.pc_view .radio_content .post-content img").each(function(){
         $(this).on("mouseover mouseout", function(e){
             if (e.type == "mouseover") {
-                $(this).css("transform", "scale(1.1)");
+                $(this).css("transform", "scale(1.15)");
             }
             if (e.type == "mouseout") {
                 $(this).css("transform", "scale(1.0)");

@@ -1,6 +1,104 @@
 
 
 $(function(){
+    if ($(".pc_display_view.pc_view").length){
+        window.onload = function() {
+            setTimeout (function () {
+            scrollTo(0,0);
+            }, 100);
+        }
+        try{
+            var t = $('.container.main.map_view.section').offset().top;
+            var p = t - $(window).height();
+            var radio = $(".radio_mian_box").offset().top;
+            var radio_p = radio - $(window).height();
+
+            function handleTouchMove(e){
+                e.preventDefault();
+            }
+            var mousewheelevent = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+
+            $(window).scroll(function(){
+                console.log($(window).scrollTop())
+                if ($(window).scrollTop() == 0 ){
+                    if ($(".back_img.scroll").length){} else {
+                        $(".back_img").addClass("scroll");
+                        document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                    }
+                }
+                if  ($(window).scrollTop() > p){
+                    $(document).ready(function(){
+                        $(".main_top_img .main_back").css("opacity", "0");
+                        $(".main_top_img .iphone_main_back_image .back_img").addClass("active");
+                        $(".main_top_img .iphone_main_back_image .iphone_main_back_image_text").addClass("active");
+                        $(".main_top_img .iphone_main_back_image .sliding_pictures").addClass("active");
+                        $(".main_top_img .iphone_main_back_image .nav_bar_icon").addClass("active");
+                    });
+                } else {
+                    $(".main_top_img .main_back").css("opacity", "1");
+
+                }
+            });
+
+
+            // $(this).find(".back_img.active").addClass("scroll");
+            $(window).scroll(function(e){
+                e.preventDefault();
+
+                if ($(".back_img.scroll").length){
+                    console.log("scroll")
+                    var scrollOffsetY = window.pageYOffset;
+                    window.scrollTo(0,scrollOffsetY);
+                    document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                    $("html,body").animate({
+                        scrollTop : p
+                    }, {
+                        duration : 2000,
+                        easing: "linear",
+                        queue : false,
+                        complete: function(e) {
+                            $(".back_img.scroll").removeClass("scroll");
+                            $(".container.main.map_view").addClass("scroll");
+                            $(".main_top_img .main_back").css("opacity", "1");
+                            document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                        }
+                    });
+                }
+
+                if($(".container.main.map_view.scroll").length){
+                    document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                    setTimeout(function(){
+                        document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                        $(".main_top_img .main_back").css("opacity", "1");
+                        $(".iphone_main_back_image .scroll_text").css("visibility", "visible");
+                            $("html,body").animate({
+                                scrollTop : t + 100
+                            }, {
+                                duration : 1000,
+                                easing: "swing",
+                                queue : false,
+                                complete: function(e) {
+                                    $(".container.main.map_view").removeClass("scroll");
+                                    $(".main_top_img .main_back").css("opacity", "1");
+                                    $(".radio_mian_box").addClass("scroll");
+                                    $(".iphone_main_back_image .scroll_text").css("visibility", "hidden");
+                                    setTimeout(function(){
+                                        document.removeEventListener('mousewheel', handleTouchMove, { passive: false });
+                                    }, 2000);
+                                }
+                            });
+                    },2000);
+
+                }
+
+
+                return false;
+            });
+
+        } catch {
+            console.log("test")
+        }
+    }
 
     $(".pc_display_view.pc_view .radio_content .post-content img").each(function(){
         $(this).on("mouseover mouseout", function(e){
@@ -576,8 +674,7 @@ $(function(){
         }
 
         if (windowWidth == 585){
-            console.log("windowWidth")
-            console.log(windowWidth)
+
             $(".top_main_img").css("padding-top", "50px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_585/v1574258843/my_media_bg.mp4");
@@ -587,8 +684,6 @@ $(function(){
             });
         }
         if (windowWidth > 580 && windowWidth < 590) {
-            console.log("windowWidthcssacac")
-            console.log(windowWidth)
             $(".top_main_img").css("padding-top", "50px");
             $(".main_top_view_video").each(function(){
                 $(this).find("video").attr("src", "https://res.cloudinary.com/hchyaihwv/video/upload/c_fill,h_500,w_580/v1574258843/my_media_bg.mp4");

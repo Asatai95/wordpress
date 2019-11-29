@@ -1941,7 +1941,7 @@ aside.page {
 .pc_display_view .tips .sns_box {
     z-index: 50;
     transform: translate3d(-600px, 0, 0);
-    transition : all 2s ease-in-out;
+    transition : all 1.5s ease-in-out;
 }
 
 .tips .support-title {
@@ -1950,7 +1950,7 @@ aside.page {
 
 .pc_display_view .tips .support-title {
     transform: translate3d(600px, 0, 0);
-    transition : all 1.8s ease-in-out;
+    transition : all 1.5s ease-in-out;
     z-index: 50;
 }
 
@@ -2394,7 +2394,7 @@ img.pin_icon {
   left: 0;
   bottom: 150px;
   margin: auto;
-  z-index: 30;
+  z-index: 80;
   transition: .2s;
   display: block!important;
   animation: korokoro .5s linear 0s 1;
@@ -2549,7 +2549,7 @@ img.pin_icon_active {
     margin: auto;
     background: rgb(255,255,255);
     margin-top: 250px;
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 .radio_mian_box .new_radio_content {
@@ -2770,7 +2770,7 @@ img.pin_icon_active {
 
 #instagram_field {
     margin-top : 250px;
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
 }
 
 .instagram_field_title {
@@ -2876,7 +2876,7 @@ img.pin_icon_active {
 }
 
 .travel_info_block {
-    transition: all 2s ease-in-out;
+    transition: all 1.5s ease-in-out;
     margin-top : 250px;
 }
 
@@ -3133,6 +3133,15 @@ img.pin_icon_active {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.iphone_main_back_image .scroll_text {
+    position :fixed;
+    visibility: hidden;
+}
+
+.iphone_main_back_image .scroll_text span {
+    color: #222;s
 }
 
 .scroll_text span {

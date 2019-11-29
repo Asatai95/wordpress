@@ -1067,7 +1067,7 @@
         </div>
         <div class="pc_display_view pc_view">
                 <div class="main_top_img">
-                    <div class="main_back">
+                    <div class="main_back section">
                         <div class="top_main_img">
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573972961/home.png" alt="" class="home_icon">
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573972946/check.png" alt="" class="check_icon">
@@ -1083,12 +1083,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="iphone_main_back_image">
+                    <div class="iphone_main_back_image section">
                         <div class="iphone_main_back_image_text">
                             <h2>このラジオで、今日も誰かを笑顔に</h2>
                             <p>今日もどこかで収録しています</p>
                         </div>
-                        <div class="back_img"></div>
+                        <div class="back_img scroll"></div>
                         <div class="sliding_pictures">
                             <div class="picture left near sliding_picture2"></div>
                             <div class="picture right near sliding_picture3"></div>
@@ -1098,9 +1098,13 @@
                         <div class="nav_bar_icon">
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573999241/picture_video_control.png" alt="">
                         </div>
+                        <div class="scroll_text">
+                            <span>Scroll for more</span>
+                            <div class="icon icon_arrow_down_white"></div>
+                        </div>
                     </div>
                 </div>
-                <div id="main" class="container main map_view">
+                <div id="main" class="container main map_view section">
                     <div class="next-stream">
                         <span class="next-stream_date">次回の収録日は
                             <span id="js-next">2019年12月01日</span>です。
@@ -1490,7 +1494,7 @@
                     </div><!-- /posts -->
 
                 </div><!-- /main -->
-                <div class="radio_mian_box">
+                <div class="radio_mian_box section">
                     <div class="new_radio_content">
                         <p>
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573907648/new.png" alt="">
@@ -1580,7 +1584,7 @@
                         <div class="main_box"></div>
                     </div>
                 </div>
-                <div class="tips">
+                <div class="tips section">
                     <div class="sns_box">
                         <div class="facebook_feed">
                             <p class="sns">Facebook</p>

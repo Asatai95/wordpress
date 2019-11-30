@@ -59,7 +59,7 @@ $(function(){
                                     $(".main_top_img .main_back").css("opacity", "1");
                                     $(".iphone_main_back_image .scroll_text").css("visibility", "visible");
                                     $("html,body").animate({
-                                        scrollTop : t + 100
+                                        scrollTop : t
                                     }, {
                                         duration : 1000,
                                         easing: "swing",
@@ -1323,7 +1323,7 @@ $(function(){
             var view_top = $(".container.main.map_view").offset();
             var scroll_count = 1.0 - $(window).scrollTop()/4500;
             var scroll_count_other = scroll_count - $(window).scrollTop()/500;
-            if ($(window).scrollTop() > 5800){
+            if ($(window).scrollTop() > 6000){
                 $(".main_top_img").addClass("disactive");
             } else {
                 if ($(".main_top_img.disactive").length) {

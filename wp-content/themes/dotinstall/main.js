@@ -39,11 +39,11 @@ $(function(){
 
             $(".pc_display_view .scroll_text a").on("click", function(e){
                 e.preventDefault();
-
+                document.addEventListener('mousewheel', handleTouchMove, { passive: false });
                 if ($(".back_img.scroll").length){
                     var scrollOffsetY = window.pageYOffset;
                     window.scrollTo(0,scrollOffsetY);
-                    // document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+
                     $("html,body").animate({
                         scrollTop : p
                     }, {

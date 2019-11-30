@@ -59,9 +59,9 @@ $(function(){
                                     $(".main_top_img .main_back").css("opacity", "1");
                                     $(".iphone_main_back_image .scroll_text").css("visibility", "visible");
                                     $("html,body").animate({
-                                        scrollTop : t
+                                        scrollTop : t +50
                                     }, {
-                                        duration : 1000,
+                                        duration : 2000,
                                         easing: "swing",
                                         queue : false,
                                         complete: function(e) {

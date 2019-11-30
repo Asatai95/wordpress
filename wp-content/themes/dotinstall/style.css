@@ -3154,8 +3154,7 @@ img.pin_icon_active {
 }
 
 .scroll_text span:hover {
-    font-size: 21px;
-    color: #222;
+    font-size: 22px;
 }
 
 .scroll_text .icon_arrow_down_white.icon {

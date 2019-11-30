@@ -1,10 +1,10 @@
 $(function(){
     if ($(".pc_display_view.pc_view").length){
-        // window.onload = function() {
-        //     setTimeout (function () {
-        //     scrollTo(0,0);
-        //     }, 100);
-        // }
+        window.onload = function() {
+            setTimeout (function () {
+            scrollTo(0,0);
+            }, 100);
+        }
         try{
             var t = $('.container.main.map_view.section').offset().top;
             var p = t - $(window).height();

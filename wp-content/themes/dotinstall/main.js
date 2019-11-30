@@ -1323,7 +1323,7 @@ $(function(){
             var view_top = $(".container.main.map_view").offset();
             var scroll_count = 1.0 - $(window).scrollTop()/4500;
             var scroll_count_other = scroll_count - $(window).scrollTop()/500;
-            if ($(window).scrollTop() > 5500){
+            if ($(window).scrollTop() > 5800){
                 $(".main_top_img").addClass("disactive");
             } else {
                 if ($(".main_top_img.disactive").length) {

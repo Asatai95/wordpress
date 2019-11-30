@@ -1,12 +1,10 @@
-
-
 $(function(){
     if ($(".pc_display_view.pc_view").length){
-        window.onload = function() {
-            setTimeout (function () {
-            scrollTo(0,0);
-            }, 100);
-        }
+        // window.onload = function() {
+        //     setTimeout (function () {
+        //     scrollTo(0,0);
+        //     }, 100);
+        // }
         try{
             var t = $('.container.main.map_view.section').offset().top;
             var p = t - $(window).height();
@@ -22,7 +20,7 @@ $(function(){
                 if ($(window).scrollTop() == 0 ){
                     if ($(".back_img.scroll").length){} else {
                         $(".back_img").addClass("scroll");
-                        document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                        // document.addEventListener('mousewheel', handleTouchMove, { passive: false });
                     }
                 }
                 if  ($(window).scrollTop() > p){
@@ -39,57 +37,48 @@ $(function(){
                 }
             });
 
-
-            // $(this).find(".back_img.active").addClass("scroll");
-            $(window).scroll(function(e){
+            $(".pc_display_view .scroll_text a").on("click", function(e){
                 e.preventDefault();
 
                 if ($(".back_img.scroll").length){
                     var scrollOffsetY = window.pageYOffset;
                     window.scrollTo(0,scrollOffsetY);
-                    document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                    // document.addEventListener('mousewheel', handleTouchMove, { passive: false });
                     $("html,body").animate({
                         scrollTop : p
                     }, {
-                        duration : 2000,
-                        easing: "linear",
+                        duration : 2500,
+                        easing: "swing",
                         queue : false,
                         complete: function(e) {
                             $(".back_img.scroll").removeClass("scroll");
                             $(".container.main.map_view").addClass("scroll");
                             $(".main_top_img .main_back").css("opacity", "1");
-                            document.addEventListener('mousewheel', handleTouchMove, { passive: false });
+                            if($(".container.main.map_view.scroll").length){
+                                setTimeout(function(){
+                                    $(".main_top_img .main_back").css("opacity", "1");
+                                    $(".iphone_main_back_image .scroll_text").css("visibility", "visible");
+                                    $("html,body").animate({
+                                        scrollTop : t + 100
+                                    }, {
+                                        duration : 1000,
+                                        easing: "swing",
+                                        queue : false,
+                                        complete: function(e) {
+                                            $(".container.main.map_view").removeClass("scroll");
+                                            $(".main_top_img .main_back").css("opacity", "1");
+                                            $(".radio_mian_box").addClass("scroll");
+                                            $(".iphone_main_back_image .scroll_text").css("visibility", "hidden");
+                                            setTimeout(function(){
+                                                document.removeEventListener('mousewheel', handleTouchMove, { passive: false });
+                                            }, 1000);
+                                        }
+                                    });
+                                },2500);
+                            }
                         }
                     });
                 }
-
-                if($(".container.main.map_view.scroll").length){
-                    document.addEventListener('mousewheel', handleTouchMove, { passive: false });
-                    setTimeout(function(){
-                        document.addEventListener('mousewheel', handleTouchMove, { passive: false });
-                        $(".main_top_img .main_back").css("opacity", "1");
-                        $(".iphone_main_back_image .scroll_text").css("visibility", "visible");
-                            $("html,body").animate({
-                                scrollTop : t + 100
-                            }, {
-                                duration : 1000,
-                                easing: "swing",
-                                queue : false,
-                                complete: function(e) {
-                                    $(".container.main.map_view").removeClass("scroll");
-                                    $(".main_top_img .main_back").css("opacity", "1");
-                                    $(".radio_mian_box").addClass("scroll");
-                                    $(".iphone_main_back_image .scroll_text").css("visibility", "hidden");
-                                    setTimeout(function(){
-                                        document.removeEventListener('mousewheel', handleTouchMove, { passive: false });
-                                    }, 2000);
-                                }
-                            });
-                    },3500);
-
-                }
-
-
                 return false;
             });
 

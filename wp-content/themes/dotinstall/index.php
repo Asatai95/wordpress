@@ -1078,7 +1078,9 @@
                                 <h2>TRAVEL, LIFE, AND RADIO BY KOU, ASUKA, ASATAI</h2>
                             </div>
                             <div class="scroll_text">
-                                <span>Scroll for more</span>
+                                <a href="#">
+                                    <span>Click Here</span>
+                                </a>
                                 <div class="icon icon_arrow_down_white"></div>
                             </div>
                         </div>

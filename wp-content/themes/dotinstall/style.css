@@ -3149,8 +3149,13 @@ img.pin_icon_active {
     -webkit-transition: all 1.5s cubic-bezier(.4,.85,.49,.99) 2.7s;
     transition: all 1.5s cubic-bezier(.4,.85,.49,.99) 2.7s;
     color: #FFF;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 800;
+}
+
+.scroll_text span:hover {
+    font-size: 21px;
+    color: #222;
 }
 
 .scroll_text .icon_arrow_down_white.icon {

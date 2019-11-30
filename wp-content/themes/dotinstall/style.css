@@ -3057,7 +3057,7 @@ img.pin_icon_active {
     width: 590px;
     height: 350px;
     top: 0;
-    bottom: 0px;
+    bottom: 70px;
     right: 0;
     left: 0;
     margin: auto;
@@ -3173,7 +3173,7 @@ img.pin_icon_active {
 .iphone_main_back_image .sliding_pictures {
     position: fixed;
     top: 0px;
-    bottom: 0;
+    bottom: 70px;
     right: 0;
     left: 0;
     margin: auto;

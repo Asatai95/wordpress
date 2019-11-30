@@ -1231,27 +1231,27 @@ $(function(){
         if($(".container.main.map_view").length){
             $(window).scroll(function() {
                 var scroll = $(this).scrollTop();
-                if (scroll > 8300){
+                if (scroll > 8700){
                     $(".tips .sns_box").css("transform", "translate3d(0px, 0, 0)");
                 } else {
                     $(".tips .sns_box").css("transform", "translate3d(-600px, 0, 0)");
                 }
-                if (scroll > 8300){
+                if (scroll > 8700){
                     $(".tips .support-title").css("transform", "translate3d(0px, 0, 0)");
                 } else {
                     $(".tips .support-title").css("transform", "translate3d(600px, 0, 0)");
                 }
-                if (scroll > 7700){
+                if (scroll > 8100){
                     $(".instagram_block").css("margin-top", "0");
                 } else {
                     $(".instagram_block").css("margin-top", "250px");
                 }
-                if (scroll > 7000){
+                if (scroll > 7400){
                     $(".travel_info_block").css("margin-top", "0");
                 } else {
                     $(".travel_info_block").css("margin-top", "250px");
                 }
-                if(scroll > 6400){
+                if(scroll > 6800){
                     $(".radio_info_block .radio_content.tag_1").css("transform", "translate3d(0px, 0px, 0px)");
                     $(".radio_info_block .radio_content.tag_2").css("transform", "translate3d(0px, 0px, 0px)");
                     $(".radio_info_block .radio_content.tag_3").css("transform", "translate3d(0px, 0px, 0px)");

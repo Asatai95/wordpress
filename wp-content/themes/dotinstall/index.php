@@ -1345,7 +1345,7 @@
                                 <?php elseif ($value == "那覇市"):?>
                                     <div class="pins naha">
                                         <a href="#">
-
+                                        <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573794941/map_pin_icon.png" alt="" class="pin_icon action after" style="bottom: 40px">
                                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1572843861/naha.png" alt="">
                                         </a>
                                         <div class="name_text view">

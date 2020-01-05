@@ -2018,8 +2018,8 @@ figure iframe {
     margin: auto;
     cursor: pointer;
     width: 35px;
-    bottom: 10px;
-    left: -10px;
+    bottom: 20px;
+    left: 0px;
 }
 
 .map_pin .pins.urasoe .icon {
@@ -2416,6 +2416,8 @@ figure iframe {
     top: 0;
     margin: auto;
     cursor: pointer;
+    width: 35px;
+    left: -1px;
 }
 
 .map_pin .pins.naha .marker .icon {

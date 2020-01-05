@@ -420,7 +420,7 @@ aside.page {
         animation-duration: 2.2s;
         -webkit-animation-timing-function: ease-in-out;
         animation-timing-function: ease-in-out;
-        z-index: 50;
+        /* z-index: 50; */
     }
 
     .container.main .post .main_top_map .map_pin .pins img {

@@ -1,7 +1,11 @@
 
 # BEGIN WordPress
 # Redirect WordPress
-
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^wp-admin/$ index.html [R=301,L]
+RewriteRule ^wp-login.php$ index.html [R=301,L]
+</IfModule>
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>

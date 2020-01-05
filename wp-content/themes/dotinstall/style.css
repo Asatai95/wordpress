@@ -252,6 +252,12 @@ aside.page {
     letter-spacing: 0.1rem;
 }
 
+.next-stream .date_span {
+    font-size: 15px;
+    font-weight: 800;
+    color: #FF4B00;
+}
+
 .next-stream .next-stream_date:before {
     content: '\FF3C';
     display: inline-block;
@@ -272,7 +278,7 @@ aside.page {
     font-size: 32px;
     font-weight: normal;
     position: relative;
-    left: 0;
+    left: -5px;
     top: 8px;
     color: rgb(81, 165, 255);
     -webkit-transform: scaleX(0.8);
@@ -2778,6 +2784,7 @@ img.pin_icon_active {
 }
 
 .instagram_field_title p a {
+    z-index: 50;
     transition: all 1s ease;
 }
 

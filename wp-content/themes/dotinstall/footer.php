@@ -1,4 +1,3 @@
-<!-- <div id="footer" class="container"></div>/footer -->
 <?php wp_footer(); ?>
 
 
@@ -552,6 +551,7 @@
   </body>
 
 </html>
+
 
 
 

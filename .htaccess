@@ -1,5 +1,13 @@
 
 # BEGIN WordPress
+# Redirect WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^wp-admin/$ index.html [R=301,L]
+RewriteRule ^wp-login.php$ index.html [R=301,L]
+</IfModule>
+
+# BEGIN WordPress
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -8,13 +16,10 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.php [L]
 </IfModule>
+
 <Files ~ "\.(mov|mp4|m4v|flv|f4v)$">
   Satisfy any
   Allow from all
 </Files>
-<Files wp-login.php>
-  Order deny,allow
-  Deny from all
-  Allow from 192.168.11.4
-</Files>
+
 # END WordPress

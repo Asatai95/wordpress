@@ -74,7 +74,7 @@
                                                     Instagram
                                                 </a>
                                                 /
-                                                <a href="https://www.facebook.com/asukamiyazato" class="facebook">
+                                                <a href="https://www.facebook.com/asuka.miyazato.54" class="facebook">
                                                     Facebook
                                                 </a>
                                             </div>
@@ -212,8 +212,9 @@
         <div id="main" class="container radio_content_view">
             <div class="next-stream">
                 <span class="next-stream_date">次回の収録日は
-                    <span id="js-next">2019年12月01日</span>です。
+                    <span id="js-next">未定</span>です。
                 </span>
+                <br>
             </div>
             <div id="posts">
 

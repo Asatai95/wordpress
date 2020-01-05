@@ -2,8 +2,9 @@
         <div id="main" class="container single">
             <div class="next-stream">
                 <span class="next-stream_date">次回の収録日は
-                    <span id="js-next">2019年12月01日</span>です。
+                    <span id="js-next">未定</span>です。
                 </span>
+                <br>
             </div>
             <div id="posts">
 

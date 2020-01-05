@@ -46,8 +46,9 @@
         <div id="main" class="container main map_view_sp">
             <div class="next-stream">
                 <span class="next-stream_date">次回の収録日は
-                    <span id="js-next">2019年12月01日</span>です。
+                    <span id="js-next">未定</span>です。
                 </span>
+                <br>
             </div>
 
             <div id="posts">
@@ -580,8 +581,9 @@
             <div id="main" class="container main map_view_sp">
                 <div class="next-stream">
                     <span class="next-stream_date">次回の収録日は
-                        <span id="js-next">2019年12月01日</span>です。
+                        <span id="js-next">未定</span>です。
                     </span>
+                    <br>
                 </div>
 
                 <div id="posts">
@@ -1072,6 +1074,7 @@
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573972961/home.png" alt="" class="home_icon">
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573972946/check.png" alt="" class="check_icon">
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573972951/bar.png" alt="" class="bar_icon">
+                            <!-- <video src="/wp-content/uploads/2019/10/radio_youtube_1.mp4" muted webkit-playsinline playsinline autoplay loop class="main_view_image"></video> -->
                             <img src="https://res.cloudinary.com/hchyaihwv/image/upload/v1573912471/main_img_top.png" alt="" class="main_view_image">
                             <div class="main_top_text">
                                 <h1>Awamori in The Pocket</h1>
@@ -1109,10 +1112,10 @@
                 <div id="main" class="container main map_view section">
                     <div class="next-stream">
                         <span class="next-stream_date">次回の収録日は
-                            <span id="js-next">2019年12月01日</span>です。
+                            <span id="js-next">未定</span>です。
                         </span>
+                        <br>
                     </div>
-
                     <div id="posts">
                         <div class="post top_page">
                             <div class="background_mian_image"></div>
@@ -1647,4 +1650,5 @@
         endif;
     ?>
 <?php get_footer(); ?>
+
 

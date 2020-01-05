@@ -239,6 +239,12 @@ aside{
     letter-spacing: 0.1rem;
 }
 
+.next-stream .date_span {
+    font-size: 13px;
+    font-weight: 800;
+    color : #FF4B00;
+}
+
 .next-stream .next-stream_date:before {
     content: '\FF3C';
     display: inline-block;
@@ -1075,7 +1081,8 @@ figure iframe {
 }
 
 .insta_view_block .main_box .post a img {
-    width: 100%;
+    width: 75px;
+    height: 75px;
 }
 
 .insta_view_block .main_box .post .insta_box {
@@ -2010,9 +2017,9 @@ figure iframe {
     position: absolute;
     margin: auto;
     cursor: pointer;
-    width: 25px;
-    bottom: 14px;
-    left: 5px;
+    width: 35px;
+    bottom: 10px;
+    left: -10px;
 }
 
 .map_pin .pins.urasoe .icon {
@@ -2350,9 +2357,9 @@ figure iframe {
     top: 0;
     margin: auto;
     cursor: pointer;
-    width: 20px;
-    bottom: 50px;
-    left: 9px;
+    width: 35px;
+    bottom: 80px;
+    left: 0px;
 }
 
 .map_pin .pins.yaese img.icon {
